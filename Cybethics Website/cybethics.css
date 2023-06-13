@@ -1,81 +1,81 @@
 /* Style the header with a grey background and some padding */
 html {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-    color: white;
-    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
-    background-attachment: fixed;
-    background-size: cover;
-    font-family: "Cairo";
+  color: white;
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: "Cairo";
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.13);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.13);
 }
 
 .header-item {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .menu-item {
-    padding: 15px;
-    border-right: 1px solid;
-    border-color: white;
-    text-decoration: none;
-    color: white;
-    transition: background-color 0.2s ease;
+  padding: 15px;
+  border-right: 1px solid;
+  border-color: white;
+  text-decoration: none;
+  color: white;
+  transition: background-color 0.2s ease;
 }
 
 .menu-item:hover {
-    background-color: rgba(0, 0, 0, 0.50);
+  background-color: rgba(0, 0, 0, 0.50);
 }
 
 .logo {
-    height: 5em;
-    width: 5em;
+  height: 5em;
+  width: 5em;
 }
 
 .logo-title {
-    font-size: 24px;
-    margin: 10px;
+  font-size: 24px;
+  margin: 10px;
 }
 
 .large-text {
-    font-size: 40px;
+  font-size: 40px;
 }
 
 .side-margin {
-    margin: 0 10% 0 10%;
+  margin: 0 10% 0 10%;
 }
 
 .full-margin {
-    margin: 10%;
+  margin: 10%;
 }
 
 .grid-container {
-    height: 150px;
-    width: 70%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 10px;
-    row-gap: 100px;
+  height: 150px;
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 10px;
+  row-gap: 100px;
 }
 
 .item {
   background-color: rgba(0, 0, 0, 0.10);
   padding: 20px;
   border-radius: 20px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.5s ease;
 }
 
 .item:hover {
-    background-color: rgba(15, 15, 15, 0.3);
+  background-color: rgba(15, 15, 15, 0.3);
 }
 
 .item i {
@@ -91,43 +91,58 @@ body {
 }
 
 .justify-center {
-    justify-self: center;
+  justify-self: center;
 }
 
 .content-column-1 {
-    grid-column: 1 2;
+  grid-column: 1 2;
 }
 
 .animated-title {
-    display: flex;
+  display: flex;
 }
 
 .remove {
-    animation: cybethics 8s infinite 2s both;
+  animation: cybethics 8s infinite 2s both;
 }
 
-h1, h2 {
-    font-size: 300%;
+h1,
+h2 {
+  font-size: 300%;
 }
-  
+
 @keyframes cybethics {
-    0% {width: 1.25em;}
-    11%, 33% {opacity: 1;}
-    22% {width: 1px;}
-    44%, 100% {width: 1.25em; opacity: 1;}
+  0% {
+    width: 1.25em;
+  }
+
+  11%,
+  33% {
+    opacity: 1;
+  }
+
+  22% {
+    width: 1px;
+  }
+
+  44%,
+  100% {
+    width: 1.25em;
+    opacity: 1;
+  }
 }
 
 /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
 @media screen and (max-width: 500px) {
-    .header a {
-        float: none;
-        display: block;
-        text-align: left;
-    }
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
 
-    .header-right {
-        float: none;
-    }
+  .header-right {
+    float: none;
+  }
 }
 
 /** Services Page Carousel */
@@ -135,7 +150,8 @@ h1, h2 {
   display: flex;
   overflow: hidden;
   width: 100%;
-  height: 300px; /* Adjust the height as needed */
+  height: 300px;
+  /* Adjust the height as needed */
 }
 
 .slide {
@@ -181,11 +197,17 @@ h1, h2 {
 }
 
 @keyframes slideAnimation {
-  0%, 20%, 100% {
+
+  0%,
+  20%,
+  100% {
     transform: translateX(0);
     opacity: 1;
   }
-  25%, 45%, 75% {
+
+  25%,
+  45%,
+  75% {
     transform: translateX(-20%);
     filter: blur(2px);
   }
@@ -198,81 +220,88 @@ h1, h2 {
 /** Process Container */
 
 .process-container-new {
-    display: grid;
-    grid-template-columns: 2fr 3fr 2fr 3fr 2fr;
-    grid-template-rows: repeat(3, 120px);
-    align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 2fr 1fr;
+  grid-template-rows: repeat(3, 120px);
+  align-items: center;
+  column-gap: 2em;
+  width: 70%;
 }
 
 .arrow-column {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: center;
-    grid-template-rows: 60px 60px;
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  align-items: center;
+  grid-template-rows: 1fr 2fr;
 }
 
 .document {
-    opacity: 0;
-    grid-column: 1 / 3;
-    animation: assigningDocument 3s ease-in-out 5s forwards;
+  opacity: 0;
+  grid-column: 1 / 3;
+  animation: assigningDocument 3s ease-in-out forwards;
 }
 
 .process-container {
-    display: grid;
-    grid-template-columns: 4fr 4fr auto 1fr;
-    grid-template-rows: repeat(3, 60px);
-    align-items: center;
+  display: grid;
+  grid-template-columns: 4fr 4fr auto 1fr;
+  grid-template-rows: repeat(3, 60px);
+  column-gap: 2em;
+  align-items: center;
+  width: 70%;
 }
 
 .process-container-actor {
-    display: grid;
-    gap: 10px;
-    align-items: center;
-    grid-template-columns: 1fr;
-    grid-template-rows: 2fr 1fr;
+  display: grid;
+  justify-items: center;
+  align-self: end;
+  opacity: 0;
+  animation: fade-in 1s ease-in-out forwards;
 }
 
 .arrow {
-    border: solid white;
-    border-width: 0 10px 10px 0;
-    display: inline-block;
-    padding: 6px;
-    width: 12px;
-    height: 12px;
-    animation: emergingArrow 1s ease-in-out backwards;
-    animation-delay: 1s;
+  border: solid white;
+  border-width: 0 0.4em 0.4em 0;
+  display: inline-block;
+  padding: 6px;
+  width: 12px;
+  height: 12px;
+  opacity: 0;
+  animation: emergingArrow 3s ease-in-out forwards;
 }
 
 .arrow-line {
-    position: relative;
-    font-size: 4rem;
-    top: -0.2rem;
-    animation: emergingArrow 2s ease-in-out forwards;
+  border: solid white;
+  border-width: 0.15em;
+  opacity: 0;
+  animation: emergingArrow 2s ease-in-out forwards;
 }
 
 .right {
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-}  
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
 
 @keyframes emergingArrow {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+  0%, 10% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes assigningDocument {
-    from {
-        opacity: 0;
-        transform: translateX(-20%);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(90%);
-    }
+  0% {
+    opacity: 0;
+    transform: translateX(0%);
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(115%);
+  }
 }
 
 .text-container {
@@ -280,42 +309,100 @@ h1, h2 {
   height: 10vh;
 }
 
-.text1,
-.text2 {
+.process-text {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   opacity: 0;
-  animation-duration: 5s;
+  animation-duration: 8s;
   animation-fill-mode: forwards;
+  animation-name: fade-in-out;
 }
 
-.text1 {
-  animation-name: fade-in-out;
+.part1 {
   animation-delay: 0s;
 }
 
-.text2 {
-  animation-name: fade-in-out;
-  animation-delay: 5s; /* Adjust delay as needed */
+.part2 {
+  animation-delay: 8s;
+  /* animation-delay: 0s; */
+}
+
+.part3 {
+  animation-delay: 17s;
+  /* animation-delay: 0s; */
+}
+
+.part4 {
+  animation-delay: 25s;
+  /* animation-delay: 4s; */
+}
+
+.part5 {
+  animation-delay: 33s;
+}
+
+.part6 {
+  animation-delay: 41s;
+}
+
+.cybethics-role1 {
+  opacity: 1;
+  animation: fade-in-out 2s ease-in-out 25s forwards;
+}
+
+.cybethics-role2 {
+  opacity: 0;
+  position: absolute;
+  animation: highlight-role 3s ease-in-out 27s;
+}
+
+.cybethics-role3 {
+  opacity: 0;
+  position: absolute;
+  animation: highlight-role 3s ease-in-out 30s none;
+}
+
+@keyframes highlight-role {
+  0% {
+    opacity: 0;
+    color: white;
+  }
+  10% {
+    opacity: 1;
+    color: red;
+  }
+  15% {
+    opacity: 1;
+    color: white;
+  }
+  20% {
+    opacity: 1;
+    color: red;
+  }
+  25% {
+    opacity: 1;
+    color: white;
+  }
+  90%, 100% {
+    opacity: 1;
+    color: white;
+  }
 }
 
 @keyframes fade-in-out {
-  0% {
+  0%, 100% {
     opacity: 0;
   }
-  50% {
+  10%, 90% {
     opacity: 1;
-  }
-  100% {
-    opacity: 0;
   }
 }
 
 .fade-in-short-short-delay {
-    animation: fade-in 1s normal 0.5s both;
+  animation: fade-in 1s normal 0.5s both;
 }
 
 @keyframes fade-in {
@@ -323,9 +410,9 @@ h1, h2 {
     transform: translateX(-3%);
     opacity: 0;
   }
+
   to {
     transform: translateX(0%);
     opacity: 1;
   }
 }
-  
