@@ -1,14 +1,24 @@
 /* Style the header with a grey background and some padding */
 html {
   height: 100%;
+  --highlight-color: #00fff7;
+  --mobile-development-color: var(--highlight-color);
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
 }
 
 body {
   color: white;
-  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+  background-image: linear-gradient(336deg, #5d0e90 0%, #4e027b 48%, #3c0462 100%);
   background-attachment: fixed;
   background-size: cover;
   font-family: "Cairo";
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .header {
@@ -16,6 +26,7 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.13);
+  max-height: 7em;
 }
 
 .header-item {
@@ -25,15 +36,26 @@ body {
 
 .menu-item {
   padding: 15px;
-  border-right: 1px solid;
-  border-color: white;
   text-decoration: none;
   color: white;
   transition: background-color 0.2s ease;
 }
 
+.menu-item:not(:nth-child(0)) {
+  border-right: 1px solid;
+  border-color: white;
+}
+
 .menu-item:hover {
   background-color: rgba(0, 0, 0, 0.50);
+}
+
+.logo-container {
+  background-image: url(assets/logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 15em;
+  height: 10em;
 }
 
 .logo-new {
@@ -43,10 +65,7 @@ body {
 }
 
 .logo-symbol {
-  width: 50px; /* Adjust size as needed */
-  height: 50px; /* Adjust size as needed */
-  margin-right: 10px;
-  fill: #3366ff; /* Replace with desired symbol color */
+  width: 10em;
 }
 
 .logo-text {
@@ -70,7 +89,7 @@ body {
 }
 
 .side-margin {
-  margin: 0 10% 0 10%;
+  padding: 0 10% 0 10%;
 }
 
 .full-margin {
@@ -78,7 +97,6 @@ body {
 }
 
 .grid-container {
-  height: 150px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 1em;
@@ -86,18 +104,19 @@ body {
 }
 
 .item {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(0, 0, 0, 0.15);
   padding: 20px;
   border-radius: 20px;
   transition: background-color 0.5s ease;
 }
 
 .item:hover {
-  background-color: rgba(15, 15, 15, 0.3);
+  transition: 0.5s;
+  background-color: rgba(15, 15, 15, 0.75);
 }
 
 .item i {
-  margin-right: 20px;
+  margin-right: 0.5em;
 }
 
 .item h3 {
@@ -124,9 +143,16 @@ body {
   animation: cyber-ethics 8s infinite 2s both;
 }
 
-h1,
-h2 {
-  font-size: 300%;
+h1, h2 {
+  font-size: 250%;
+}
+
+h3, h4 {
+  font-size: 150%;
+}
+
+h5, h6 {
+  font-size: 120%;
 }
 
 @keyframes cyber-ethics {
@@ -465,7 +491,6 @@ h2 {
 .ongoing {
   opacity: 0;
   justify-self: end;
-  align-self: center;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
   animation-name: fully-rotate;
@@ -563,13 +588,13 @@ h2 {
 }
 
 .full-grid-width {
-  grid-column: 1 / 3;
+  grid-column: 1 / -1;
 }
 
 .mobile-development-detail-group {
   display: grid;
   gap: 1em;
-  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  grid-template-columns: repeat(3, minmax(min(300px, 100%), 1fr));
 }
 
 .mobile-development-detail-single:hover {
@@ -577,18 +602,51 @@ h2 {
   transition: 0.5s;
 }
 
+.mobile-development-detail-single:not(:hover) {
+  transform: scale(1.00);
+  transition: 0.5s;
+}
+
 .mobile-development-detail-single:hover > .mobile-development-detail-group {
   opacity: 0.5;
 }
 
-.mobile-development-detail-single:hover > .image-title > i, .mobile-development-detail-single:hover > .image-title {
-  color: violet;
-  transform: scale(1.02);
+.mobile-development-detail-single:hover > .image-title > i, .mobile-development-detail-single:hover > .image-title, .mobile-development-detail-single:hover > .image-title > h3 {
+  color: var(--mobile-development-color);
+  transform: scale(1.07);
+  transition: 0.5s;
+}
+
+.mobile-development-detail-single:hover > .image-title > i {
+  color: var(--mobile-development-color);
+  transform: scale(1.07) rotateX(360deg);
+  transition: 0.5s;
+}
+
+.item:hover > i {
+  color: rgb(255, 7, 226);
+  transform: rotateX(360deg);
+  transition: 0.5s;
+}
+
+.item:hover > h3 {
+  color: rgb(255, 7, 226);
+  transition: 0.5s;
+}
+
+.mobile-development-detail-single:not(:hover) > .image-title > i, .mobile-development-detail-single:hover > .image-title, .mobile-development-detail-single:not(:hover) > .image-title > h3 {
+  color: white;
+  transform: scale(1.00);
   transition: 0.5s;
 }
 
 .mobile-development-detail-single:hover > p > span {
-  color: violet;
+  color: var(--mobile-development-color);
+  transition: 0.5s;
+}
+
+.mobile-development-detail-single:not(:hover) > p > span {
+  color: white;
   transition: 0.5s;
 }
 
@@ -611,3 +669,123 @@ h2 {
   font-size: x-large;
   max-width: 70%;
 }
+
+.mobile-development-platform-group {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 3fr;
+  grid-template-columns: 50fr 50fr 1fr 50fr 50fr;
+  gap: 1em;
+}
+
+.mobile-development-platform-group-item-stretched {
+  grid-column: span 2;
+}
+
+.awesome::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  padding-right: 0.5em;
+}
+
+.pros {
+  justify-self: end;
+}
+
+.pro::before {
+  color: var(--highlight-color);
+  content: "\f0fe";
+}
+
+.cons {
+  justify-self: center;
+}
+
+.con::before {
+  color: violet;
+  content: "\f146";
+}
+
+.center {
+  align-self: center;
+  justify-self: center;
+}
+
+.center-text {
+  text-align: center;
+  text-wrap: balance;
+}
+
+.subtitle {
+  color: var(--highlight-color);
+  opacity: 0.6;
+  padding-left: 0.5em;
+}
+
+.vertical-divider {
+  grid-area: 1 / 3 / -1 / 4;
+  background-color: var(--highlight-color);
+  opacity: 0.5;
+}
+
+#mobile-development-platform-expertise {
+  grid-column: 1 / 3;
+}
+
+.container {
+  height: 600px;
+  width: 100%;
+  top: 60px;
+  display: flex;
+}
+
+.card {
+  display: flex;
+  height: 480px;
+  width: 500px;
+  background-color: #17141d;
+  border-radius: 10px;
+  box-shadow: -1em 0 3rem #000;
+  transition: 0.4s ease-out;
+  position: relative;
+  left: 0px;
+}
+
+.card:not(:first-child) {
+  margin-left: -50px;
+}
+
+.card:hover {
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
+}
+
+.card:hover ~ .card {
+  position: relative;
+  left: 50px;
+  transition: 0.4s ease-out;
+}
+
+.title {
+  color: white;
+  font-weight: 300;
+  position: absolute;
+  left: 20px;
+  top: 15px;
+}
+
+
+/* #mobile-development-ui-ux-design {
+  --mobile-development-color: rgb(245, 74, 176);
+}
+
+#mobile-development-app-security {
+  --mobile-development-color: rgb(209, 110, 255);
+}
+
+#mobile-development-performance-optimization {
+  --mobile-development-color: rgb(251, 159, 47);
+}
+
+#mobile-development-platform-expertise {
+  --mobile-development-color: rgb(244, 10, 112);
+} */
