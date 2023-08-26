@@ -1,0 +1,154 @@
+{
+    "menu_home" : "Naslovna",
+    "menu_shop" : "Prodavnica",
+    "menu_about" : "O nama",
+    "menu_services": "Usluge",
+    "menu_blog" : "Blog",
+    "menu_contact" : "Kontakt",
+    
+    
+    "section-title" : "Više o nama",
+    "section_about_desc_0" : "Pacijenti su uvek na prvom mestu za nas, a i za njih Zdravlje i vaša podrška su naš najvažniji cilj.",
+    "section_about_desc_1" : "Tokom svih ovih godina,stekli smo ne samo zadovoljne pacijente i klijente već i mnogo prijatelja i partnera sa kojima zajedno radimo i trudimo se da uvek unapredjujemo i usavršavamo naše poslovanje.",
+    "section_about_desc_2" : "Naša praksa uvek teži tome visokokvalitetna fizioterapija i usluge rehabilitacije",
+    "section_about_desc_br" : "da ponudi.",
+    "section_about_button_1" : "O nama",
+    "section_about_button_2" : "Kontaktirajte nas sada",
+    
+    
+    "home_reviews_title" : "Mi ćemo vam pomoći!",
+    "home_reviews_quote" : "\"Svaki pokret se dešava u vremenu i ima svrhu.\" - Aristotel",
+    "home_reviews_description" : "Bilo da imate bolove u leđima, probleme sa zglobovima, povrede ili postoperativni tretman - imamo rešenje za vas sa našim konceptom terapije!",
+    "home_reviews_button_1" : "Kontaktirajte nas",
+    "home_reviews_button_2" : "O nama",
+    
+    
+    "content_parallax_title" : "Topla dobrodošlica",
+    "content_parallax_description" : "Ordinacija   za   fizikalnu   medicinu   i   rehabilitaciju  Physiohilfezug  posvećena   je pružanju   stručne   rehabilitacije   kroz   fizikalnu   terapiju,   kineziterapiju   i   masažu   i mnoge druge terapije i programe. Pacijenti su nam uvek na prvom mestu, a njihovo zdravlje nam I pružanje pomoći njima nam je najvažniji cilj.",
+    "content_parallax_subtitle" : "Dobrodošli na naš sajt",
+    "content_parallax_h5" : "Ko smo mi?",
+    "content_parallax_p" : "Ordinacija   za   fizikalnu   medicinu   i   rehabilitaciju  Physiohilfezug  posvećena   je pružanju   stručne   rehabilitacije, naša   ordinacija   se   uvek   zalaze   za   pružanje   visoko   kvalitetnih   usluga   fizikalne terapije i rehabilitacije.",
+    "content_parallax_p_1" : "Ordinacija  Physiohilfezug  koristi   najsavremenije   aparate   za   elektroterapiju, ultrazvucnu   terapiju   itd.   naučno   dokazane   metode   u   rehabilitaciji,   u   prijatnom ambijentu. U okviru naše ordinacije kombinovanim pristupom u lečenju hroničnih i akutnih stanja i sportskih povreda primenjujemo najsavremenije fizikalne procedure sa aparaturom renomiranih proizvođača.",
+    "content_parallax_h5_quality": "Kvalitet usluge",
+    "content_parallax_p_quality": "Svojim   kvalitetom   i   stručnošću,   naš   tim   će   doprineti   vašem   brzom   oporavku, održavanju ili poboljšanju kvaliteta života. Opremljeni  aparatima na polju fizikalne medicine, kao i znanjem na polju kineziterapije omogućićemo vam slobodu pokreta, bez ograničenja i bola.",
+    
+    "content_parallax_h5_focus": "Fokus",
+    "content_parallax_p_focus": "Nas fokus je rehabilitacija sa naucno dokazanim metodama kao i kontinuirano obrazovanje   nasih   fizioterapeuta   kako   bi   koristili   najsavremenije   tehnike rehabilitacije dostupne za sve vrste povreda i stanja.",
+    "content_parallax_p_focus_1": "Terapiju   zasnivamo   na   individualnom   pristupu   svakom   pacijentu,   u   odnosu   na dijagnozu, kliničku sliku, želje i potrebe pojedinca, kako bi se obezbedio najbolji terapijski ishod. U okviru naših usluga izdvajamo rehabilitaciju povreda, rad sa sportistima, rad sa decom, lečenje bola u leđima i različite vrste masaža itd.",
+    "content_parallax_h5_mission": "Nasa misija",
+    "content_parallax_p_mission": "Naša  misija  je  da u  prijatnoj  atmosferi, udovoljimo  i potrebama  najzahtevnijih pacijenata   poštujući   principe   dobre   kliničke   prakse.   Dugogodišnje   iskustvo, neprestano usavršavanje i posvećen rad   po kojima se izdvajamo od drugih, su doprineli visokoj reputaciji naše ordinacije kako u zemlji tako i u inostranstvu.",
+    
+    
+    
+    "logo_footer_desc": "To da se napravi knjiga primeraka tipa. Preživeo je ne samo pet vekova.",
+    "logo_footer_menu_map": "MAPA SAJTA",
+    "logo_footer_menu_home": "Početna stranica",
+    "logo_footer_menu_about": "O nama",
+    "logo_footer_menu_blog": "Blog",
+    "logo_footer_menu_contact": "Kontakt",
+    
+    "footer_services_title" : "USLUGE", 
+     
+    "footer_cyriax" : "Cyriax Terapija", 
+    "footer_electro" : "Elektroterapija", 
+    "footer_thermo" : "Termoterapija", 
+    "footer_cryo" : "Krioterapija", 
+    "footer_rehabilitation" : "Rehabilitacija",
+    
+    "footer_massage_therapie" : "Masaža terapija",
+    "footer_sportphysiotherapie" : "Sportska fizioterapija",
+    "footer_ultraschalltherapie" : "Ultrazvučna terapija",
+    "footer_kinesio_taping" : "Kinesio-taping",
+    "footer_manuelle_therapie" : "Manualna terapija",
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    "copyright" : "Sva prava zadržana.",
+    "copyright_p" : "Pokreće ga:",
+    
+    
+    
+    "home_hero_cta1" : "POZOVITE ODMAH!",
+    
+    
+    "home_hero_subtitle" : "Podnaslov",
+    "home_hero_title" : "Veliki naslov sa tekstom i opisom",
+    "home_hero_cta1" : "POZOVITE ODMAH",
+    "home_hero_cta2" : "Pozovite Nas",
+    "home_service1" : "Najpovoljniji Keš Krediti",
+    "home_service2" : "Naša usluga je potpuno besplatna",
+    "home_service3" : "Podrška 24/7",
+    "home_service4" : "Refinansiraj i smanji ratu",
+    "home_service5" : "Stambeni kredit po vašoj meri",
+    "home_service6" : "Pronalazimo najpovoljniju ponudu",
+    "highlight_first_title" : "Potpuno besplatna usluga",
+    "highlight_first_description" : "Opis prvog highlighta. Opis prvog highlighta. Opis prvog highlighta. Opis prvog highlighta. Opis prvog highlighta. Opis prvog highlighta. Opis prvog highlighta.",
+    "highlight_second_title" : "Pružamo podršku 24/7",
+    "highlight_second_description" : "Opis drugog highlighta. Opis drugog highlighta. Opis drugog highlighta. Opis drugog highlighta. Opis drugog highlighta. Opis drugog highlighta. Opis drugog highlighta.",
+    "highlight_second_title" : "Najpovoljnija ponuda za vas",
+    "highlight_second_description" : "Opis trećeg highlighta. Opis trećeg highlighta. Opis trećeg highlighta. Opis trećeg highlighta. Opis trećeg highlighta. Opis trećeg highlighta. Opis trećeg highlighta.",
+    "home_about_subtitle": "Više o nama",
+    "home_about_title": "Naziv naše firme",
+    "home_about_p1" : "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    "home_about_p2" : "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    "home_about_p3" : "",
+    "home_about_cta" : "Više o nama",
+    "homeblog-title" : "Title - srp",
+    "home_blog_title" : "Najnovije vesti",
+    "home_blog_subtitle" : "Pročitajte najnovije tekstove sa našeg blog-a",
+    "home_blog_cta" : "Sve vesti",
+    "SAJT JE U FAZI IZRADE" : "srpski - SAJT JE U FAZI IZRADE",
+    
+    "contact_style1_title" : "Kontakt info",
+    "contact_title" : "Kontaktirajte nas",
+    "contact_name" : "Ima i prezime",
+    "contact_email" : "E-mail",
+    "contact_phone" : "Broj telefona",
+    "contact_subject" : "Naslov poruke",
+    "contact_message" : "Tekst poruke",
+    "contact_privacy1" : "Ovim izjavljujem da prihvatam",
+    "contact_privacy2" : "Politiku privantosti",
+    "contact_privacy3" : "i",
+    "contact_privacy4" : "Uslove korišćenja",
+    "contact_privacy5" : "ove platforme kao i da sam saglasan sa tim da moji podaci mogu biti skladišteni i korišćeni u svrhu internet marketinga",
+    "contact_cta" : "Pošalji",
+    "contact_other_email" : "E-mail",
+    "contact_other_phone" : "Kontakt telefon",
+    "contact_other_address" : "Adresa sedišta",
+    
+    "blog_read_more" : "Pročitaj više",
+    "blog_sidebar_categories" : "Kategorije vesti",
+    "blog_sidebar_posts" : "Najnovije vesti",
+    
+    
+    "services_title" : "Usluge koje pružamo",
+    "services_subtitle" : "SRP Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, molestias?.",
+    "services_sidebar_title1" : "Sve usluge",
+    "services_sidebar_title2" : "Kontakt",
+    
+    "shop_sidebar_categories" : "Kategorije",
+    "shop_sidebar_top_categories" : "Prikaži glavne kategorije",
+    "shop_sidebar_tags" : "Tagovi",
+    "shop_sidebar_order_title" : "Sortiraj prema",
+    "shop_sidebar_order_date" : "Datumu",
+    "shop_sidebar_order_name" : "Nazivu",
+    "shop_sidebar_order_price" : "Ceni",
+    "shop_sidebar_topproducts_title" : "Top proizvodi",
+    "shop_sidebar_topproducts_noproducts" : "Nema proizvoda",
+    "shop_sidebar_follow_title" : "Zapratite nas",
+    "shop_breadcrumb_home" : "Naslovna",
+    "shop_sidebar_discount" : "AKCIJA",
+     
+    "thankyou_title" : "Hvala Vam na porudžbini!",
+    "thankyou_subtitle" : "Uspešno ste kompletirali porudžbinu",
+    "thankyou_paragraph1" : "Uskoro ćete dobiti email sa detaljima Vaše porudžbine.",
+    "thankyou_paragraph2" : "Ukoliko imate dodatna pitanja, kontaktirajte nas na email"
+    
+    }

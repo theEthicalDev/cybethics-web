@@ -1,0 +1,113 @@
+{
+    "menu_home" : "Homepage",
+    "menu_shop" : "Shop",
+    "menu_about" : "About",
+    "menu_services": "Services",
+    "menu_blog" : "Blog",
+    "menu_contact" : "Contact",
+    
+    
+    
+    "section-title" : "More about us",
+    "section_about_desc_0" : "Patients always come first for us, and for them, too, Health and your support are our most important goals.",
+    "section_about_desc_1" : "During all these years, we have acquired not only satisfied patients and clients, but also many friends and partners with whom we work together and strive to always improve and improve our business.",
+    "section_about_desc_2" : "Our practice always strives for high-quality physiotherapy and rehabilitation services",
+    "section_about_desc_br" : "to offer.",
+    "section_about_button_1" : "About us",
+    "section_about_button_2" : "Contact us now",
+    
+    
+    "home_reviews_title" : "A warm welcome",
+    "home_reviews_description" : "To make a book of specimens of the type. It survived not only five centuries, but also the leap into electronic assembly.",
+    "home_reviews_button_1" : "Contact us",
+    "home_reviews_button_2" : "About us",
+    
+    
+    "content_parallax_title" : "A warm welcome",
+    "content_parallax_description" : "Physiohilfezug physical medicine and rehabilitation practice is dedicated to providing professional rehabilitation through physical therapy, kinesitherapy and massage and many other therapies and programs. Patients are always our first priority, and their health and providing assistance to them is our most important goal.",
+    "content_parallax_subtitle" : "Welcome to our site",
+    "content_parallax_h5" : "Who are we?",
+    "content_parallax_p" : "The office for physical medicine and rehabilitation Physiohilfezug is dedicated to providing professional rehabilitation, our office always strives to provide high-quality physical therapy and rehabilitation services.",
+    "content_parallax_p_1" : "The Physiohilfezug office uses the most modern devices for electrotherapy, ultrasound therapy, etc. scientifically proven methods in rehabilitation, in a pleasant environment. Within our practice, we apply the most modern physical procedures with the equipment of renowned manufacturers with a combined approach in the treatment of chronic and acute conditions and sports injuries.",
+    "content_parallax_h5_quality": "Quality of service",
+    "content_parallax_p_quality": "With its quality and expertise, our team will contribute to your quick recovery, maintenance or improvement of your quality of life. Equipped with apparatus in the field of physical medicine, as well as knowledge in the field of kinesitherapy, we will provide you with freedom of movement, without limitations and pain.",
+    
+    "content_parallax_h5_focus": "Focus",
+    "content_parallax_p_focus": "Our focus is rehabilitation with scientifically proven methods as well as continuous education of our physiotherapists to use the most modern rehabilitation techniques available for all types of injuries and conditions.",
+    "content_parallax_p_focus_1": "We base our therapy on an individual approach to each patient, in relation to the diagnosis, clinical picture, wishes and needs of the individual, in order to ensure the best therapeutic outcome. Our services include rehabilitation of injuries, work with athletes, work with children, treatment of back pain and various types of massages, etc.",
+    "content_parallax_h5_mission": "Our mission",
+    "content_parallax_p_mission": "Our mission is to meet the needs of the most demanding patients in a pleasant atmosphere, respecting the principles of good clinical practice. Many years of experience, continuous improvement and dedicated work, which distinguish us from others, have contributed to the high reputation of our office both in the country and abroad.",
+    
+    
+    "logo_footer_desc": "To make a book of type specimens. He survived not only five centuries.",
+    "logo_footer_menu_map": "SITE MAP",
+    "logo_footer_menu_home": "Home page",
+    "logo_footer_menu_about": "About us",
+    "logo_footer_menu_blog": "Blog",
+    "logo_footer_menu_contact": "Contact",
+    
+    "footer_services_title" : "SERVICES", 
+     
+    "footer_cyriax" : "Cyriax Therapy", 
+    "footer_electro" : "Electrotherapy", 
+    "footer_thermo" : "Thermotherapy", 
+    "footer_cryo" : "Cryotherapy", 
+    "footer_rehabilitation" : "Rehabilitation",
+    
+    "footer_massage_therapie" : "Massage therapy",
+    "footer_sportphysiotherapie" : "Sports physiotherapy",
+    "footer_ultraschalltherapie" : "Ultrasound therapy",
+    "footer_kinesio_taping" : "Kinesio taping",
+    "footer_manuelle_therapie" : "Manual therapy",
+    
+    
+    "copyright" : "All rights reserved.",
+    "copyright_p" : "powered by:",
+    
+
+    "home_hero_cta1" : "CALL US NOW!",
+    "home_hero_cta2" : "Call us",
+    
+    "home_about_subtitle": "Više o nama",
+    "home_about_title": "Naziv naše firme",
+    "home_about_p": "Ovo je novi pargraf",
+    "home_about_p1" : "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    "home_about_p2" : "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    "home_about_p3" : "",
+    "home_about_cta" : "Više o nama",
+    "home_reviews_title" : "Naši klijenti o nama",
+    "home_reviews_subtitle" : "Pročitajte utiske naših klijenata",
+    "homeblog-title" : "Title - srp",
+    "home_blog_title" : "Latest news",
+    "home_blog_subtitle" : "Read the latest news from our blog",
+    "home_blog_cta" : "All news",
+    "SAJT JE U FAZI IZRADE" : "srpski - SAJT JE U FAZI IZRADE",
+    
+    "contact_style1_title" : "Contact info",
+    "contact_title" : "Contact us",
+    "contact_name" : "First name and last name",
+    "contact_email" : "E-mail",
+    "contact_phone" : "Telephone number",
+    "contact_subject" : "Subject",
+    "contact_message" : "Message",
+    "contact_privacy1" : "Ovim izjavljujem da prihvatam",
+    "contact_privacy2" : "Politiku privantosti",
+    "contact_privacy3" : "i",
+    "contact_privacy4" : "Uslove korišćenja",
+    "contact_privacy5" : "ove platforme kao i da sam saglasan sa tim da moji podaci mogu biti skladišteni i korišćeni u svrhu internet marketinga",
+    "contact_cta" : "Send",
+    "contact_other_email" : "E-mail",
+    "contact_other_phone" : "Contact number",
+    "contact_other_address" : "Address",
+    
+    "blog_read_more" : "Read more",
+    "blog_sidebar_categories" : "News category",
+    "blog_sidebar_posts" : "LAtest news",
+    
+    
+    "services_title" : "Services we provide",
+    "services_subtitle" : "ENG Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, molestias?.",
+    "services_sidebar_title1" : "All services",
+    "services_sidebar_title2" : "Contact"
+    
+    }

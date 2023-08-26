@@ -1,0 +1,128 @@
+{
+    "menu_home" : "Startseite ",
+    "menu_shop" : "Geschäft",
+    "menu_about" : "Über uns",
+    "menu_services": "Dienstleistungen",
+    "menu_blog" : "Bloggen",
+    "menu_contact" : "Kontakt",
+    
+    
+    "section-title" : "Mehr über uns",
+    "section_about_desc_0" : "Die Patienten stehen für uns immer im Zentrum und ihre Gesundheit zu fördern ist unser wichtigstes Ziel.",
+    "section_about_desc_1" : "In all diesen Jahren haben wir neben zufriedenen Kunden, viele Freunde und Partner gewonnen, mit denen wir zusammenarbeiten und unser Geschäft laufend optimieren.",
+    "section_about_desc_2" : "Unsere Praxis ist stets bestrebt, qualitativ hochwertige physiotherapeutische und rehabilitative Leistungen zu erbringen.",
+    "section_about_desc_br" : "anbieten.",
+    "section_about_button_1" : "Über uns",
+    "section_about_button_2" : "Kontaktieren Sie uns jetzt",
+    
+    
+    "home_reviews_title" : "Wir werden Ihnen helfen!",
+    "home_reviews_description" : "Ob Sie Rückenschmerzen, Gelenkprobleme, Verletzungen oder Nachbehandlungen von Operation haben-Wir haben mit unserem Therapiekonzept die Lösung für Sie!",
+    "home_reviews_button_1" : "Kontaktieren Sie uns",
+    "home_reviews_button_2" : "Über uns",
+    "quotes_title": "",
+    
+    
+    
+    "content_parallax_title" : "Herzlich Willkommen",
+    "content_parallax_description" : "Die Praxis Physiohilfezug widmet sich der professionellen Rehabilitation durch Physiotherapie, Bewegungstherapie, Massagen sowie vielen weiteren Therapieformen. Patienten stehen für uns immer im Zentrum und ihre Gesundheit zu fördern ist unser wichtigstes Ziel.",
+    "content_parallax_subtitle" : "Willkommen auf unserer Webseite",
+    "content_parallax_h5" : "Wer sind wir?",
+    "content_parallax_p" : "Physiohilfezug widmet sich der professionellen Rehabilitation und ist stets bestrebt, hochwertige Therapieformen anzubieten.",
+    "content_parallax_p_1" : "Bei der Physiohilfezug kommen modernste Geräte unter wissenschaftlich erprobten Methoden für die entsprechenden Therapieformen in einer angenehmen Atmosphäre zum Einsatz. Dabei wenden wir modernste Verfahren mit Geräten von namhaften Herstellern in der Behandlung von chronischen und akuten Erkrankungen an.",
+    "content_parallax_h5_quality": "Servicequalität",
+    "content_parallax_p_quality": "Unser Team trägt mit seiner Qualität und Expertise zu Ihrer Genesung, Erhaltung oder Verbesserung Ihrer Lebensqualität bei. Ausgestattet mit Geräten aus der Physiotherapie sowie Kenntnissen der Bewegungstherapie vermitteln wir Ihnen Bewegungsfreiheit ohne Einschränkungen und Schmerzen.",
+    
+    "content_parallax_h5_focus": "Fokus",
+    "content_parallax_p_focus": "Unser Fokus liegt auf der Rehabilitation mit wissenschaftlich erprobten Methoden sowie der kontinuierlichen Weiterbildung unserer Physiotherapeuten, um die modernsten verfügbaren Rehabilitationstechniken für alle Arten von Verletzungen und Erkrankungen anzuwenden.",
+    "content_parallax_p_focus_1": "Unsere Therapie wird in Bezug auf die Diagnose, das Krankheitsbild oder Wünsche auf jeden Einzelnen individuell zugeschnitten, damit wir das beste Ergebnis gewährleisten können. Unsere  Dienstleistungen umfassen die Rehabilitation von Verletzungen, die Arbeit mit Sportlern und Kindern, die Behandlung von Rückenschmerzen sowie verschiedene Massagearten.",
+    "content_parallax_h5_mission": "Unsere Aufgabe",
+    "content_parallax_p_mission": "Unsere Mission besteht darin, Bedürfnisse der anspruchsvollsten Patienten in einer angenehmen Atmosphäre zu befriedigen. Langjährige Erfahrung, eine kontinuierliche Verbesserung unserer Dienstleistungen und engagierte Arbeit haben zu einer guten Reputation unserer Praxis im In- und Ausland beigetragen.",
+    
+    
+    "logo_footer_desc": "Um ein Buch mit Typusexemplaren zu erstellen. Er überlebte nicht nur fünf Jahrhunderte.",
+    "logo_footer_menu_map": "SEITENVERZEICHNIS",
+    "logo_footer_menu_home": "Startseite",
+    "logo_footer_menu_about": "Über uns",
+    "logo_footer_menu_blog": "Bloggen",
+    "logo_footer_menu_contact": "Kontakt",
+    
+    "footer_services_title" : "DIENSTLEISTUNGEN", 
+     
+    "footer_cyriax" : "Cyriax-Therapie", 
+    "footer_electro" : "Elektrotherapie", 
+    "footer_thermo" : "Thermotherapie", 
+    "footer_cryo" : "Kryotherapie", 
+    "footer_rehabilitation" : "Rehabilitation",
+    
+    "footer_massage_therapie" : "Massage Therapie",
+    "footer_sportphysiotherapie" : "Sportphysiotherapie",
+    "footer_ultraschalltherapie" : "Ultraschalltherapie",
+    "footer_kinesio_taping" : "Kinesio-taping",
+    "footer_manuelle_therapie" : "Manuelle Therapie",
+    
+    
+    
+    
+    
+    
+    "copyright" : "Alle Rechte vorbehalten.",
+    "copyright_p" : "unterstützt von:",
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    "home_hero_cta1" : "Schreiben Sie uns",
+    "home_hero_cta2" : "Rufen Sie uns an",
+    
+    "home_about_subtitle": "Untertitel",
+    "home_about_title": "Der Name unseres Unternehmens",
+    "home_about_p": "Dies ist ein neuer Absatz",
+    "home_about_p1" : "Es wurde in den 1960er Jahren mit der Veröffentlichung von Letraset-Blättern mit Passagen von Lorem Ipsum und in jüngerer Zeit mit Desktop-Publishing-Software wie Aldus PageMaker, einschließlich Versionen von Lorem Ipsum, populär.",
+    "home_about_p2" : "Es wurde in den 1960er Jahren mit der Veröffentlichung von Letraset-Blättern mit Passagen von Lorem Ipsum und in jüngerer Zeit mit Desktop-Publishing-Software wie Aldus PageMaker, einschließlich Versionen von Lorem Ipsum, populär.",
+    "home_about_p3" : "",
+    "home_about_cta" : "Mehr über uns",
+    
+    
+    "homeblog-title" : "Titel - de",
+    "home_blog_title" : "Neuesten Nachrichten",
+    "home_blog_subtitle" : "Lesen Sie die neuesten Nachrichten aus unserem Blog",
+    "home_blog_cta" : "Alle Nachrichten",
+    "SAJT JE U FAZI IZRADE" : "German - DIE WEBSITE IST IM AUFBAU",
+    
+    "contact_style1_title" : "Kontaktinformation",
+    "contact_title" : "Kontaktiere uns",
+    "contact_name" : "Vorname und Nachname",
+    "contact_email" : "E-mail",
+    "contact_phone" : "Telefonnummer",
+    "contact_subject" : "Thema",
+    "contact_message" : "Nachricht",
+    "contact_privacy1" : "Hiermit erkläre ich mich einverstanden",
+    "contact_privacy2" : "Datenschutz-Bestimmungen",
+    "contact_privacy3" : "i",
+    "contact_privacy4" : "Nutzungsbedingungen",
+    "contact_privacy5" : "dieser Plattform und dass ich damit einverstanden bin, dass meine Daten gespeichert und zum Zwecke des Internetmarketings verwendet werden",
+    "contact_cta" : "Senden",
+    "contact_other_email" : "E-mail",
+    "contact_other_phone" : "Kontakt Nummer",
+    "contact_other_address" : "Adresse",
+    
+    "blog_read_more" : "Weiterlesen",
+    "blog_sidebar_categories" : "Kategorie Nachrichten",
+    "blog_sidebar_posts" : "Neuesten Nachrichten",
+    
+
+    "services_title" : "Dienstleistungen, die wir anbieten",
+    "services_subtitle" : "ENG Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, molestias?.",
+    "services_sidebar_title1" : "Alle Dienstleistungen",
+    "services_sidebar_title2" : "Kontakt"
+    
+    
+    
+    }

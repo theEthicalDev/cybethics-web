@@ -1,0 +1,1 @@
+<h2>samo napred i bez odustajanja</h2><?php /**PATH /home/physiohilfezug/public_html/resources/views/pages/random.blade.php ENDPATH**/ ?>
