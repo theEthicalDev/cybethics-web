@@ -12,20 +12,22 @@ camera.position.set(0, 10, dynamicCameraPoint(innerWidth));
 let renderer = new THREE.WebGLRenderer();
 renderer.setSize(innerWidth, innerHeight);
 const canvasContainer = document.getElementById("canvas-container");
-const textNode1 = createTextNode("Humanity consists of individual units", "part1 visible-large-screen-only");
+const textNode1 = createTextNode("Tailored Software Solutions Built With Purpose", "fade-in-short-short-delay visible-large-screen-only");
 canvasContainer.appendChild(textNode1);
-const textNode2 = createTextNode("Every unit can have an impact on the future", "part1_2 visible-large-screen-only");
+const textNode2 = createTextNode("Empower Your Vision And Elevate Humanity", "fade-in-short-short-delay visible-large-screen-only");
 canvasContainer.appendChild(textNode2);
-const textNode3 = createTextNode("Strive for positive impacts!", "part2 visible-large-screen-only");
-canvasContainer.appendChild(textNode3);
-const cybethicsLogo = document.createElement("div");
-cybethicsLogo.classList = "canvas-logo part2_2 visible-large-screen-only";
-canvasContainer.appendChild(cybethicsLogo);
+// const textNode2 = createTextNode("Every unit can have an impact on the future", "part1_2 visible-large-screen-only");
+// canvasContainer.appendChild(textNode2);
+// const textNode3 = createTextNode("Strive for positive impacts!", "part2 visible-large-screen-only");
+// canvasContainer.appendChild(textNode3);
+// const cybethicsLogo = document.createElement("div");
+// cybethicsLogo.classList = "canvas-logo part2_2 visible-large-screen-only";
+// canvasContainer.appendChild(cybethicsLogo);
 canvasContainer.appendChild(renderer.domElement);
 
 let controls = new OrbitControls(camera, renderer.domElement);
 controls.enableZoom = false;
-controls.enableRotate = false;
+controls.enableRotate = true;
 controls.enablePan = false;
 
 let gu = {

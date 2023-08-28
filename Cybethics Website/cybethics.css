@@ -13,7 +13,7 @@ html {
 
 body {
   color: white;
-  background-image: linear-gradient(336deg, #0e56e8 0%, #0876db 48%, #036597 100%);
+  background-image: linear-gradient(-180deg, #e605ff 0%, #9d1dcb 30%, #321575 100%);
   background-attachment: fixed;
   background-size: cover;
   font-family: "Cairo";
@@ -615,7 +615,7 @@ h6 {
 }
 
 .fade-in-short-short-delay {
-  animation: fade-in 1s normal 0.5s both;
+  animation: fade-in 1s normal 0.7s both;
 }
 
 @keyframes fade-in {
@@ -855,28 +855,37 @@ h6 {
   background-color: #000000;
   display: grid;
   grid-template-columns: 50% 50%;
+  grid-template-rows: repeat(2, 1fr);
   max-height: 80%;
 }
 
 .canvas-text {
   font-family: "Cairo";
-  font-size: 5em;
   text-wrap: balance;
-  grid-area: 1 / 1 / 1 / 2;
-  color: white;
-  align-self: center;
-  animation-duration: 4s;
-  animation-fill-mode: forwards;
-  animation-name: fade-in-out;
-  animation-timing-function: ease;
-  opacity: 0;
+}
+
+.canvas-text:first-child {
+  grid-area: 1 / 1 / 2 / 2;
+  align-self: self-end;
+  justify-self: end;
+  color: #d475ff;
+  font-size: 4.2em;
+  margin-bottom: 0;
+}
+
+.canvas-text:nth-child(2) {
+  grid-area: 2 / 1 / 3 / 2;
+  word-break: break-word;
+  font-size: 3.5em;
+  text-wrap: balance;
+  color: #a047e0;
 }
 
 canvas {
   max-width: 100%;
   max-height: 60vh;
   object-fit: cover;
-  grid-area: 1 / 2 / 1 / 3;
+  grid-area: 1 / 2 / 3 / 3;
 }
 
 .canvas-logo {
@@ -902,7 +911,7 @@ li::marker {
   content: "\f101";
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
-  color: #00e5ff;
+  color: var(--highlight-color-two);
   padding: 3em;
 }
 
@@ -921,10 +930,17 @@ li {
 }
 
 .cyber-ethical-solutions {
-  display: flex;
-  grid-template: 1fr 2fr / repeat(3, 1fr);
+  display: grid;
+  grid-template: 5fr 1fr / 1fr 50fr 50fr 1fr;
   gap: 1em;
-  max-height: 50vh;
+  height: 50vh;
+}
+
+.cyber-ethical-solutions.continued {
+  grid-template: 5fr 1fr / 100fr 1fr 1fr 100fr;
+  gap: 0;
+  justify-items: center;
+  transition: all 3s;
 }
 
 .cyber-ethical-solutions-item-container {
@@ -933,9 +949,30 @@ li {
   width: 100%;
 }
 
+.cyber-ethical-solutions-item-container:nth-child(1) {
+  grid-column: 2 / 3;
+}
+
+.cyber-ethical-solutions-item-container:nth-child(2) {
+  grid-column: 3 / 4;
+}
+
 .cyber-ethical-solutions-item-title {
   font-size: 4em;
   justify-self: center;
+}
+
+.cyber-ethical-solutions-item-title.continued {
+  font-family: 'Solaris';
+  transition: font 1.5s ease-in-out;
+}
+
+.cyber-ethical-solutions-item-container.continued {
+  width: max-content;
+}
+
+.cyber-ethical-solutions-item-long.continued {
+  display: none;
 }
 
 .cyber-ethical-solutions:hover>* span {
@@ -968,28 +1005,32 @@ li {
   color: #c7c7c7;
 }
 
+.cyber-ethical-solutions-item-short.continued>i {
+  display: none;
+}
+
 .cyber-ethical-solutions-item-long {
   transform: rotateY(90deg);
 }
 
-.cyber-ethical-solutions-item-container:hover>.cyber-ethical-solutions-item-long {
+.cyber-ethical-solutions-item-container:hover:not(.continued) .cyber-ethical-solutions-item-long {
   visibility: none;
   transform: rotateY(0deg);
   transition: 0.3s 0.3s;
 }
 
-.cyber-ethical-solutions-item-container:hover>.cyber-ethical-solutions-item-short {
+.cyber-ethical-solutions-item-container:hover:not(.continued) .cyber-ethical-solutions-item-short {
   transform: rotateY(90deg);
   transition: 0.3s;
 }
 
-.cyber-ethical-solutions-item-container:not(:hover)>.cyber-ethical-solutions-item-long {
+.cyber-ethical-solutions-item-container:not(:hover):not(.continued) .cyber-ethical-solutions-item-long {
   visibility: none;
   transform: rotateY(90deg);
   transition: 0.3s;
 }
 
-.cyber-ethical-solutions-item-container:not(:hover)>.cyber-ethical-solutions-item-short {
+.cyber-ethical-solutions-item-container:not(:hover):not(.continued) .cyber-ethical-solutions-item-short {
   transform: rotateY(0deg);
   transition: 0.3s 0.3s;
 }
@@ -1298,7 +1339,7 @@ li {
 
 .card-header {
   grid-row: 1 / 2;
-  background-color: rgb(22 105 172);
+  background-color: black;
   padding: 1.5em;
 }
 
@@ -1376,12 +1417,14 @@ li {
 
 #goal-center {
   grid-area: center;
+  display: grid;
 }
 
 #goal-center img {
-  width: 100%;
+  max-width: 60%;
+  justify-self: center;
+  align-self: center;
 }
-
 
 /* Test Bitcoin */
 .hero {
@@ -1411,4 +1454,116 @@ li {
 .bre {
   height: 100%;
   width: 100%;
+}
+
+.wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cyber-ethical-solutions-button {
+  min-width: 20%;
+  min-height: 60px;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  background: linear-gradient(90deg, rgb(180 0 245) 0%, rgb(138 6 224) 100%);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px rgb(26 14 42 / 64%);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+  color: rgb(216, 216, 216);
+}
+
+button::before {
+  content: '';
+  border-radius: 1000px;
+  min-width: calc(100% + 12px);
+  min-height: calc(100% + 12px);
+  border: 6px solid var(--highlight-color-two);
+  box-shadow: 0 0 60px var(--highlight-color-two);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
+}
+
+.cyber-ethical-solutions-button:hover,
+.cyber-ethical-solutions-button:focus {
+  color: #ffffff;
+  font-weight: bolder;
+  transform: translateY(-6px);
+}
+
+button:hover::before,
+button:focus::before {
+  opacity: 1;
+}
+
+button::after {
+  content: '';
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  border: 6px solid var(--highlight-color-two);
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 5s forwards infinite;
+}
+
+button:hover::after,
+button:focus::after {
+  animation: none;
+  display: none;
+}
+
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+
+  20%, 100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
+
+.cyber-ethical-solutions-item.continued {
+  animation: cybethics-continue 1.5s forwards;
+}
+
+.continued {
+  /* transition: 3s ease-in-out; */
+}
+
+@keyframes cybethics-continue {
+  from {
+    background-color: rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    border-radius: var(--spacing-l);
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0);
+    padding: 0;
+    border-radius: var(--spacing-l);
+  }
+}
+
+@font-face {
+  font-family: Solaris;
+  src: url("assets/Solaris.otf") format("opentype");
 }
