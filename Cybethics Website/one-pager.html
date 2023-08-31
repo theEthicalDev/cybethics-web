@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="cybethics.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cairo">
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
   <script src="https://kit.fontawesome.com/3cb905f540.js" crossorigin="anonymous"></script>
   <script src="planet.js" type="module"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>
@@ -116,7 +117,98 @@
           against common security vulnerabilities.
         </p>
       </div>
-      <div class="mobile-development-detail-single item full-grid-width">
+      <div class="mobile-development-detail-single item">
+        <div class="image-title">
+          <i class="fa-solid fa-mobile fa-xl"></i>
+          <h3>Native</h3>
+        </div>
+        <p>Highlight your proficiency in developing mobile applications for <span>iOS and Android</span> platforms.
+          Mention your
+          experience with specific versions of <span>iOS and Android</span>, as well as any additional platforms you
+          may support.
+        </p>
+        <div class="mobile-development-platform-group">
+          <div class="image-title center">
+            <i class="fa-brands fa-swift fa-2xl"></i>
+            <h3>Swift</h3>
+            <p class="subtitle">(iOS)</p>
+          </div>
+          <div class="image-title center">
+            <i class="fa-brands fa-android fa-2xl"></i>
+            <h3>Android SDK</h3>
+            <p class="subtitle">(Android)</p>
+          </div>
+          <p class="mobile-development-platform-group-item-stretched center center-text">Advantages and disadvantages of
+            native app programming:</p>
+          <div class="pros">
+            <p class="awesome pro">Better app performance</p>
+            <p class="awesome pro">Native user experience</p>
+            <p class="awesome pro">More access to device features</p>
+            <p class="awesome pro">OS change flexibility</p>
+          </div>
+          <div class="cons">
+            <p class="awesome con">Development time and cost</p>
+            <p class="awesome con">Maintenance cost</p>
+          </div>
+        </div>
+      </div>
+      <img src="assets/mobile-apps.png"></img>
+      <div class="mobile-development-detail-single item">
+        <div class="image-title">
+          <i class="fa-solid fa-mobile fa-xl"></i>
+          <h3>Cross-Platform</h3>
+        </div>
+        <div class="mobile-development-platform-group">
+          <div class="image-title center mobile-development-platform-group-item-stretched">
+            <i class="fa-solid fa-angles-left fa-2xl"></i>
+            <h3>Flutter</h3>
+          </div>
+          <p class="mobile-development-platform-group-item-stretched center center-text">With cross-platform
+            development technologies like Flutter apps can be developed for multiple platforms in one go</p>
+          <div class="pros">
+            <p class="awesome pro">Faster development</p>
+            <p class="awesome pro">Maintenance deployed on all platforms</p>
+            <p class="awesome pro">Single codebase</p>
+          </div>
+          <div class="cons">
+            <p class="awesome con">Performance limitations</p>
+            <p class="awesome con">Limited platform-specific features</p>
+            <p class="awesome con">Difficulties on operating system updates</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="mobile-development-detail-single item" id="mobile-development-app-security">
+        <div class="image-title">
+          <i class="fa-solid fa-shield-halved fa-xl"></i>
+          <h3>Native</h3>
+          <p class="subtitle">(iOS and Android)</p>
+        </div>
+        <p>While Android can be developed using Android SDK with Java or Kotlin, iOS apps can be developed with Apple's programming language Swift
+        </p>
+        <div class="pros">
+          <p class="awesome pro">Better app performance</p>
+          <p class="awesome pro">Native user experience</p>
+          <p class="awesome pro">More access to device features</p>
+          <p class="awesome pro">Flexibility on operating system updates</p>
+        </div>
+        <div class="cons">
+          <p class="awesome con">Development time and cost</p>
+          <p class="awesome con">Maintenance cost</p>
+        </div>
+        <div class="pros">
+          <p class="awesome pro">Faster development</p>
+          <p class="awesome pro">Maintenance deployed on all platforms</p>
+          <p class="awesome pro">Single codebase</p>
+        </div>
+        <div class="cons">
+          <p class="awesome con">Performance limitations</p>
+          <p class="awesome con">Limited platform-specific features</p>
+          <p class="awesome con">Difficulties on operating system updates</p>
+        </div>
+      </div> -->
+    <!-- <div class="mobile-development-detail-single item full-grid-width">
         <div class="image-title">
           <i class="fa-solid fa-mobile fa-xl"></i>
           <h3>Platform Expertise</h3>
@@ -170,12 +262,12 @@
           </div>
           <img class="vertical-divider" src="assets/mobile-apps.png"></img>
         </div>
-      </div>
-    </div>
+      </div> -->
+  </div>
   </div>
   <div class="background-dark bottom-space fade-in-short-short-delay">
     <div class="side-margin">
-      <div class="grid-container unsdg-container">
+      <div class="grid-container">
         <div class="">
           <h2>DevOps</h2>
           <p>Our DevOps experts streamline your software development and deployment processes, enabling faster and more
@@ -183,12 +275,36 @@
             tools
             like Kubernetes, ensuring scalability, portability, and ease of management.</p>
         </div>
+        <div id="devops-grid-item">
+          <div class="boxes">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box">
+              <div class="progress">
+                <div class="bar">
+                  <div class="bar__fill" style="width: 33%;"></div>
+                </div>
+                <div class="point point--complete">
+                  <div class="bullet"></div><label class="label">Build</label>
+                </div>
+                <div class="point point--active">
+                  <div class="bullet"></div><label class="label">Test</label>
+                </div>
+                <div class="point">
+                  <div class="bullet"></div><label class="label">Release</label>
+                </div>
+                <div class="point">
+                  <div class="bullet"></div><label class="label">Deploy</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="">
           <h2>Severless Functions</h2>
           <p>Experience the benefits of serverless computing with our serverless functions development services. We
-            design
-            and
-            build serverless architectures using platforms like AWS Lambda, Azure Functions, and Google Cloud Functions,
+            design and build serverless architectures using platforms like AWS Lambda, Azure Functions, and Google Cloud
+            Functions,
             enabling you to focus on business logic without worrying about infrastructure management.</p>
         </div>
         <div class="">
@@ -196,8 +312,7 @@
           <p>We facilitate seamless integration of third-party APIs into your software ecosystem, enabling efficient
             data
             exchange and expanding the capabilities of your applications. Our expertise in API integration ensures
-            smooth
-            and
+            smooth and
             secure interactions with external systems, enhancing your business processes.</p>
         </div>
       </div>
@@ -657,15 +772,15 @@
     <form target="_blank" action="https://formsubmit.co/77ae534886cf0d623525bfeb94990284" method="POST">
       <div class="grid-container">
         <input type="text" name="first_name" placeholder="First Name">
-        <input type="text" name="last_name" placeholder="Last Name" required>
-        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="text" name="last_name" placeholder="Last Name">
+        <input type="email" name="email" placeholder="Email Address (*)" required>
         <input type="text" name="_honey" style="display:none">
         <input type="text" name="phone" placeholder="Phone Number">
         <input type="hidden" name="_blacklist" value="spammy pattern, banned term, phrase">
         <input type="hidden" name="_subject" value="Webseite Kontaktaufnahme">
         <input type="hidden" name="_autoresponse"
           value="Herzlichen Dank für Ihre Kontaktaufnahme. Wir haben Ihre Mail erhalten und werden Sie innerhalb der nächsten 24h bearbeitet haben. Wir freuen uns auf den Kontakt mit Ihnen!">
-        <textarea placeholder="Your Message" class="form-control" name="message" rows="10" required></textarea>
+        <textarea placeholder="Your Message (*)" class="form-control" name="message" rows="10" required></textarea>
         <button type="submit">Send</button>
       </div>
     </form>

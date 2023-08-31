@@ -47,10 +47,110 @@ function cybethicsNameContinue() {
     }
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+    prepareRotatingText();
+    prepareDevOpsAnimation();
+});
+
+function prepareDevOpsAnimation() {
+    // Selecting elements
+    var boxOne = document.querySelector('.box:nth-child(1)');
+    var boxTwo = document.querySelector('.box:nth-child(2)');
+    var boxThree = document.querySelector('.box:nth-child(3)');
+
+    // Creating TimelineMax instances
+    var timelineBoxOne = new TimelineMax();
+    var timelineBoxTwo = new TimelineMax();
+    var timelineBoxThree = new TimelineMax();
+
+    // Animating boxOne
+    timelineBoxOne.to(boxOne, 0.6, {
+        opacity: 0.25,
+        scale: 1,
+        ease: Back.easeOut
+    }).to(boxOne, 0.6, {
+        rotation: 4,
+        ease: Back.easeOut
+    }, 2);
+
+    // Animating boxTwo
+    timelineBoxTwo.to(boxTwo, 0.6, {
+        opacity: 0.5,
+        scale: 1,
+        ease: Back.easeOut
+    }, 0.6).to(boxTwo, 0.6, {
+        rotation: -4,
+        ease: Back.easeOut
+    }, 1.8);
+
+    // Animating boxThree
+    timelineBoxThree.to(boxThree, 0.6, {
+        opacity: 1,
+        scale: 1,
+        ease: Back.easeOut
+    }, 1.2);
+
+    // Adding click event to point elements
+    var pointElements = document.querySelectorAll('.point');
+    pointElements.forEach(function (point) {
+        point.addEventListener('click', function (e) {
+            var totalPoints = pointElements.length;
+            var index = Array.from(pointElements).indexOf(point);
+            var completeIndex = Array.from(document.querySelectorAll('.point--active')).indexOf(document.querySelector('.point--active'));
+
+            var barFill = document.querySelector('.bar__fill');
+            barFill.style.width = ((index) / (totalPoints - 1)) * 100 + '%';
+
+            if (index >= completeIndex) {
+                document.querySelector('.point--active').classList.add('point--complete');
+                document.querySelector('.point--active').classList.remove('point--active');
+
+                point.classList.add('point--active');
+                Array.from(point.parentElement.children).slice(0, index).forEach(function (el) {
+                    el.classList.add('point--complete');
+                });
+                Array.from(point.parentElement.children).slice(index + 1).forEach(function (el) {
+                    el.classList.remove('point--complete');
+                });
+            }
+        });
+    });
+
+    // Demo purposes: animation
+    var animateProgress = function () {
+        var totalPoints = pointElements.length;
+        var index = Math.floor(Math.random() * 4);
+        var completeIndex = Array.from(document.querySelectorAll('.point--active')).indexOf(document.querySelector('.point--active'));
+
+        var barFill = document.querySelector('.bar__fill');
+        barFill.style.width = ((index) / (totalPoints - 1)) * 100 + '%';
+
+        if (index >= completeIndex) {
+            document.querySelector('.point--active').classList.add('point--complete');
+            document.querySelector('.point--active').classList.remove('point--active');
+
+            var nextPoint = pointElements[index];
+            nextPoint.classList.add('point--active');
+            Array.from(nextPoint.parentElement.children).slice(0, index).forEach(function (el) {
+                el.classList.add('point--complete');
+            });
+            Array.from(nextPoint.parentElement.children).slice(index + 1).forEach(function (el) {
+                el.classList.remove('point--complete');
+            });
+        }
+    };
+
+    var animateProgressInterval = setInterval(animateProgress, 1200);
+
+    document.addEventListener('mouseover', function () {
+        clearInterval(animateProgressInterval);
+    });
+}
+
 // Rotating text above the contact form
-document.addEventListener("DOMContentLoaded", function() {
+function prepareRotatingText() {
     let words = document.querySelectorAll(".word");
-    
+
     let wordArray = Array.from(words);
 
     wordArray.forEach(word => {
@@ -72,11 +172,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     let rotateText = () => {
         let currentWord = wordArray[currentWordIndex];
-        let nextWord =
-            currentWordIndex === maxWordIndex ? wordArray[0] : wordArray[currentWordIndex + 1];
+        let nextWord = currentWordIndex === maxWordIndex ? wordArray[0] : wordArray[currentWordIndex + 1];
 
         Array.from(currentWord.children).forEach((letter, i) => {
-            console.log(i);
             setTimeout(() => {
                 letter.className = "letter out";
             }, i * 80);
@@ -96,4 +194,5 @@ document.addEventListener("DOMContentLoaded", function() {
 
     rotateText();
     setInterval(rotateText, 4000);
-});
+}
+

@@ -737,9 +737,9 @@ h6 {
 
 .mobile-development-platform-group {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr 3fr;
-  grid-template-columns: 30fr 30fr 50fr 30fr 30fr;
-  gap: 1em;
+  grid-template-rows: 1fr 1fr 3fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.1em;
 }
 
 .mobile-development-platform-group-item-stretched {
@@ -750,10 +750,6 @@ h6 {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   padding-right: 0.5em;
-}
-
-.pros {
-  justify-self: end;
 }
 
 .pro::before {
@@ -975,7 +971,6 @@ li {
 }
 
 .cyber-ethical-solutions-item-title.continued:nth-child(1) {
-  /* font-family: 'Solaris'; */
   content: 'T';
   transition: cybethics-font-transition 1.5s ease-in-out;
 }
@@ -1598,7 +1593,6 @@ button:focus::after {
   src: url("assets/Solaris.otf") format("opentype");
 }
 
-
 .blog-slider {
   box-sizing: border-box;
   position: relative;
@@ -2058,4 +2052,141 @@ input[type=checkbox]:checked+label {
 
 .sun-flower {
   color: #f1c40f;
+}
+
+.squares {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.boxes {
+  top: 50%;
+  left: 50%;
+  height: 180px;
+  transform: translate(0%, 20%);
+}
+
+.box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  background: #FFF;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  box-shadow: 40px 0 65px rgba(212, 197, 186, 0.4);
+  padding: 0 80px;
+  box-sizing: border-box;
+  opacity: 0;
+  transform-origin: center;
+  transform: scale(1.2, 1.2);
+}
+
+.box:nth-child(1),
+.box:nth-child(2) {
+  position: absolute;
+}
+
+.box:nth-child(1) {
+  left: 3%;
+  width: 94%;
+}
+
+.box:nth-child(2) {
+  left: 2%;
+  width: 96%;
+}
+
+.progress {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.bar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: #E8DFD8;
+  width: 100%;
+  height: 3px;
+  border-radius: 10px;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+.bar__fill {
+  display: block;
+  background: green;
+  height: 100%;
+}
+
+.point {
+  position: relative;
+  color: gray;
+  cursor: pointer;
+}
+
+.point:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s ease;
+}
+
+.show-radius .point:before {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.point--complete {
+  color: green;
+}
+
+.point--active {
+  color: dodgerblue;
+}
+
+.bullet {
+  z-index: 1;
+  position: relative;
+  background: gray;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  transition: 0.3s ease;
+}
+
+.point--complete .bullet,
+.point--active .bullet {
+  background: #FFFFFF;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, green 0px 0px 0px 10px;
+}
+
+.point--active .bullet {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px, dodgerblue 0px 0px 0px 10px;
+}
+
+.label {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin: 20px 0 0 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  transform: translate(-50%, 0);
+}
+
+#devops-grid-item {
+  align-self: center;
 }
