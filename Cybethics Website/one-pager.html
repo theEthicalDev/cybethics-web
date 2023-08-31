@@ -7,8 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="Transparent">
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <link rel="stylesheet" href="cybethics.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cairo">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script src="https://kit.fontawesome.com/3cb905f540.js" crossorigin="anonymous"></script>
   <script src="planet.js" type="module"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>
@@ -26,7 +28,6 @@
   </div>
   <div id="canvas-planet-container" class="side-margin bottom-space background-dark"></div>
   <div class="side-margin fade-in-short-short-delay">
-    <h1>Cybethics Solutions and Services</h1>
     <div class="">
       <h2>Customized Full-Stack Software Development</h2>
       <p>Our team excels in developing custom software solutions that perfectly align with your business requirements.
@@ -77,7 +78,7 @@
     <p class="web-development-experience-description">certificates by developer on average</p>
     <p class="web-development-experience-description">possibilities with our technology stack experience</p>
   </div>
-  <div class="fade-in-short-short-delay side-margin">
+  <div class="fade-in-short-short-delay side-margin bottom-space">
     <h2>Mobile App Development</h2>
     <p>We specialize in crafting intuitive and feature-rich mobile applications for iOS and Android platforms.
       Leveraging our expertise in native and hybrid app development, we create seamless user experiences, leveraging
@@ -172,24 +173,6 @@
       </div>
     </div>
   </div>
-  <div class="grid-container mobile-development-platform-group">
-    <!-- <div>
-        <img src="assets/mobile-apps.png" alt="Cybethics Mobile Apps">
-      </div>
-      <div>
-        <div class="mobile-development-platform">
-          <h3>iOS</h3>
-        </div>
-        <div class="mobile-development-platform">
-          <h3>Android</h3>
-        </div>
-        <div class="mobile-development-platform">
-          <h3>Cross-Platform</h3>
-        </div>
-      </div> -->
-  </div>
-  </div>
-
   <div class="background-dark bottom-space fade-in-short-short-delay">
     <div class="side-margin">
       <div class="grid-container unsdg-container">
@@ -262,7 +245,7 @@
       </div>
     </div>
     <div class="wrap">
-      <button class="cyber-ethical-solutions-button" onclick="cybethicsNameContinue()">Continue</button>
+      <button id="cyber-ethical-solutions-button" onclick="cybethicsNameContinue()">Continue</button>
     </div>
 
     <!-- ------------------------- -->
@@ -319,7 +302,7 @@
     </div>
   </div>
   <div class="bottom-space side-margin fade-in-short-short-delay background-dark">
-    <h2>5 Cybethics priority goals</h2>
+    <h2>Our 5 UN Sustainability Priorities</h2>
     <p>With all this said, Cybethics cannot focus on all but prioritises five out of the 17 goals instead. The choice
       for these five goals has been made on the basis of two main questions:</p>
     <ul>
@@ -327,9 +310,123 @@
       <li>Which goals do we consider most important?</li>
     </ul>
     <p>Having provided the baseline for our beliefs, the below five goals are our priorities.</p>
-    <div class="background-dark bottom-space">
+    <div class="bottom-space">
       <div class="">
-        <div class="unsdg-container-new" style="padding-top: 50px;">
+        <div class="blog-slider">
+          <div class="blog-slider__wrp swiper-wrapper">
+            <div class="blog-slider__item swiper-slide">
+              <div class="blog-slider__img">
+                <img src="assets/unsdg3.png" alt="">
+              </div>
+              <div class="blog-slider__content">
+                <div class="blog-slider__title">UNSDG 3: Good Health and Well-Being</div>
+                <div class="blog-slider__text">
+                  <div class="blog-slider__text">
+                    <ul class="unsdg-card-content">
+                      <li>Employee Well-Being Programs: Prioritise the health and well-being of employees
+                        throughwellness programs, promoting work-life balance, and creating a supportive work
+                        environment</li>
+                      <li>Flexible Work Arrangements: Offer flexible work arrangements, such as remote work or flexible
+                        hours, that allow employees to manage their health needs, attend medical appointments, or
+                        accommodate caregiving responsibilities</li>
+                      <li>Promote Health Awareness: Raise awareness about important health issues, share health tips,
+                        and promote preventive healthcare practices among employees and the wider community</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="blog-slider__item swiper-slide">
+              <div class="blog-slider__img">
+                <img src="assets/unsdg8.png" alt="">
+              </div>
+              <div class="blog-slider__content">
+                <div class="blog-slider__title">UNSDG 8: Decent Work and Economic Growth</div>
+                <div class="blog-slider__text">
+                  <ul class="unsdg-card-content">
+                    <li>Job Creation: Actively create job opportunities, contribute to economic growth by hiring and
+                      providing employment.</li>
+                    <li>Skill Development: Support initiatives for skill development and training programs to enhance
+                      employability.</li>
+                    <li>Fair & Inclusive Employment Practices: Foster a diverse and inclusive work environment, promote
+                      equal
+                      opportunities, respect human rights, and prohibit discrimination.</li>
+                    <li>Corporate Social Responsibility (CSR): Implement CSR initiatives supporting community
+                      development, education, and entrepreneurship.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="blog-slider__item swiper-slide">
+              <div class="blog-slider__img">
+                <img src="assets/unsdg9.png" alt="">
+              </div>
+              <div class="blog-slider__content">
+                <div class="blog-slider__title">UNSDG 9: Industry, Innovation and Infrastructure</div>
+                <div class="blog-slider__text">
+                  <ul class="unsdg-card-content">
+                    <li>Technological Innovation: Drive cutting-edge software solutions, improving efficiency,
+                      productivity, and sustainability across industries.</li>
+                    <li>Digital Connectivity: Enhance access to affordable and reliable internet services, empowering
+                      communities, bridging the digital divide, and enabling economic opportunities.</li>
+                    <li>Partnerships for Innovation: Collaborate with industry, research, and government partners to
+                      foster innovation ecosystems, driving research and development to address societal challenges.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="blog-slider__item swiper-slide">
+              <div class="blog-slider__img">
+                <img src="assets/unsdg11.png" alt="">
+              </div>
+              <div class="blog-slider__content">
+                <div class="blog-slider__title">UNSDG 11: Sustainable Cities and Communities</div>
+                <div class="blog-slider__text">
+                  <ul class="unsdg-card-content">
+                    <li>Internal Sustainability Practices: Implement eco-friendly policies for waste management, energy
+                      efficiency, and resource conservation. Encourage sustainable commuting methods like public
+                      transportation, carpooling, or cycling.</li>
+                    <li>Advocacy and Policy Engagement: Promote sustainable urban development through advocacy, stay
+                      informed about local policies, engage in public consultations, and advocate for public
+                      transportation, sustainable infrastructure, and inclusive urban design.</li>
+                    <li>Technology Solutions: Develop software applications and platforms for sustainable cities,
+                      including public transportation promotion, smart city management, citizen engagement, and urban
+                      planning facilitation.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="blog-slider__item swiper-slide">
+              <div class="blog-slider__img">
+                <img src="assets/unsdg16.png" alt="">
+              </div>
+              <div class="blog-slider__content">
+                <div class="blog-slider__title">UNSDG 16: Peace, Justice and Strong Institutions</div>
+                <div class="blog-slider__text">
+                  <ul class="unsdg-card-content">
+                    <li>Ethical Business Practices: Foster integrity and ethical conduct, strong governance,
+                      anti-corruption
+                      measures, and transparency. Promote fair practices, responsible procurement, compliance, and human
+                      rights respect.</li>
+                    <li>Data Security and Privacy: Prioritize data security, robust cybersecurity, data protection
+                      compliance, and responsible data handling.</li>
+                    <li>Promote Digital Rights: Advocate for digital rights, including freedom of expression, privacy,
+                      and
+                      access. Support initiatives for digital literacy, inclusivity, and bridging the digital divide.
+                    </li>
+                    <li>Transparency and Accountability: Transparent tax practices, financial reporting, robust
+                      accounting
+                      standards, and relevant tax information disclosure.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="blog-slider__pagination"></div>
+        </div>
+
+        <!-- <div class="unsdg-container-new" style="padding-top: 50px;">
           <div id="goal1" class="unsdg-container-item">
             <div class="card">
               <div class="card-header">
@@ -437,12 +534,12 @@
           <div id="goal-center" class="unsdg-container-item visible-large-screen-only">
             <img src="assets/unsdg-wo-text.png">
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
-  <div id="cybethics-process" class="side-margin fade-in-short-short-delay">
-    <h1>What happens when you ask us for help</h1>
+  <div id="cybethics-process" class="side-margin fade-in-short-short-delay bottom-space">
+    <h1>What happens when you contact us</h1>
     <div class="">
       <div class="">
         <div class="text-container">
@@ -544,6 +641,34 @@
         <h5 class="role-title part4 role3">Database Engineer</h5>
       </div>
     </div>
+  </div>
+  <div class="background-dark side-margin bottom-space fade-in-short-short-delay">
+    <div class="rotating-text">
+      <p>You want to</p>
+      <p>
+        <span class="word sun-flower">reduce costs?</span>
+        <span class="word alizarin">optimize performance?</span>
+        <span class="word peter-river">maximize efficiency?</span>
+        <span class="word emerald">reduce redundancy?</span>
+        <span class="word wisteria">streamline processes?</span>
+      </p>
+    </div>
+    <h3 class="large-text">We can help! Contact us</h3>
+    <form target="_blank" action="https://formsubmit.co/77ae534886cf0d623525bfeb94990284" method="POST">
+      <div class="grid-container">
+        <input type="text" name="first_name" placeholder="First Name">
+        <input type="text" name="last_name" placeholder="Last Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="text" name="_honey" style="display:none">
+        <input type="text" name="phone" placeholder="Phone Number">
+        <input type="hidden" name="_blacklist" value="spammy pattern, banned term, phrase">
+        <input type="hidden" name="_subject" value="Webseite Kontaktaufnahme">
+        <input type="hidden" name="_autoresponse"
+          value="Herzlichen Dank für Ihre Kontaktaufnahme. Wir haben Ihre Mail erhalten und werden Sie innerhalb der nächsten 24h bearbeitet haben. Wir freuen uns auf den Kontakt mit Ihnen!">
+        <textarea placeholder="Your Message" class="form-control" name="message" rows="10" required></textarea>
+        <button type="submit">Send</button>
+      </div>
+    </form>
   </div>
 </body>
 
