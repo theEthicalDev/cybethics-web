@@ -4,68 +4,702 @@
 <head>
   <title>Cybethics</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="Transparent">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <link rel="stylesheet" href="cybethics.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cairo">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
   <script src="https://kit.fontawesome.com/3cb905f540.js" crossorigin="anonymous"></script>
-  <script src="planet.js"></script>
+  <script src="planet.js" type="module"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>
+  <script src="rain.js" type="module"></script>
+  <script src="functions.js"></script>
 </head>
 
 <body>
-  <div class="header">
+  <div class="header side-margin background-dark">
     <div class="header-item">
-      <a href="#default" class="logo">
-        <!-- <img alt="Cybethics Company Logo" src="assets/logo_wo_text.png" class="logo">--> 
-      </a>
-      <div class="logo-title">CYBETHICS</div>
-    </div>
-    <div class="header-item">
-      <a class="menu-item" href="/Cybethics Website/index.html">
-        <i class="fa-solid fa-house"></i>
-        Home
-      </a>
-      <a class="menu-item" href="/Cybethics Website/values.html">
-        <i class="fa-sharp fa-solid fa-heart"></i>
-        Values
-      </a>
-      <a class="menu-item" href="/Cybethics Website/services.html">
-        <i class="fa-solid fa-laptop-code"></i>
-        Services
-      </a>
-      <a class="menu-item" href="/Cybethics Website/technologies.html">
-        <i class="fa-solid fa-toolbox"></i>
-        Technologies
-      </a>
-      <!-- <a class="menu-item" href="#showroom">Showroom</a> -->
-      <!-- <a class="menu-item" href="#blog">Blog</a> -->
-      <a class="menu-item" href="/Cybethics Website/contact.html">
-        <i class="fa-sharp fa-solid fa-comments"></i>
-        Contact
+      <a href="#default" class="">
+        <div class="logo-container"></div>
       </a>
     </div>
   </div>
-  <div class="grid-container">
-    <div class="grid-item justify-center">
-      <img src="assets/logo_wo_text.png" alt="Cybethics Logo">
+  <div id="canvas-planet-container" class="side-margin bottom-space background-dark"></div>
+  <div class="side-margin fade-in-short-short-delay">
+    <div class="">
+      <h2>Customized Full-Stack Software Development</h2>
+      <p>Our team excels in developing custom software solutions that perfectly align with your business requirements.
+        Using industry-leading technologies such as Spring Boot, Angular, HTML, CSS, and JPA, we create scalable and
+        robust applications that empower your organization to thrive in the digital landscape.</p>
     </div>
-    <div class="grid-item">
-      <h2 class="large-text">What does Cybethics stand for?</h2>
-      <p>We believe that economic progress made our world a much better place. However, the strive for infinite gain led to the neglection of certain values and rules. We aim for a balance.</p>
-      <p>A balance between equality and gain.</p>
-      <div class="animated-title">
-        <h2 class="keep">CYB</h2>
-        <h2 class="remove">ER</h2>
-        <p class="remove"> </p>
-        <h2 class="keep">ETHICS</h2>
+    <div class="grid-container bottom-space">
+      <div class="item">
+        <i class="fa-brands fa-html5 fa-2xl"></i>
+        <i class="fa-brands fa-css3-alt fa-2xl"></i>
+        <i class="fa-brands fa-angular fa-2xl"></i>
+        <i class="fa-brands fa-js fa-2xl"></i>
+        <i class="fa-brands fa-node fa-2xl"></i>
+        <h3>Frontend Development</h3>
+        <p>Our frontend development services focus on creating engaging and user-friendly interfaces that enhance the
+          user
+          experience. Our skilled team of frontend developers is proficient in HTML, CSS, and JavaScript, ensuring
+          seamless integration of design and functionality. We stay up to date with the latest frontend frameworks, such
+          as Angular, to deliver visually stunning and responsive web applications. Whether it's crafting intuitive user
+          interfaces or optimizing website performance, our frontend development expertise ensures your online presence
+          captivates and engages your target audience.</p>
+      </div>
+      <div class="item">
+        <i class="fa-brands fa-java fa-2xl"></i>
+        <i class="fa-brands fa-python fa-2xl"></i>
+        <i class="fa-brands fa-stack-overflow fa-2xl"></i>
+        <i class="fa-brands fa-git-alt fa-2xl"></i>
+        <i class="fa-solid fa-leaf fa-2xl"></i>
+        <h3>Backend Development</h3>
+        <p>Our backend development services revolve around building robust and scalable architectures that power your
+          software applications. Our experienced team of backend developers specializes in programming languages like
+          Java, Python, and PHP, as well as frameworks like Spring Boot and Quarkus. We leverage our expertise in
+          database
+          design, API integrations, and server-side technologies to ensure efficient data management, seamless
+          communication, and secure data exchange. With our backend development solutions, you can expect reliable
+          performance, strong data security, and the foundation for a successful software application.</p>
       </div>
     </div>
-    <div class="grid-item">
-      <img src="assets/mobile-apps.png" alt="Cybethics Mobile Apps">
+  </div>
+  <div class="web-development-experience fade-in-short-short-delay top-space bottom-space side-margin background-dark">
+    <div>
+      <div class="web-development-experience-number">9.8</div>
+      <p class="web-development-experience-description">years of software development experience by employee</p>
+    </div>
+    <div>
+      <div class="web-development-experience-number">16.3</div>
+      <p class="web-development-experience-description">different technologies in the backpack of a Cybethics developer
+      </p>
+    </div>
+    <div>
+      <div class="web-development-experience-number">5+</div>
+      <p class="web-development-experience-description">certificates by developer on average</p>
+    </div>
+    <div>
+      <div class="web-development-experience-number">8∞</div>
+      <p class="web-development-experience-description">possibilities with our technology stack experience</p>
     </div>
   </div>
-</body>
-</html>
+  <div class="fade-in-short-short-delay side-margin bottom-space">
+    <h2>Mobile App Development</h2>
+    <p>We specialize in crafting intuitive and feature-rich mobile applications for iOS and Android platforms.
+      Leveraging our expertise in native and hybrid app development, we create seamless user experiences, leveraging
+      technologies such as Swift, Kotlin, Java, React Native, and Flutter.</p>
+    <div class="mobile-development-detail-group">
+      <div class="mobile-development-detail-single item" id="mobile-development-ui-ux-design">
+        <div class="image-title">
+          <i class="fa-solid fa-user-plus fa-xl"></i>
+          <h3>UI/UX Design</h3>
+        </div>
+        <p>Emphasize your focus on creating intuitive and <span>visually appealing user interfaces (UI)</span> and
+          delivering
+          exceptional user experiences (UX). Mention your expertise in crafting<span> user-friendly
+          </span>navigation, engaging
+          interactions, and seamless transitions.</p>
+      </div>
+      <div class="mobile-development-detail-single item" id="mobile-development-performance-optimization">
+        <div class="image-title">
+          <i class="fa-solid fa-gauge-high fa-xl"></i>
+          <h3>Performance Optimization</h3>
+        </div>
+        <p>Showcase your ability to optimize mobile app performance to ensure <span>smooth and efficient
+            operation</span>.
+          Highlight your techniques for minimizing app load times, reducing memory usage, and optimizing battery
+          consumption.</p>
+      </div>
+      <div class="mobile-development-detail-single item" id="mobile-development-app-security">
+        <div class="image-title">
+          <i class="fa-solid fa-shield-halved fa-xl"></i>
+          <h3>App Security</h3>
+        </div>
+        <p>Highlight your commitment to ensuring the security of mobile applications. Mention your expertise in
+          implementing robust security measures, such as data <span>encryption</span>, secure user
+          <span>authentication</span>, and <span>protection</span>
+          against common security vulnerabilities.
+        </p>
+      </div>
+      <div class="mobile-development-detail-single item">
+        <div class="image-title">
+          <i class="fa-solid fa-mobile fa-xl"></i>
+          <h3>Native</h3>
+        </div>
+        <p>Highlight your proficiency in developing mobile applications for <span>iOS and Android</span> platforms.
+          Mention your
+          experience with specific versions of <span>iOS and Android</span>, as well as any additional platforms you
+          may support.
+        </p>
+        <div class="mobile-development-platform-group">
+          <div class="image-title center">
+            <i class="fa-brands fa-swift fa-2xl"></i>
+            <h3>Swift</h3>
+            <p class="subtitle">(iOS)</p>
+          </div>
+          <div class="image-title center">
+            <i class="fa-brands fa-android fa-2xl"></i>
+            <h3>Android SDK</h3>
+            <p class="subtitle">(Android)</p>
+          </div>
+          <p class="mobile-development-platform-group-item-stretched center center-text">Advantages and disadvantages of
+            native app programming:</p>
+          <div class="pros">
+            <p class="awesome pro">Better app performance</p>
+            <p class="awesome pro">Native user experience</p>
+            <p class="awesome pro">More access to device features</p>
+            <p class="awesome pro">OS change flexibility</p>
+          </div>
+          <div class="cons">
+            <p class="awesome con">Development time and cost</p>
+            <p class="awesome con">Maintenance cost</p>
+          </div>
+        </div>
+      </div>
+      <img class="visible-large-screen-only" src="assets/mobile-apps.png" style="width: 100%;"></img>
+      <div class="mobile-development-detail-single item">
+        <div class="image-title">
+          <i class="fa-solid fa-mobile fa-xl"></i>
+          <h3>Cross-Platform</h3>
+        </div>
+        <div class="mobile-development-platform-group">
+          <div class="image-title center mobile-development-platform-group-item-stretched">
+            <i class="fa-solid fa-angles-left fa-2xl"></i>
+            <h3>Flutter</h3>
+          </div>
+          <p class="mobile-development-platform-group-item-stretched center center-text">With cross-platform
+            development technologies like Flutter apps can be developed for multiple platforms in one go.</p>
+          <div class="pros">
+            <p class="awesome pro">Faster development</p>
+            <p class="awesome pro">Maintenance deployed on all platforms</p>
+            <p class="awesome pro">Single codebase</p>
+          </div>
+          <div class="cons">
+            <p class="awesome con">Performance limitations</p>
+            <p class="awesome con">Limited platform-specific features</p>
+            <p class="awesome con">Difficulties on operating system updates</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<!--
-  See the following link for your custom grid layout https://grid.layoutit.com?id=V1mAQ0L
--->
+    <!-- <div class="mobile-development-detail-single item" id="mobile-development-app-security">
+        <div class="image-title">
+          <i class="fa-solid fa-shield-halved fa-xl"></i>
+          <h3>Native</h3>
+          <p class="subtitle">(iOS and Android)</p>
+        </div>
+        <p>While Android can be developed using Android SDK with Java or Kotlin, iOS apps can be developed with Apple's programming language Swift
+        </p>
+        <div class="pros">
+          <p class="awesome pro">Better app performance</p>
+          <p class="awesome pro">Native user experience</p>
+          <p class="awesome pro">More access to device features</p>
+          <p class="awesome pro">Flexibility on operating system updates</p>
+        </div>
+        <div class="cons">
+          <p class="awesome con">Development time and cost</p>
+          <p class="awesome con">Maintenance cost</p>
+        </div>
+        <div class="pros">
+          <p class="awesome pro">Faster development</p>
+          <p class="awesome pro">Maintenance deployed on all platforms</p>
+          <p class="awesome pro">Single codebase</p>
+        </div>
+        <div class="cons">
+          <p class="awesome con">Performance limitations</p>
+          <p class="awesome con">Limited platform-specific features</p>
+          <p class="awesome con">Difficulties on operating system updates</p>
+        </div>
+      </div> -->
+    <!-- <div class="mobile-development-detail-single item full-grid-width">
+        <div class="image-title">
+          <i class="fa-solid fa-mobile fa-xl"></i>
+          <h3>Platform Expertise</h3>
+        </div>
+        <p>Highlight your proficiency in developing mobile applications for <span>iOS and Android</span> platforms.
+          Mention your
+          experience with specific versions of <span>iOS and Android</span>, as well as any additional platforms you
+          may support.
+        </p>
+        <div class="mobile-development-platform-group">
+          <h3 class="mobile-development-platform-group-item-stretched center">Native</h3>
+          <h3 class="mobile-development-platform-group-item-stretched center">Cross-Platform</h3>
+          <div class="image-title center">
+            <i class="fa-brands fa-swift fa-2xl"></i>
+            <h3>Swift</h3>
+            <p class="subtitle">(iOS)</p>
+          </div>
+          <div class="image-title center">
+            <i class="fa-brands fa-android fa-2xl"></i>
+            <h3>Android SDK</h3>
+            <p class="subtitle">(Android)</p>
+          </div>
+          <div class="image-title center mobile-development-platform-group-item-stretched">
+            <i class="fa-solid fa-angles-left fa-2xl"></i>
+            <h3>Flutter</h3>
+          </div>
+          <p class="mobile-development-platform-group-item-stretched center center-text">While Android can be
+            developed using Android SDK with Java or Kotlin, iOS apps can be developed with Apple's programming
+            language Swift</p>
+          <p class="mobile-development-platform-group-item-stretched center center-text">With cross-platform
+            development technologies like Flutter apps can be developed for multiple platforms in one go</p>
+          <div class="pros">
+            <p class="awesome pro">Better app performance</p>
+            <p class="awesome pro">Native user experience</p>
+            <p class="awesome pro">More access to device features</p>
+            <p class="awesome pro">Flexibility on operating system updates</p>
+          </div>
+          <div class="cons">
+            <p class="awesome con">Development time and cost</p>
+            <p class="awesome con">Maintenance cost</p>
+          </div>
+          <div class="pros">
+            <p class="awesome pro">Faster development</p>
+            <p class="awesome pro">Maintenance deployed on all platforms</p>
+            <p class="awesome pro">Single codebase</p>
+          </div>
+          <div class="cons">
+            <p class="awesome con">Performance limitations</p>
+            <p class="awesome con">Limited platform-specific features</p>
+            <p class="awesome con">Difficulties on operating system updates</p>
+          </div>
+          <img class="vertical-divider" src="assets/mobile-apps.png"></img>
+        </div>
+      </div> -->
+  </div>
+  </div>
+  <div class="background-dark bottom-space fade-in-short-short-delay">
+    <div class="side-margin">
+      <div class="grid-container">
+        <div class="">
+          <h2>DevOps</h2>
+          <p>Our DevOps experts streamline your software development and deployment processes, enabling faster and more
+            reliable releases. We implement containerization techniques using platforms like Docker and orchestration
+            tools
+            like Kubernetes, ensuring scalability, portability, and ease of management.</p>
+        </div>
+        <div id="devops-grid-item">
+          <div class="boxes">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box">
+              <div class="progress">
+                <div class="bar">
+                  <div class="bar__fill" style="width: 33%;"></div>
+                </div>
+                <div class="point">
+                  <div class="bullet"></div><label class="label">Build</label>
+                </div>
+                <div class="point">
+                  <div class="bullet"></div><label class="label">Test</label>
+                </div>
+                <div class="point">
+                  <div class="bullet"></div><label class="label">Release</label>
+                </div>
+                <div class="point">
+                  <div class="bullet"></div><label class="label">Deploy</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <h2>Severless Functions</h2>
+          <p>Experience the benefits of serverless computing with our serverless functions development services. We
+            design and build serverless architectures using platforms like AWS Lambda, Azure Functions, and Google Cloud
+            Functions,
+            enabling you to focus on business logic without worrying about infrastructure management.</p>
+        </div>
+        <div class="">
+          <h2>External API Integrations</h2>
+          <p>We facilitate seamless integration of third-party APIs into your software ecosystem, enabling efficient
+            data
+            exchange and expanding the capabilities of your applications. Our expertise in API integration ensures
+            smooth and
+            secure interactions with external systems, enhancing your business processes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="fade-in-short-short-delay side-margin bottom-space">
+    <h1>Why Cybethics deeply cares about values</h1>
+    <p class="large-text">At Cybethics, ethics and reason are at the core of everything we do. It's not just a name;
+      it's a reflection of
+      our unwavering commitment to integrity and responsible business practices.</p>
+    <div class="cyber-ethical-solutions">
+      <div class="cyber-ethical-solutions-item-container">
+        <div class="cyber-ethical-solutions-item-short center-text cyber-ethical-solutions-item">
+          <div style="display: inline-flex;">
+            <p class="center-text cyber-ethical-solutions-item-title">c</p>
+            <p class="center-text cyber-ethical-solutions-item-title">y</p>
+            <p class="center-text cyber-ethical-solutions-item-title">b</p>
+            <p class="center-text cyber-ethical-solutions-item-title">e</p>
+            <p class="center-text cyber-ethical-solutions-item-title">r</p>
+          </div>
+          <i class="fa-solid fa-microchip"></i>
+        </div>
+        <div class="cyber-ethical-solutions-item-long cyber-ethical-solutions-item">
+          <p class="large-text darkened">Why Cyber?</p>
+          <ul>
+            <li>Your Strategic Partner: Empower your business with software solutions.</li>
+            <li>Unlock Efficiency: Streamline operations and enhance productivity.</li>
+            <li>Custom Solutions: Tailored to your unique needs for seamless integration.</li>
+            <li>Technology for Growth: Leverage innovation for competitive advantage.</li>
+            <li class="visible-large-screen-only">Measured Results: Tangible outcomes that drive success.</li>
+            <li class="visible-large-screen-only">Enhanced User Experiences: Engage customers with intuitive interfaces.
+            </li>
+            <li class="visible-large-screen-only">Expert Team: Skilled professionals dedicated to your success.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="cyber-ethical-solutions-item-container">
+        <div class="cyber-ethical-solutions-item-short center-text cyber-ethical-solutions-item">
+          <div style="display: inline-flex;">
+            <p class="center-text cyber-ethical-solutions-item-title">e</p>
+            <p class="center-text cyber-ethical-solutions-item-title">t</p>
+            <p class="center-text cyber-ethical-solutions-item-title">h</p>
+            <p class="center-text cyber-ethical-solutions-item-title">i</p>
+            <p class="center-text cyber-ethical-solutions-item-title">c</p>
+            <p class="center-text cyber-ethical-solutions-item-title">s</p>
+          </div>
+          <i class="fa-solid fa-heart-circle-check"></i>
+        </div>
+        <div class="cyber-ethical-solutions-item-long cyber-ethical-solutions-item">
+          <p class="large-text darkened">Why Ethics?</p>
+          <ul>
+            <li>Guided by Values: Our foundation is built on ethical principles.</li>
+            <li>Positive Impact: Drive social responsibility through technology.</li>
+            <li>Long-Term Vision: Sustainability and growth hand in hand.</li>
+            <li>Beyond Profit: Commitment to a better world through technology.</li>
+            <li class="visible-large-screen-only">Trust and Respect: Earn trust through transparent practices.</li>
+            <li class="visible-large-screen-only">Inclusive Approach: Foster fairness and inclusivity in solutions.</li>
+            <li class="visible-large-screen-only">Empowering Teams: Motivate employees to create meaningful change.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="wrap">
+        <button class="" id="cyber-ethical-solutions-button" onclick="cybethicsNameContinue()">Resolve</button>
+      </div>
+    </div>
+
+    <!-- ------------------------- -->
+
+
+    <!-- <div class="grid-container">
+      <div>
+        <h3>Ethics: connected with our Name, our Brand, our Identity</h3>
+        <div class="cyber-ethical-solutions"></div> -->
+    <!-- <div class="cyberethics">
+          <p class="cyb">cyb</p>
+          <p class="cyber">cyber</p>
+          <p class="ethics">ethics</p>
+        </div> -->
+    <!-- <p>As part of the company name, the word ethics is deeply connected with the organisation from the very beginning.
+          The rationale behind this is that Cybethics deeply cares about ethics and that it is to be avoided to only
+          pursue economic growth without the consideration of morality, humanity, ethics and social responsibility.</p>
+      </div>
+      <p>At Cybethics, ethics and reason are at the core of everything we do. It's not just a name; it's a reflection of
+        our unwavering commitment to integrity and responsible business practices.</p>
+      <div class="full-grid-width">
+        <h2>Building a Better Future</h2>
+        <p>At Cybethics, we believe that a prosperous future is one where economic growth goes hand in hand with
+          social progress and environmental stewardship. To achieve a positive impact Cybethics pursues the United
+          Nations Sustainability Development Goals. Join us on our journey as we strive to build a more just,
+          sustainable, and inclusive world through responsible business practices and impactful projects.</p>
+      </div> -->
+    <!-- </div> -->
+  </div>
+  <div class="background-dark bottom-space fade-in-short-short-delay">
+    <div class="side-margin">
+      <h2>United Nations Sustainability Development Goals</h2>
+      <div class="grid-container unsdg-container">
+        <img src="assets/unsdg.png" class="limit-width fade-in-short-short-delay">
+        <div class="fade-in-short-short-delay">
+          <h3 class="large-text">What the heck are UNSDG?</h3>
+          <ul>
+            <li>The United Nations Sustainable Development Goals (UNSDG) are a set of 17 global goals adopted by the
+              United Nations in 2015</li>
+            <li>The UNSDGs provide a framework for addressing global challenges including poverty, inequality,
+              climate change, social injustice, etc</li>
+            <li>The goals encompass a wide range of issues: ending poverty and hunger, combating climate change,
+              promoting
+              education and sustainable economic growth
+            </li>
+            <li>The UNSDGs aim to be achieved by 2030, providing a 15-year roadmap for sustainable development efforts
+              on
+              a global scale</li>
+            <li>They call for collaboration and partnerships among governments, businesses, civil society organisations,
+              and individuals to work together towards achieving the goals and creating a more sustainable world</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-space side-margin fade-in-short-short-delay background-dark">
+    <h2>Our 5 UN Sustainability Goal Priorities</h2>
+    <p>With all this said, Cybethics cannot focus on all but prioritises five out of the 17 goals instead. The choice
+      for these five goals has been made on the basis of two main questions:</p>
+    <ul>
+      <li>How can we contribute most?</li>
+      <li>Which goals do we consider most important?</li>
+    </ul>
+    <p>Having provided the baseline for our beliefs, the below five goals are our priorities.</p>
+    <div class="bottom-space">
+      <div class="">
+        <div class="blog-slider">
+          <div class="blog-slider__wrp swiper-wrapper">
+            <div class="blog-slider__item swiper-slide">
+              <div class="blog-slider__img">
+                <img src="assets/unsdg3.png" alt="">
+              </div>
+              <div class="blog-slider__content">
+                <div class="blog-slider__title">UNSDG 3: Good Health and Well-Being</div>
+                <div class="blog-slider__text">
+                  <div class="blog-slider__text">
+                    <ul class="unsdg-card-content">
+                      <li>Employee Well-Being Programs: Prioritise the health and well-being of employees
+                        throughwellness programs, promoting work-life balance, and creating a supportive work
+                        environment</li>
+                      <li>Flexible Work Arrangements: Offer flexible work arrangements, such as remote work or flexible
+                        hours, that allow employees to manage their health needs, attend medical appointments, or
+                        accommodate caregiving responsibilities</li>
+                      <li>Promote Health Awareness: Raise awareness about important health issues, share health tips,
+                        and promote preventive healthcare practices among employees and the wider community</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="blog-slider__item swiper-slide">
+              <div class="blog-slider__img">
+                <img src="assets/unsdg8.png" alt="">
+              </div>
+              <div class="blog-slider__content">
+                <div class="blog-slider__title">UNSDG 8: Decent Work and Economic Growth</div>
+                <div class="blog-slider__text">
+                  <ul class="unsdg-card-content">
+                    <li>Job Creation: Actively create job opportunities, contribute to economic growth by hiring and
+                      providing employment.</li>
+                    <li>Skill Development: Support initiatives for skill development and training programs to enhance
+                      employability.</li>
+                    <li>Fair & Inclusive Employment Practices: Foster a diverse and inclusive work environment, promote
+                      equal
+                      opportunities, respect human rights, and prohibit discrimination.</li>
+                    <li>Corporate Social Responsibility (CSR): Implement CSR initiatives supporting community
+                      development, education, and entrepreneurship.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="blog-slider__item swiper-slide">
+              <div class="blog-slider__img">
+                <img src="assets/unsdg9.png" alt="">
+              </div>
+              <div class="blog-slider__content">
+                <div class="blog-slider__title">UNSDG 9: Industry, Innovation and Infrastructure</div>
+                <div class="blog-slider__text">
+                  <ul class="unsdg-card-content">
+                    <li>Technological Innovation: Drive cutting-edge software solutions, improving efficiency,
+                      productivity, and sustainability across industries.</li>
+                    <li>Digital Connectivity: Enhance access to affordable and reliable internet services, empowering
+                      communities, bridging the digital divide, and enabling economic opportunities.</li>
+                    <li>Partnerships for Innovation: Collaborate with industry, research, and government partners to
+                      foster innovation ecosystems, driving research and development to address societal challenges.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="blog-slider__item swiper-slide">
+              <div class="blog-slider__img">
+                <img src="assets/unsdg11.png" alt="">
+              </div>
+              <div class="blog-slider__content">
+                <div class="blog-slider__title">UNSDG 11: Sustainable Cities and Communities</div>
+                <div class="blog-slider__text">
+                  <ul class="unsdg-card-content">
+                    <li>Internal Sustainability Practices: Implement eco-friendly policies for waste management, energy
+                      efficiency, and resource conservation. Encourage sustainable commuting methods like public
+                      transportation, carpooling, or cycling.</li>
+                    <li>Advocacy and Policy Engagement: Promote sustainable urban development through advocacy, stay
+                      informed about local policies, engage in public consultations, and advocate for public
+                      transportation, sustainable infrastructure, and inclusive urban design.</li>
+                    <li>Technology Solutions: Develop software applications and platforms for sustainable cities,
+                      including public transportation promotion, smart city management, citizen engagement, and urban
+                      planning facilitation.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="blog-slider__item swiper-slide">
+              <div class="blog-slider__img">
+                <img src="assets/unsdg16.png" alt="">
+              </div>
+              <div class="blog-slider__content">
+                <div class="blog-slider__title">UNSDG 16: Peace, Justice and Strong Institutions</div>
+                <div class="blog-slider__text">
+                  <ul class="unsdg-card-content">
+                    <li>Ethical Business Practices: Foster integrity and ethical conduct, strong governance,
+                      anti-corruption
+                      measures, and transparency. Promote fair practices, responsible procurement, compliance, and human
+                      rights respect.</li>
+                    <li>Data Security and Privacy: Prioritize data security, robust cybersecurity, data protection
+                      compliance, and responsible data handling.</li>
+                    <li>Promote Digital Rights: Advocate for digital rights, including freedom of expression, privacy,
+                      and
+                      access. Support initiatives for digital literacy, inclusivity, and bridging the digital divide.
+                    </li>
+                    <li>Transparency and Accountability: Transparent tax practices, financial reporting, robust
+                      accounting
+                      standards, and relevant tax information disclosure.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="blog-slider__pagination"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="cybethics-process" class="side-margin fade-in-short-short-delay bottom-space visible-large-screen-only">
+    <h1>What happens when you contact us</h1>
+    <div class="">
+      <div class="">
+        <div class="text-container">
+          <h3 class="process-text part1">You contact our company and we assign a
+            requirements engineer to you. Our requirements engineer is a specialist for technical possibilities,
+            potential solutions, options and costs
+            of the project.</h3>
+          <h3 class="process-text part2">The requirements engineer proposes solutions to your problem and if you decide
+            to go for it, a value stream (team) of people
+            will be established to complete the project.</h3>
+          <h3 class="process-text part3">The value stream discusses the architectural solution and divides the work
+            into small and clear tasks.</h3>
+          <h3 class="process-text part4">Depending on the project needs different specialists might be involved.</h3>
+          <h3 class="process-text part5">The value stream works on the technical implementation and testing, while the
+            responsible requirements engineer always has an overview
+            so that you could be informed about the status.</h3>
+          <h3 class="process-text part6">Once the work has been completed and successfully tested, the value stream
+            will finalize the work and documentation for the final handover.</h3>
+          <h3 class="process-text part7">The final work including the documentation will be sent to the requirements
+            engineer for the final signoff.</h3>
+          <h3 class="process-text part8">Once the project has been completed we will make sure the solution made
+            available based on our clients needs.</h3>
+        </div>
+      </div>
+    </div>
+    <div class="process-container-new">
+      <div class="empty-cell"></div>
+      <div class="empty-cell"></div>
+      <div class="empty-cell"></div>
+      <div class="">
+        <div class="arrow-column">
+          <div class="document-row part3">
+            <i class="document-list fa-solid fa-file-lines fa-2xl part3"></i>
+            <i class="document-checked fa-solid fa-file-circle-check fa-2xl part6"></i>
+          </div>
+          <div class="arrow-line part3"></div>
+          <p class="arrow right part3"></p>
+        </div>
+      </div>
+      <div class="process-container-actor part3">
+        <i class="role-icon fa-solid fa-user fa-2xl"></i>
+        <h5 class="role-title part3 role1">Software Engineer</h5>
+        <h5 class="role-title part4 role2">Frontend Developer</h5>
+        <i class="fa-solid fa-circle-notch fa-lg ongoing part5"></i>
+        <h5 class="role-title part4 role3">Backend Developer</h5>
+      </div>
+      <div class="process-container-actor part1">
+        <i class="role-icon fa-solid fa-user fa-2xl" id="cybethics-re"></i>
+        <h5 class="role-title">Requirements Engineer</h5>
+      </div>
+      <div class="arrow-column">
+        <div class="document-row">
+          <i class="document-list fa-solid fa-file-lines fa-2xl part2"></i>
+          <i class="document-checked fa-solid fa-file-circle-check fa-2xl part7"></i>
+        </div>
+        <p class="arrow-line part2"></p>
+        <p class="arrow right part2"></p>
+      </div>
+      <div class="process-container-actor part2">
+        <i class="role-icon fa-solid fa-people-group fa-2xl"></i>
+        <i class="fa-solid fa-circle-notch fa-lg ongoing part6"></i>
+        <h5 class="role-title">Value Stream</h5>
+      </div>
+      <div class="">
+        <div class="arrow-column">
+          <div class="document-row part3">
+            <i class="document-list fa-solid fa-file-lines fa-2xl part3"></i>
+            <i class="document-checked fa-solid fa-file-circle-check fa-2xl part6"></i>
+          </div>
+          <p class="arrow-line part3"></p>
+          <p class="arrow right part3"></p>
+        </div>
+      </div>
+      <div class="process-container-actor part3">
+        <i class="role-icon fa-solid fa-user fa-2xl"></i>
+        <h5 class="role-title role1 part3">Software Engineer</h5>
+        <h5 class="role-title part4 role2">Database Analyst</h5>
+        <i class="fa-solid fa-circle-notch fa-lg ongoing part5"></i>
+        <h5 class="role-title part4 role3">Frontend Developer</h5>
+      </div>
+      <div class="empty-cell"></div>
+      <div class="empty-cell"></div>
+      <div class="empty-cell"></div>
+      <div class="">
+        <div class="arrow-column">
+          <div class="document-row part3">
+            <i class="document-list fa-solid fa-file-lines fa-2xl part3"></i>
+            <i class="document-checked fa-solid fa-file-circle-check fa-2xl part6"></i>
+          </div>
+          <p class="arrow-line part3"></p>
+          <p class="arrow right part3"></p>
+        </div>
+      </div>
+      <div class="process-container-actor part3">
+        <i class="role-icon fa-solid fa-user fa-2xl"></i>
+        <h5 class="role-title part3 role1">Tester</h5>
+        <h5 class="role-title part4 role2">DevOps Engineer</h5>
+        <i class="fa-solid fa-circle-notch fa-lg ongoing part5"></i>
+        <h5 class="role-title part4 role3">Database Engineer</h5>
+      </div>
+    </div>
+  </div>
+  <div class="background-dark side-margin bottom-space fade-in-short-short-delay">
+    <div class="rotating-text large-text">
+      <p>You want to</p>
+      <p>
+        <span class="word sun-flower">reduce costs?</span>
+        <span class="word alizarin">optimize performance?</span>
+        <span class="word peter-river">maximize efficiency?</span>
+        <span class="word emerald">avoid repetitive work?</span>
+        <span class="word wisteria">streamline processes?</span>
+        <span class="word peter-river">automate tasks?</span>
+      </p>
+    </div>
+    <h3 class="large-text">We can help! Contact us</h3>
+    <form target="_blank" action="https://formsubmit.co/77ae534886cf0d623525bfeb94990284" method="POST">
+      <div class="grid-container bottom-space">
+        <input type="text" name="first_name" placeholder="First Name">
+        <input type="text" name="last_name" placeholder="Last Name">
+        <input type="email" name="email" placeholder="Email Address (*)" required>
+        <input type="text" name="_honey" style="display:none">
+        <input type="text" name="phone" placeholder="Phone Number">
+        <input type="hidden" name="_blacklist" value="spammy pattern, banned term, phrase">
+        <input type="hidden" name="_subject" value="Webseite Kontaktaufnahme">
+        <input type="hidden" name="_autoresponse"
+          value="Herzlichen Dank für Ihre Kontaktaufnahme. Wir haben Ihre Mail erhalten und werden Sie innerhalb der nächsten 24h bearbeitet haben. Wir freuen uns auf den Kontakt mit Ihnen!">
+        <textarea placeholder="Your Message (*)" class="form-control" name="message" rows="10" required></textarea>
+      </div>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</body>
+
+</html>

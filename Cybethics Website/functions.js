@@ -9,7 +9,7 @@ function cybethicsNameContinue() {
             }
             const titles = document.getElementsByClassName('cyber-ethical-solutions-item-title');
             button.removeAttribute('disabled');
-            button.textContent = 'Continue';
+            button.textContent = 'Resolve';
         }, 1000);
     } else {
         const elements = new Set();
@@ -54,97 +54,89 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function prepareDevOpsAnimation() {
     // Selecting elements
-    var boxOne = document.querySelector('.box:nth-child(1)');
-    var boxTwo = document.querySelector('.box:nth-child(2)');
-    var boxThree = document.querySelector('.box:nth-child(3)');
-
-    // Creating TimelineMax instances
-    var timelineBoxOne = new TimelineMax();
-    var timelineBoxTwo = new TimelineMax();
-    var timelineBoxThree = new TimelineMax();
-
-    // Animating boxOne
-    timelineBoxOne.to(boxOne, 0.6, {
-        opacity: 0.25,
-        scale: 1,
-        ease: Back.easeOut
-    }).to(boxOne, 0.6, {
-        rotation: 4,
-        ease: Back.easeOut
-    }, 2);
-
-    // Animating boxTwo
-    timelineBoxTwo.to(boxTwo, 0.6, {
-        opacity: 0.5,
-        scale: 1,
-        ease: Back.easeOut
-    }, 0.6).to(boxTwo, 0.6, {
-        rotation: -4,
-        ease: Back.easeOut
-    }, 1.8);
-
-    // Animating boxThree
-    timelineBoxThree.to(boxThree, 0.6, {
-        opacity: 1,
-        scale: 1,
-        ease: Back.easeOut
-    }, 1.2);
-
-    // Adding click event to point elements
-    var pointElements = document.querySelectorAll('.point');
-    pointElements.forEach(function (point) {
-        point.addEventListener('click', function (e) {
-            var totalPoints = pointElements.length;
-            var index = Array.from(pointElements).indexOf(point);
-            var completeIndex = Array.from(document.querySelectorAll('.point--active')).indexOf(document.querySelector('.point--active'));
-
-            var barFill = document.querySelector('.bar__fill');
-            barFill.style.width = ((index) / (totalPoints - 1)) * 100 + '%';
-
-            if (index >= completeIndex) {
-                document.querySelector('.point--active').classList.add('point--complete');
-                document.querySelector('.point--active').classList.remove('point--active');
-
-                point.classList.add('point--active');
-                Array.from(point.parentElement.children).slice(0, index).forEach(function (el) {
-                    el.classList.add('point--complete');
-                });
-                Array.from(point.parentElement.children).slice(index + 1).forEach(function (el) {
-                    el.classList.remove('point--complete');
-                });
-            }
-        });
-    });
 
     // Demo purposes: animation
-    var animateProgress = function () {
+    var pointElements = document.querySelectorAll('.point');
+    function animateProgress(index) {
         var totalPoints = pointElements.length;
-        var index = Math.floor(Math.random() * 4);
-        var completeIndex = Array.from(document.querySelectorAll('.point--active')).indexOf(document.querySelector('.point--active'));
-
-        var barFill = document.querySelector('.bar__fill');
-        barFill.style.width = ((index) / (totalPoints - 1)) * 100 + '%';
-
-        if (index >= completeIndex) {
-            document.querySelector('.point--active').classList.add('point--complete');
-            document.querySelector('.point--active').classList.remove('point--active');
-
-            var nextPoint = pointElements[index];
-            nextPoint.classList.add('point--active');
-            Array.from(nextPoint.parentElement.children).slice(0, index).forEach(function (el) {
-                el.classList.add('point--complete');
-            });
-            Array.from(nextPoint.parentElement.children).slice(index + 1).forEach(function (el) {
-                el.classList.remove('point--complete');
-            });
-        }
+        setPoints(totalPoints, index);
     };
 
-    var animateProgressInterval = setInterval(animateProgress, 1200);
+    const targetDiv = document.getElementById("devops-grid-item");
+    const targetPositionStart = targetDiv.getBoundingClientRect().top + window.scrollY - (window.innerHeight);
+    const targetPositionEnd = targetDiv.getBoundingClientRect().bottom + window.scrollY - (window.innerHeight / 2);
+    window.addEventListener("scroll", () => {
+        const animated = document.querySelector('[animated]');
+        if (!animated && window.scrollY >= targetPositionStart && window.scrollY <= targetPositionEnd) {
+            targetDiv.setAttribute('animated', true);
+            var boxOne = document.querySelector('.box:nth-child(1)');
+            var boxTwo = document.querySelector('.box:nth-child(2)');
+            var boxThree = document.querySelector('.box:nth-child(3)');
 
-    document.addEventListener('mouseover', function () {
-        clearInterval(animateProgressInterval);
+            // Creating TimelineMax instances
+            var timelineBoxOne = new TimelineMax();
+            var timelineBoxTwo = new TimelineMax();
+            var timelineBoxThree = new TimelineMax();
+
+            // Animating boxOne
+            timelineBoxOne.to(boxOne, 0.6, {
+                opacity: 0.25,
+                scale: 1,
+                ease: Back.easeOut
+            }).to(boxOne, 0.6, {
+                rotation: 4,
+                ease: Back.easeOut
+            }, 2);
+
+            // Animating boxTwo
+            timelineBoxTwo.to(boxTwo, 0.6, {
+                opacity: 0.5,
+                scale: 1,
+                ease: Back.easeOut
+            }, 0.6).to(boxTwo, 0.6, {
+                rotation: -4,
+                ease: Back.easeOut
+            }, 1.8);
+
+            // Animating boxThree
+            timelineBoxThree.to(boxThree, 0.6, {
+                opacity: 1,
+                scale: 1,
+                ease: Back.easeOut
+            }, 1.2);
+
+            // Adding click event to point elements
+            var pointElements = document.querySelectorAll('.point');
+            pointElements.forEach(function (point) {
+                point.addEventListener('click', function (e) {
+                    var totalPoints = pointElements.length;
+                    var index = Array.from(pointElements).indexOf(point);
+                    setPoints(totalPoints, index);
+                });
+            });
+            for (let i = 0; i < 4; i++) {
+                // const randomIndex = Math.floor(Math.random() * 3) + 1;
+                setTimeout(() => {
+                    animateProgress(i);
+                }, 1000+500 * (i + 1)); // Use (i + 1) to stagger the execution by 2000 milliseconds for each iteration
+            }
+        }
     });
+
+    function setPoints(totalPoints, index) {
+        var barFill = document.querySelector('.bar__fill');
+        barFill.style.width = ((index) / (totalPoints - 1)) * 100 + '%';
+        const allPoints = document.getElementsByClassName('point');
+        Array.from(allPoints).forEach(function (el, i) {
+            el.classList.remove('point--complete');
+            el.classList.remove('point--active');
+            if (i < index) {
+                el.classList.add('point--complete');
+            } else if (i === index) {
+                el.classList.add('point--active');
+            }
+        });
+    }
 }
 
 // Rotating text above the contact form
