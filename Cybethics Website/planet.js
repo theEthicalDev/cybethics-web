@@ -109,9 +109,9 @@ renderer.setAnimationLoop(() => {
 });
 
 function dynamicCameraPoint(screenWidth) {
-    const xMin = 800;  // or whatever you consider as smallest screen width
-    const xMax = 2000; // or whatever you consider as desktop screen width
-    const yMin = 35;
+    const xMin = 700;  // or whatever you consider as smallest screen width
+    const xMax = 2200; // or whatever you consider as desktop screen width
+    const yMin = 50;
     const yMax = 30;
 
     return yMin + (screenWidth - xMin) * (yMax - yMin) / (xMax - xMin);

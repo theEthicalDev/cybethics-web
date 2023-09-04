@@ -742,7 +742,7 @@ h6 {
 
 .mobile-development-platform-group {
   display: grid;
-  grid-template-rows: 1fr 1fr 3fr;
+  /* grid-template-rows: 1fr 1fr 3fr; */
   grid-template-columns: 1fr 1fr;
   gap: 0.1rem;
 }
@@ -1321,8 +1321,8 @@ li {
     "goal5 goal5 goal5 goal2";
 }
 
-/* Central media query for notebook monitors */
-@media screen and (max-width: 1600px) {
+/* Central media query for large notebook monitors */
+@media screen and (max-width: 1800px) {
   html {
     font-size: 14px;
     width: 100vw;
@@ -1353,12 +1353,64 @@ li {
   ul {
     padding-left: 1%;
   }
+
+  .cyber-ethical-solutions-item-long ul li {
+    font-size: 1.5rem;
+  }
+
+  .cyber-ethical-solutions {
+    gap: 0.5rem;
+    height: auto;
+  }
+}
+
+/* Central media query for medium notebook monitors */
+@media screen and (max-width: 1600px) {
+  html {
+    font-size: 13px;
+    width: 100vw;
+  }
+
+  .large-text {
+    font-size: 1.5rem;
+  }
+
+  #canvas-container {
+    grid-template-columns: 0% 100%;
+    /* max-height: 50vh; */
+  }
+
+  .unsdg-container-new {
+    display: block;
+  }
+
+  .grid-container {
+    display: block;
+  }
+
+  .visible-large-screen-only {
+    display: none;
+  }
+
+  li,
+  ul {
+    padding-left: 1%;
+  }
+
+  .cyber-ethical-solutions-item-long ul li {
+    font-size: 1.25rem;
+  }
+
+  .cyber-ethical-solutions {
+    gap: 0.5rem;
+    height: auto;
+  }
 }
 
 /* Central media query for phones */
 @media screen and (max-width: 780px) {
   html {
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 500;
     width: 100vw;
   }
@@ -1377,7 +1429,7 @@ li {
     grid-template-columns: repeat(1, 1fr);
   }
 
-  #canvas-container {
+  #canvas-planet-container {
     grid-template-columns: 0% 100%;
     /* max-height: 50vh; */
   }
@@ -1390,7 +1442,7 @@ li {
     display: block;
   }
 
-  .visible-large-screen-only {
+  .visible-large-screen-only, .visible-medium-screen-only {
     display: none;
   }
 
@@ -1627,7 +1679,6 @@ button:focus::after {
   .blog-slider {
     min-height: 500px;
     height: auto;
-    margin: 180px auto;
   }
 }
 
@@ -1929,6 +1980,21 @@ textarea:valid~label {
   max-width: 100%;
 }
 
+.form-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  padding-bottom: 150px;
+}
+
+.form-container > textarea {
+  grid-column: 1 / -1;
+}
+
+.form-container > button {
+  grid-column: 1 / -1;
+}
+
 input,
 textarea {
   padding: 30px;
@@ -1937,6 +2003,8 @@ textarea {
   background-color: #2d2d2d;
   color: white;
   border-radius: 4px;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 input:focus,
