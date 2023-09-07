@@ -50,6 +50,7 @@ function cybethicsNameContinue() {
 document.addEventListener("DOMContentLoaded", function () {
     prepareRotatingText();
     prepareDevOpsAnimation();
+    addScrollAnimations();
 });
 
 function prepareDevOpsAnimation() {
@@ -63,65 +64,62 @@ function prepareDevOpsAnimation() {
     };
 
     const targetDiv = document.getElementById("devops-grid-item");
-    const targetPositionStart = targetDiv.getBoundingClientRect().top + window.scrollY - (window.innerHeight);
-    const targetPositionEnd = targetDiv.getBoundingClientRect().bottom + window.scrollY - (window.innerHeight / 2);
-    window.addEventListener("scroll", () => {
-        const animated = document.querySelector('[animated]');
-        if (!animated && window.scrollY >= targetPositionStart && window.scrollY <= targetPositionEnd) {
-            targetDiv.setAttribute('animated', true);
-            var boxOne = document.querySelector('.box:nth-child(1)');
-            var boxTwo = document.querySelector('.box:nth-child(2)');
-            var boxThree = document.querySelector('.box:nth-child(3)');
 
-            // Creating TimelineMax instances
-            var timelineBoxOne = new TimelineMax();
-            var timelineBoxTwo = new TimelineMax();
-            var timelineBoxThree = new TimelineMax();
+    const devOpsAnimation = () => {
+        var boxOne = document.querySelector('.box:nth-child(1)');
+        var boxTwo = document.querySelector('.box:nth-child(2)');
+        var boxThree = document.querySelector('.box:nth-child(3)');
 
-            // Animating boxOne
-            timelineBoxOne.to(boxOne, 0.6, {
-                opacity: 0.25,
-                scale: 1,
-                ease: Back.easeOut
-            }).to(boxOne, 0.6, {
-                rotation: 4,
-                ease: Back.easeOut
-            }, 2);
+        // Creating TimelineMax instances
+        var timelineBoxOne = new TimelineMax();
+        var timelineBoxTwo = new TimelineMax();
+        var timelineBoxThree = new TimelineMax();
 
-            // Animating boxTwo
-            timelineBoxTwo.to(boxTwo, 0.6, {
-                opacity: 0.5,
-                scale: 1,
-                ease: Back.easeOut
-            }, 0.6).to(boxTwo, 0.6, {
-                rotation: -4,
-                ease: Back.easeOut
-            }, 1.8);
+        // Animating boxOne
+        timelineBoxOne.to(boxOne, 0.6, {
+            opacity: 0.25,
+            scale: 1,
+            ease: Back.easeOut
+        }).to(boxOne, 0.6, {
+            rotation: 4,
+            ease: Back.easeOut
+        }, 2);
 
-            // Animating boxThree
-            timelineBoxThree.to(boxThree, 0.6, {
-                opacity: 1,
-                scale: 1,
-                ease: Back.easeOut
-            }, 1.2);
+        // Animating boxTwo
+        timelineBoxTwo.to(boxTwo, 0.6, {
+            opacity: 0.5,
+            scale: 1,
+            ease: Back.easeOut
+        }, 0.6).to(boxTwo, 0.6, {
+            rotation: -4,
+            ease: Back.easeOut
+        }, 1.8);
 
-            // Adding click event to point elements
-            var pointElements = document.querySelectorAll('.point');
-            pointElements.forEach(function (point) {
-                point.addEventListener('click', function (e) {
-                    var totalPoints = pointElements.length;
-                    var index = Array.from(pointElements).indexOf(point);
-                    setPoints(totalPoints, index);
-                });
+        // Animating boxThree
+        timelineBoxThree.to(boxThree, 0.6, {
+            opacity: 1,
+            scale: 1,
+            ease: Back.easeOut
+        }, 1.2);
+
+        // Adding click event to point elements
+        var pointElements = document.querySelectorAll('.point');
+        pointElements.forEach(function (point) {
+            point.addEventListener('click', function (e) {
+                var totalPoints = pointElements.length;
+                var index = Array.from(pointElements).indexOf(point);
+                setPoints(totalPoints, index);
             });
-            for (let i = 0; i < 4; i++) {
-                // const randomIndex = Math.floor(Math.random() * 3) + 1;
-                setTimeout(() => {
-                    animateProgress(i);
-                }, 1000+500 * (i + 1)); // Use (i + 1) to stagger the execution by 2000 milliseconds for each iteration
-            }
+        });
+        for (let i = 0; i < 4; i++) {
+            // const randomIndex = Math.floor(Math.random() * 3) + 1;
+            setTimeout(() => {
+                animateProgress(i);
+            }, 1000 + 500 * (i + 1)); // Use (i + 1) to stagger the execution by 2000 milliseconds for each iteration
         }
-    });
+    };
+
+    addScrollAnimation(devOpsAnimation, targetDiv);
 
     function setPoints(totalPoints, index) {
         var barFill = document.querySelector('.bar__fill');
@@ -188,3 +186,52 @@ function prepareRotatingText() {
     setInterval(rotateText, 4000);
 }
 
+function addScrollAnimations() {
+    const counters = document.getElementsByClassName('counter');
+    Array.from(counters).forEach(counter => {
+        const target = parseInt(counter.getAttribute('data-target'));
+        const duration = 2000; // in milliseconds
+        const frameDuration = 1000 / 60; // 60 frames per second
+
+        const totalFrames = duration / frameDuration;
+        const increment = target / totalFrames;
+
+        let count = 0;
+        let currentFrame = 0;
+
+        const updateCounter = () => {
+            if (count < target) {
+                count += increment;
+                counter.textContent = Math.floor(count);
+
+                currentFrame++;
+                if (currentFrame < totalFrames - 15) {
+                    requestAnimationFrame(updateCounter);
+                } else if (currentFrame < totalFrames) {
+                    setTimeout(updateCounter, frameDuration * 2);
+                } else {
+                    counter.textContent = target;
+                    if (target === 8) {
+                        counter.classList.add('rotate-right');
+                        counter.style = "left: 6px; position: relative;";
+                    }
+                }
+            }
+        };
+
+        const targetDiv = counter;
+        addScrollAnimation(updateCounter, targetDiv);
+    });
+}
+
+function addScrollAnimation(animation, targetDiv) {
+    const targetPositionStart = targetDiv.getBoundingClientRect().top + window.scrollY - (window.innerHeight);
+    const targetPositionEnd = targetDiv.getBoundingClientRect().bottom + window.scrollY;
+    window.addEventListener("scroll", () => {
+        const animated = targetDiv.getAttribute('animated');
+        if (!animated && window.scrollY >= targetPositionStart && window.scrollY <= targetPositionEnd) {
+            targetDiv.setAttribute('animated', true);
+            animation();
+        }
+    });
+}

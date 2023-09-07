@@ -12,9 +12,9 @@ camera.position.set(0, 10, dynamicCameraPoint(innerWidth));
 let renderer = new THREE.WebGLRenderer();
 renderer.setSize(innerWidth, innerHeight);
 const canvasContainer = document.getElementById("canvas-planet-container");
-const textNode1 = createTextNode("Tailored Software Solutions Built With Purpose", "fade-in-short-short-delay visible-large-screen-only");
+const textNode1 = createTextNode("Tailored Software Solutions Built With Purpose", "fade-in-short-short-delay visible-medium-screen-only");
 canvasContainer.appendChild(textNode1);
-const textNode2 = createTextNode("Empower Your Vision And Elevate Humanity", "fade-in-short-short-delay visible-large-screen-only");
+const textNode2 = createTextNode("Empower Your Vision And Elevate Humanity", "fade-in-short-short-delay visible-medium-screen-only");
 canvasContainer.appendChild(textNode2);
 canvasContainer.appendChild(renderer.domElement);
 
@@ -110,11 +110,13 @@ renderer.setAnimationLoop(() => {
 
 function dynamicCameraPoint(screenWidth) {
     const xMin = 700;  // or whatever you consider as smallest screen width
-    const xMax = 2200; // or whatever you consider as desktop screen width
-    const yMin = 50;
-    const yMax = 30;
+    const xMax = 3000; // or whatever you consider as desktop screen width
+    const yMin = 35;
+    const yMax = 20;
 
-    return yMin + (screenWidth - xMin) * (yMax - yMin) / (xMax - xMin);
+    const result = yMin + (screenWidth - xMin) * (yMax - yMin) / (xMax - xMin);
+    console.log(result);
+    return result;
 }
 
 function createTextNode(text, partType) {
