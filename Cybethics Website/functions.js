@@ -1,3 +1,6 @@
+var intervalId;
+var germanText = [];
+
 function cybethicsNameContinue() {
     const continuedElems = Array.from(document.getElementsByClassName('continued'));
     const button = document.getElementById('cyber-ethical-solutions-button');
@@ -9,7 +12,7 @@ function cybethicsNameContinue() {
             }
             const titles = document.getElementsByClassName('cyber-ethical-solutions-item-title');
             button.removeAttribute('disabled');
-            button.textContent = 'Resolve';
+            button.textContent = isGerman() ? 'Auflösen' : 'Resolve';
         }, 1000);
     } else {
         const elements = new Set();
@@ -41,13 +44,14 @@ function cybethicsNameContinue() {
             for (title of titles) {
                 title.classList.add('continued');
             }
-            button.textContent = 'Reset';
+            button.textContent = isGerman() ? 'Zurücksetzen' : 'Reset';
             button.removeAttribute('disabled');
         }, 5000);
     }
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+    prepareLanguageSwitch();
     prepareRotatingText();
     prepareDevOpsAnimation();
     addScrollAnimations();
@@ -139,19 +143,19 @@ function prepareDevOpsAnimation() {
 
 // Rotating text above the contact form
 function prepareRotatingText() {
+    if (intervalId) {
+        clearInterval(intervalId);
+    }
     let words = document.querySelectorAll(".word");
-
     let wordArray = Array.from(words);
-
     wordArray.forEach(word => {
         let letters = word.textContent.split("");
         word.textContent = "";
-
         letters.forEach(letter => {
             let span = document.createElement("span");
             span.textContent = letter;
-            span.style.minWidth = "0.2em";
-            span.className = "letter";
+            span.style.minWidth = "0.3em";
+            span.className = "letter out";
             word.appendChild(span);
         });
     });
@@ -163,13 +167,11 @@ function prepareRotatingText() {
     let rotateText = () => {
         let currentWord = wordArray[currentWordIndex];
         let nextWord = currentWordIndex === maxWordIndex ? wordArray[0] : wordArray[currentWordIndex + 1];
-
         Array.from(currentWord.children).forEach((letter, i) => {
             setTimeout(() => {
                 letter.className = "letter out";
             }, i * 80);
         });
-
         nextWord.style.opacity = "1";
         Array.from(nextWord.children).forEach((letter, i) => {
             letter.className = "letter behind";
@@ -177,13 +179,11 @@ function prepareRotatingText() {
                 letter.className = "letter in";
             }, 340 + i * 80);
         });
-
         currentWordIndex =
             currentWordIndex === maxWordIndex ? 0 : currentWordIndex + 1;
     };
-
     rotateText();
-    setInterval(rotateText, 4000);
+    intervalId = setInterval(rotateText, 4000);
 }
 
 function addScrollAnimations() {
@@ -233,5 +233,75 @@ function addScrollAnimation(animation, targetDiv) {
             targetDiv.setAttribute('animated', true);
             animation();
         }
-    });
+    }, { passive: true });
+}
+
+function updateSubmitButton() {
+    var agreementCheckbox = document.getElementById("agreement");
+    var submitButton = document.getElementById("submitButton");
+    if (agreementCheckbox.checked) {
+        submitButton.disabled = false;
+    } else {
+        submitButton.disabled = true;
+    }
+}
+
+function onSubmit(token) {
+    document.getElementById('contactForm').submit();
+}
+
+function prepareLanguageSwitch() {
+    if (!localStorage.getItem('language')) {
+        localStorage.setItem('language', 'de');
+    }
+    const targetLanguage = localStorage.getItem('language');
+    translateTo(targetLanguage);
+    document.getElementById("language-switch").checked = targetLanguage === 'en' ? true : false;
+    document.getElementById("language-switch").addEventListener("change", function() {
+        if (this.checked) {
+            translateTo('en');
+        } else {
+            translateTo('de');
+        }
+    })
+};
+
+function translateTo(targetLanguage) {
+    localStorage.setItem('language', targetLanguage);
+    if (targetLanguage === 'en') {
+        fetch('en.json')
+            .then(response => response.json())
+            .then(data => translateText(data, targetLanguage))
+            .catch(error => {
+                console.error("Error fetching translations:", error);
+            });
+    } else if (targetLanguage === 'de') {
+        translateText(germanText, targetLanguage);
+    } else {
+        console.error('Unknown language ' + targetLanguage);
+    }
+}
+
+function translateText(data, targetLanguage) {
+    for (let key in data) {
+        let element = document.getElementById(key);
+        if (element) {
+            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                if (targetLanguage === 'en') {
+                    germanText[key] = element.getAttribute("placeholder");
+                }
+                element.setAttribute("placeholder", data[key]);
+            } else {
+                if (targetLanguage === 'en') {
+                    germanText[key] = element.textContent;
+                }
+                element.innerText = data[key];
+            }
+        }
+    }
+    prepareRotatingText();
+}
+
+function isGerman() {
+    return !document.getElementById("language-switch").checked;
 }

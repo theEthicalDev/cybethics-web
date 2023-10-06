@@ -1,40 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
   <title>Cybethics</title>
   <meta charset="utf-8">
+  <meta name="description"
+    content="Entdecke Cybethics - Deinen Partner für massgeschneiderte Softwarelösungen. Wir verwandeln Ideen in digitale Realität.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="Transparent">
-  <meta name="google-site-verification" content="s9fwO0DaqeL5sa0c5xapmQ6A26vs84yHStqM6wF2ac4"/>
-  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <meta name="google-site-verification" content="s9fwO0DaqeL5sa0c5xapmQ6A26vs84yHStqM6wF2ac4" />
+  <meta http-equiv="Cache-Control" content="max-age=604800">
+  <link rel="icon" href="assets/favicon.ico">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <link rel="stylesheet" href="cybethics.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cairo">
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
-  <script src="https://kit.fontawesome.com/3cb905f540.js" crossorigin="anonymous"></script>
-  <script src="planet.js" type="module"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>
-  <script src="rain.js" type="module"></script>
-  <script src="functions.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Cairo&display=swap" rel="stylesheet" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cairo">
+  </noscript>
+  <script async defer src="https://js.hcaptcha.com/1/api.js"></script>
+  <script async defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script async defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+  <script async defer src="https://kit.fontawesome.com/3cb905f540.js" crossorigin="anonymous"></script>
+  <script async defer src="planet.js" type="module"></script>
+  <!-- <script async defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script> -->
+  <!-- <script async defer src="rain.js" type="module"></script> -->
+  <script defer src="functions.js"></script>
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "name": "Cybethics",
+      "url": "https://www.cybethics.com/",
+      "logo": "https://www.cybethics.com/assets/favicon.ico"
+    }
+    </script>
 </head>
 
 <body>
   <div class="header side-margin background-dark">
     <div class="header-item">
-      <a href="#default" class="">
+      <a href="index.html" class="" aria-label="link to the home page">
         <div class="logo-container"></div>
       </a>
+    </div>
+    <div class="language-container">
+      <label class="switch">
+        <input id="language-switch" class="switch__input" type="checkbox" role="switch" name="dark"/>
+        <span class="switch__inner"></span>
+      </label>
     </div>
   </div>
   <div id="canvas-planet-container" class="side-margin bottom-space background-dark"></div>
   <div class="side-margin fade-in-short-short-delay">
     <div class="">
-      <h2>Customized Full-Stack Software Development</h2>
-      <p>Our team excels in developing custom software solutions that perfectly align with your business requirements.
-        Using industry-leading technologies such as Spring Boot, Angular, HTML, CSS, and JPA, we create scalable and
-        robust applications that empower your organization to thrive in the digital landscape.</p>
+      <h1 id="custom_software_development">Individuelle Softwareentwicklung</h1>
+      <p id="software_desc">Unser Team zeichnet sich durch die Entwicklung von maßgeschneiderten Softwarelösungen aus,
+        die perfekt auf Ihre Geschäftsanforderungen abgestimmt sind. Mit branchenführenden Technologien wie Spring Boot,
+        Angular, HTML, CSS und JPA erstellen wir skalierbare und robuste Anwendungen, die Ihre Organisation im digitalen
+        Umfeld stärken.</p>
     </div>
     <div class="grid-container bottom-space">
       <div class="item">
@@ -43,14 +66,15 @@
         <i class="fa-brands fa-angular fa-2xl"></i>
         <i class="fa-brands fa-js fa-2xl"></i>
         <i class="fa-brands fa-node fa-2xl"></i>
-        <h3>Frontend Development</h3>
-        <p>Our frontend development services focus on creating engaging and user-friendly interfaces that enhance the
-          user
-          experience. Our skilled team of frontend developers is proficient in HTML, CSS, and JavaScript, ensuring
-          seamless integration of design and functionality. We stay up to date with the latest frontend frameworks, such
-          as Angular, to deliver visually stunning and responsive web applications. Whether it's crafting intuitive user
-          interfaces or optimizing website performance, our frontend development expertise ensures your online presence
-          captivates and engages your target audience.</p>
+        <h3 id="frontend_title">Frontend-Entwicklung</h3>
+        <p id="frontend_desc">Unsere Dienstleistungen im Bereich Frontend-Entwicklung konzentrieren sich auf die
+          Erstellung ansprechender und benutzerfreundlicher Schnittstellen, die das Benutzererlebnis verbessern. Unser
+          erfahrenes Team von Frontend-Entwicklern beherrscht HTML, CSS und JavaScript und gewährleistet eine nahtlose
+          Integration von Design und Funktionalität. Wir bleiben auf dem neuesten Stand mit den neuesten
+          Frontend-Frameworks wie Angular, um optisch ansprechende und reaktionsfähige Webanwendungen zu liefern. Ob es
+          darum geht, intuitive Benutzeroberflächen zu entwerfen oder die Website-Leistung zu optimieren, unsere
+          Expertise im Bereich Frontend-Entwicklung stellt sicher, dass Ihre Online-Präsenz Ihr Zielpublikum fesselt und
+          engagiert.</p>
       </div>
       <div class="item">
         <i class="fa-brands fa-java fa-2xl"></i>
@@ -58,146 +82,149 @@
         <i class="fa-brands fa-stack-overflow fa-2xl"></i>
         <i class="fa-brands fa-git-alt fa-2xl"></i>
         <i class="fa-solid fa-leaf fa-2xl"></i>
-        <h3>Backend Development</h3>
-        <p>Our backend development services revolve around building robust and scalable architectures that power your
-          software applications. Our experienced team of backend developers specializes in programming languages like
-          Java, Python, and PHP, as well as frameworks like Spring Boot and Quarkus. We leverage our expertise in
-          database
-          design, API integrations, and server-side technologies to ensure efficient data management, seamless
-          communication, and secure data exchange. With our backend development solutions, you can expect reliable
-          performance, strong data security, and the foundation for a successful software application.</p>
+        <h3 id="backend_title">Backend-Entwicklung</h3>
+        <p id="backend_desc">Unsere Backend-Entwicklungsdienste drehen sich um den Aufbau robuster und skalierbarer
+          Architekturen, die Ihre Softwareanwendungen antreiben. Unser erfahrenes Team von Backend-Entwicklern ist auf
+          Programmiersprachen wie Java und Python sowie Frameworks wie Spring Boot und Quarkus spezialisiert. Wir nutzen
+          unsere Expertise im Bereich Datenbankdesign, API-Integrationen und serverseitige Technologien, um eine
+          effiziente Datenverwaltung, nahtlose Kommunikation und sicheren Datenaustausch zu gewährleisten. Mit unseren
+          Backend-Entwicklungslösungen können Sie eine zuverlässige Leistung, starke Datensicherheit und die Grundlage
+          für eine erfolgreiche Softwareanwendung erwarten.</p>
       </div>
     </div>
   </div>
-  <div class="web-development-experience fade-in-short-short-delay top-space bottom-space side-margin background-dark">
-    <div>
-      <div class="web-development-experience-number counter" data-target="9"></div>
-      <p class="web-development-experience-description">years of software development experience by employee</p>
+  <div class="fade-in-short-short-delay bottom-space side-margin background-dark">
+    <h2 id="web-development-experience-title" class="top-space bottom-space">Im Durchschnitt hat ein Cybethics Mitarbeiter</h2>
+    <div class="web-development-experience">
+      <div>
+        <div class="web-development-experience-number counter" data-target="10"></div>
+        <p class="web-development-experience-description" id="years_of_experience">Jahre Entwicklungserfahrung</p>
+      </div>
+      <div>
+        <div class="web-development-experience-number counter" data-target="18"></div>
+        <p class="web-development-experience-description" id="technologies_known">Technologien kennengelernt</p>
+      </div>
+      <div>
+        <div class="web-development-experience-number counter" data-target="5"></div>
+        <p class="web-development-experience-description" id="average_certificates">Zertifizierungen gemacht</p>
+      </div>
+      <div>
+        <div class="web-development-experience-number counter" data-target="8"></div>
+        <p class="web-development-experience-description" id="tech_stack_experience">Möglichkeiten Ihr Problem zu lösen</p>
+      </div>
     </div>
-    <div>
-      <div class="web-development-experience-number counter" data-target="18"></div>
-      <p class="web-development-experience-description">different technologies in the backpack of a Cybethics developer
-      </p>
     </div>
-    <div>
-      <div class="web-development-experience-number counter" data-target="5"></div>
-      <p class="web-development-experience-description">certificates by developer on average</p>
-    </div>
-    <div>
-      <div class="web-development-experience-number counter" data-target="8"></div>
-      <p class="web-development-experience-description">possibilities with our technology stack experience</p>
-    </div>
-  </div>
   <div class="fade-in-short-short-delay side-margin bottom-space">
-    <h2>Mobile App Development</h2>
-    <p>We specialize in crafting intuitive and feature-rich mobile applications for iOS and Android platforms.
-      Leveraging our expertise in native and hybrid app development, we create seamless user experiences, leveraging
-      technologies such as Swift, Kotlin, Java, React Native, and Flutter.</p>
+    <h2 id="mobile_app_development_title">Mobile App Entwicklung</h2>
+    <p id="mobile_app_desc">Wir sind spezialisiert auf die Entwicklung von intuitiven und funktionsreichen
+      mobilen Anwendungen für iOS und Android Plattformen. Mit unserer Expertise in nativer und hybrider App-Entwicklung
+      schaffen wir nahtlose Benutzererfahrungen, indem wir Technologien wie Swift, Kotlin, Java, React Native und
+      Flutter nutzen.</p>
     <div class="mobile-development-detail-group">
-      <div class="mobile-development-detail-single item" id="mobile-development-ui-ux-design">
+      <div class="mobile-development-detail-single item" id="ui_ux_section">
         <div class="image-title">
           <i class="fa-solid fa-user-plus fa-xl"></i>
-          <h3>UI/UX Design</h3>
+          <h3 id="uiux_title">UI/UX Design</h3>
         </div>
-        <p>Emphasize your focus on creating intuitive and <span>visually appealing user interfaces (UI)</span> and
-          delivering
-          exceptional user experiences (UX). Mention your expertise in crafting<span> user-friendly
-          </span>navigation, engaging
-          interactions, and seamless transitions.</p>
+        <p id="uiux_desc">Wir legen Wert auf die Schaffung von intuitiven und <span id="visually_appealing">visuell
+            ansprechenden Benutzeroberflächen (UI)</span>. Dabei liefern wir
+          außergewöhnliche Benutzererlebnisse (UX), erstellen <span id="user_friendly">benutzerfreundliche</span>
+          Navigation und sorgen für ansprechende Interaktionen und nahtlose Übergänge.</p>
       </div>
-      <div class="mobile-development-detail-single item" id="mobile-development-performance-optimization">
+      <div class="mobile-development-detail-single item" id="performance_opt_section">
         <div class="image-title">
           <i class="fa-solid fa-gauge-high fa-xl"></i>
-          <h3>Performance Optimization</h3>
+          <h3 id="performance_title">Performance Optimierung</h3>
         </div>
-        <p>Showcase your ability to optimize mobile app performance to ensure <span>smooth and efficient
-            operation</span>.
-          Highlight your techniques for minimizing app load times, reducing memory usage, and optimizing battery
-          consumption.</p>
+        <p id="performance_desc">Wir zeigen unsere Fähigkeit, die Performance von mobilen Apps zu optimieren, um
+          einen <span id="smooth_operation">reibungslosen und effizienten Betrieb</span> sicherzustellen. Dabei setzen
+          wir Techniken ein, um Ladezeiten zu minimieren, den Speicherverbrauch zu reduzieren und den Akkuverbrauch zu
+          optimieren.</p>
       </div>
       <div class="mobile-development-detail-single item" id="mobile-development-app-security">
         <div class="image-title">
           <i class="fa-solid fa-shield-halved fa-xl"></i>
-          <h3>App Security</h3>
+          <h3 id="app_security_title">App Sicherheit</h3>
         </div>
-        <p>Highlight your commitment to ensuring the security of mobile applications. Mention your expertise in
-          implementing robust security measures, such as data <span>encryption</span>, secure user
-          <span>authentication</span>, and <span>protection</span>
-          against common security vulnerabilities.
-        </p>
+        <p id="app_security_desc">Betonen Sie Ihr Engagement für die Sicherheit mobiler Anwendungen. Erwähnen Sie Ihre
+          Expertise bei der Implementierung robuster Sicherheitsmaßnahmen, wie Daten-<span
+            id="data_encryption">Verschlüsselung</span>, sichere Benutzer-<span
+            id="user_authentication">Authentifizierung</span> und <span id="protection_measures">Schutz</span> vor
+          gängigen Sicherheitslücken.</p>
       </div>
+
       <div class="mobile-development-detail-single item">
         <div class="image-title">
           <i class="fa-solid fa-mobile fa-xl"></i>
-          <h3>Native</h3>
+          <h3 id="native_title">Native</h3>
         </div>
-        <p>Highlight your proficiency in developing mobile applications for <span>iOS and Android</span> platforms.
-          Mention your
-          experience with specific versions of <span>iOS and Android</span>, as well as any additional platforms you
-          may support.
-        </p>
+        <p id="native_desc">Unterstreichen Sie Ihre Kompetenz bei der Entwicklung mobiler Anwendungen für die <span
+            id="ios_and_android">iOS und Android</span> Plattformen. Erzählen Sie von Ihren Erfahrungen mit bestimmten
+          Versionen von <span id="ios_android_versions">iOS und Android</span> sowie eventuellen weiteren unterstützten
+          Plattformen.</p>
         <div class="mobile-development-platform-group">
           <div class="image-title center visible-large-screen-only">
             <i class="fa-brands fa-swift fa-2xl"></i>
-            <h3>Swift</h3>
-            <p class="subtitle">(iOS)</p>
+            <h3 id="swift_title">Swift</h3>
+            <p class="subtitle" id="swift_subtitle">(iOS)</p>
           </div>
           <div class="image-title center visible-large-screen-only">
             <i class="fa-brands fa-android fa-2xl"></i>
-            <h3>Android SDK</h3>
-            <p class="subtitle">(Android)</p>
+            <h3 id="android_sdk_title">Android SDK</h3>
+            <p class="subtitle" id="android_subtitle">(Android)</p>
           </div>
-          <p class="mobile-development-platform-group-item-stretched center center-text">Advantages and disadvantages of
-            native app programming:</p>
+          <p class="mobile-development-platform-group-item-stretched center center-text" id="native_adv_disadvantages">
+            Vor- und Nachteile der nativen App-Programmierung:</p>
           <div class="pros">
-            <p class="awesome pro">Better app performance</p>
-            <p class="awesome pro">Native user experience</p>
-            <p class="awesome pro">More access to device features</p>
-            <p class="awesome pro">OS change flexibility</p>
+            <p class="awesome pro" id="better_perf">Bessere App-Leistung</p>
+            <p class="awesome pro" id="native_exp">Native Benutzererfahrung</p>
+            <p class="awesome pro" id="device_features_access">Mehr Zugriff auf Gerätefunktionen</p>
+            <p class="awesome pro" id="os_flexibility">Flexibilität bei OS-Änderungen</p>
           </div>
           <div class="cons">
-            <p class="awesome con">Development time and cost</p>
-            <p class="awesome con">Maintenance cost</p>
+            <p class="awesome con" id="dev_time_cost">Entwicklungszeit und -kosten</p>
+            <p class="awesome con" id="maint_cost">Wartungskosten</p>
           </div>
         </div>
       </div>
-      <img class="visible-medium-screen-only" src="assets/mobile-apps.png" style="width: 100%;"></img>
+      <img class="visible-medium-screen-only" src="assets/mobile-apps-new.png" alt="Example of mobile apps" loading="lazy"
+        style="align-self: center; justify-self: center;" height="auto">
       <div class="mobile-development-detail-single item">
         <div class="image-title">
           <i class="fa-solid fa-mobile fa-xl"></i>
-          <h3>Cross-Platform</h3>
+          <h3 id="cross_platform_title">Cross-Plattform</h3>
         </div>
         <div class="mobile-development-platform-group">
           <div class="image-title center mobile-development-platform-group-item-stretched">
             <i class="fa-solid fa-angles-left fa-2xl"></i>
-            <h3>Flutter</h3>
+            <h3 id="flutter_title">Flutter</h3>
           </div>
-          <p class="mobile-development-platform-group-item-stretched center center-text">With cross-platform
-            development technologies like Flutter apps can be developed for multiple platforms in one go.</p>
+          <p id="flutter_desc" class="mobile-development-platform-group-item-stretched center center-text">Mit
+            Cross-Plattform-Entwicklungstechnologien wie Flutter können Apps für mehrere Plattformen gleichzeitig
+            entwickelt werden.</p>
           <div class="pros">
-            <p class="awesome pro">Faster development</p>
-            <p class="awesome pro">Maintenance deployed on all platforms</p>
-            <p class="awesome pro">Single codebase</p>
+            <p id="pro_faster_dev" class="awesome pro">Schnellere Entwicklung</p>
+            <p id="pro_maintenance_all_platforms" class="awesome pro">Wartung auf allen Plattformen</p>
+            <p id="pro_single_codebase" class="awesome pro">Einzelner Codebase</p>
           </div>
           <div class="cons">
-            <p class="awesome con">Performance limitations</p>
-            <p class="awesome con">Limited platform-specific features</p>
-            <p class="awesome con">Difficulties on operating system updates</p>
+            <p id="con_performance_limitations" class="awesome con">Leistungseinschränkungen</p>
+            <p id="con_platform_specific" class="awesome con">Eingeschränkte plattformspezifische Funktionen</p>
+            <p id="con_os_updates" class="awesome con">Schwierigkeiten bei Betriebssystem-Updates</p>
           </div>
         </div>
       </div>
     </div>
-  </div>
   </div>
   <div class="background-dark bottom-space fade-in-short-short-delay">
     <div class="side-margin">
       <div class="grid-container">
         <div class="">
-          <h2>DevOps</h2>
-          <p>Our DevOps experts streamline your software development and deployment processes, enabling faster and more
-            reliable releases. We implement containerization techniques using platforms like Docker and orchestration
-            tools
-            like Kubernetes, ensuring scalability, portability, and ease of management.</p>
+          <h2 id="devops_title">DevOps</h2>
+          <p id="devops_desc">Unsere DevOps-Experten optimieren Ihre Softwareentwicklung und den Bereitstellungsprozess,
+            sodass Sie schneller und zuverlässiger veröffentlichen können. Wir implementieren
+            Containerisierungstechniken mit Plattformen wie Docker und Orchestrierungswerkzeugen wie Kubernetes, um
+            Skalierbarkeit, Portabilität und einfache Verwaltung zu gewährleisten.</p>
         </div>
         <div id="devops-grid-item">
           <div class="boxes">
@@ -225,28 +252,27 @@
           </div>
         </div>
         <div class="">
-          <h2>Severless Functions</h2>
-          <p>Experience the benefits of serverless computing with our serverless functions development services. We
-            design and build serverless architectures using platforms like AWS Lambda, Azure Functions, and Google Cloud
-            Functions,
-            enabling you to focus on business logic without worrying about infrastructure management.</p>
+          <h2 id="serverless_title">Serverlose Funktionen</h2>
+          <p id="serverless_desc">Erleben Sie die Vorteile des serverlosen Computing mit unseren Entwicklungsdiensten
+            für serverlose Funktionen. Wir entwerfen und bauen serverlose Architekturen mit Plattformen wie AWS Lambda,
+            Azure Functions und Google Cloud Functions, sodass Sie sich auf die Geschäftslogik konzentrieren können,
+            ohne sich um die Infrastrukturverwaltung kümmern zu müssen.</p>
         </div>
         <div class="">
-          <h2>External API Integrations</h2>
-          <p>We facilitate seamless integration of third-party APIs into your software ecosystem, enabling efficient
-            data
-            exchange and expanding the capabilities of your applications. Our expertise in API integration ensures
-            smooth and
-            secure interactions with external systems, enhancing your business processes.</p>
+          <h2 id="api_integration_title">Externe API-Integrationen</h2>
+          <p id="api_integration_desc">Wir erleichtern die nahtlose Integration von Drittanbieter-APIs in Ihr
+            Software-Ökosystem, ermöglichen einen effizienten Datenaustausch und erweitern die Fähigkeiten Ihrer
+            Anwendungen. Unsere Expertise in der API-Integration gewährleistet reibungslose und sichere Interaktionen
+            mit externen Systemen und verbessert Ihre Geschäftsprozesse.</p>
         </div>
       </div>
     </div>
   </div>
   <div class="fade-in-short-short-delay side-margin bottom-space">
-    <h1>Why Cybethics deeply cares about values</h1>
-    <p class="large-text">At Cybethics, ethics and reason are at the core of everything we do. It's not just a name;
-      it's a reflection of
-      our unwavering commitment to integrity and responsible business practices.</p>
+    <h2 id="heading">Warum Cybethics Werte so wichtig sind</h2>
+    <p id="intro_text" class="large-text">Bei Cybethics stehen Ethik und Vernunft im Mittelpunkt all unseres Handelns.
+      Es ist nicht nur ein Name; es ist das Spiegelbild unserer unerschütterlichen Verpflichtung zu Integrität und
+      verantwortungsvollen Geschäftspraktiken.</p>
     <div class="cyber-ethical-solutions">
       <div class="cyber-ethical-solutions-item-container">
         <div class="cyber-ethical-solutions-item-short center-text cyber-ethical-solutions-item">
@@ -260,16 +286,18 @@
           <i class="fa-solid fa-microchip"></i>
         </div>
         <div class="cyber-ethical-solutions-item-long cyber-ethical-solutions-item">
-          <p class="large-text darkened">Why Cyber?</p>
+          <p id="cyber_title" class="large-text darkened">Warum Cyber?</p>
           <ul>
-            <li>Your Strategic Partner: Empower your business with software solutions.</li>
-            <li>Unlock Efficiency: Streamline operations and enhance productivity.</li>
-            <li>Custom Solutions: Tailored to your unique needs for seamless integration.</li>
-            <li>Technology for Growth: Leverage innovation for competitive advantage.</li>
-            <li class="visible-large-screen-only">Measured Results: Tangible outcomes that drive success.</li>
-            <li class="visible-large-screen-only">Enhanced User Experiences: Engage customers with intuitive interfaces.
+            <li id="cyber_1">Ihr strategischer Partner: Stärken Sie Ihr Geschäft mit Softwarelösungen.</li>
+            <li id="cyber_2">Effizienz steigern: Prozesse optimieren und Produktivität erhöhen.</li>
+            <li id="cyber_3">Individuelle Lösungen: Maßgeschneidert für Ihre speziellen Bedürfnisse.</li>
+            <li id="cyber_4">Technologie für Wachstum: Innovation für Wettbewerbsvorteile nutzen.</li>
+            <li id="cyber_5" class="visible-large-screen-only">Messbare Ergebnisse: Greifbare Ergebnisse, die zum Erfolg
+              führen.</li>
+            <li id="cyber_6" class="visible-large-screen-only">Verbesserte Benutzererfahrungen: Kunden mit intuitiven
+              Schnittstellen binden.</li>
+            <li id="cyber_7" class="visible-large-screen-only">Expertenteam: Fachleute, die sich Ihrem Erfolg widmen.
             </li>
-            <li class="visible-large-screen-only">Expert Team: Skilled professionals dedicated to your success.</li>
           </ul>
         </div>
       </div>
@@ -286,20 +314,23 @@
           <i class="fa-solid fa-heart-circle-check"></i>
         </div>
         <div class="cyber-ethical-solutions-item-long cyber-ethical-solutions-item">
-          <p class="large-text darkened">Why Ethics?</p>
+          <p id="ethics_title" class="large-text darkened">Warum Ethik?</p>
           <ul>
-            <li>Guided by Values: Our foundation is built on ethical principles.</li>
-            <li>Positive Impact: Drive social responsibility through technology.</li>
-            <li>Long-Term Vision: Sustainability and growth hand in hand.</li>
-            <li>Beyond Profit: Commitment to a better world through technology.</li>
-            <li class="visible-large-screen-only">Trust and Respect: Earn trust through transparent practices.</li>
-            <li class="visible-large-screen-only">Inclusive Approach: Foster fairness and inclusivity in solutions.</li>
-            <li class="visible-large-screen-only">Empowering Teams: Motivate employees to create meaningful change.</li>
+            <li id="ethics_1">Geleitet von Werten: Unsere Grundlage beruht auf ethischen Grundsätzen.</li>
+            <li id="ethics_2">Positiver Einfluss: Soziale Verantwortung durch Technologie fördern.</li>
+            <li id="ethics_3">Langfristige Vision: Nachhaltigkeit und Wachstum Hand in Hand.</li>
+            <li id="ethics_4">Mehr als Profit: Engagement für eine bessere Welt durch Technologie.</li>
+            <li id="ethics_5" class="visible-large-screen-only">Vertrauen und Respekt: Vertrauen durch transparente
+              Praktiken verdienen.</li>
+            <li id="ethics_6" class="visible-large-screen-only">Inklusiver Ansatz: Fairness und Inklusivität in Lösungen
+              fördern.</li>
+            <li id="ethics_7" class="visible-large-screen-only">Teams stärken: Mitarbeiter motivieren, um bedeutende
+              Veränderungen herbeizuführen.</li>
           </ul>
         </div>
       </div>
       <div class="wrap">
-        <button class="" id="cyber-ethical-solutions-button" onclick="cybethicsNameContinue()">Resolve</button>
+        <button id="cyber-ethical-solutions-button" onclick="cybethicsNameContinue()">Auflösen</button>
       </div>
     </div>
   </div>
@@ -307,145 +338,152 @@
     <div class="side-margin">
       <h2>United Nations Sustainability Development Goals</h2>
       <div class="grid-container unsdg-container">
-        <img src="assets/unsdg.png" class="limit-width fade-in-short-short-delay">
+        <img src="assets/unsdg.png" alt="Nachhaltigkeitsziele der Vereinten Nationen" loading="lazy"
+          class="limit-width fade-in-short-short-delay">
         <div class="fade-in-short-short-delay">
-          <h3 class="large-text">What the heck are UNSDG?</h3>
+          <h3 id="subtitle" class="large-text">Was zum Teufel sind UNSDG?</h3>
           <ul>
-            <li>The United Nations Sustainable Development Goals (UNSDG) are a set of 17 global goals adopted by the
-              United Nations in 2015</li>
-            <li>The UNSDGs provide a framework for addressing global challenges including poverty, inequality,
-              climate change, social injustice, etc</li>
-            <li>The goals encompass a wide range of issues: ending poverty and hunger, combating climate change,
-              promoting
-              education and sustainable economic growth
-            </li>
-            <li>The UNSDGs aim to be achieved by 2030, providing a 15-year roadmap for sustainable development efforts
-              on
-              a global scale</li>
-            <li>They call for collaboration and partnerships among governments, businesses, civil society organisations,
-              and individuals to work together towards achieving the goals and creating a more sustainable world</li>
+            <li id="point1">Die Nachhaltigkeitsziele der Vereinten Nationen (UNSDG) sind ein Satz von 17 globalen
+              Zielen, die 2015 von den Vereinten Nationen angenommen wurden</li>
+            <li id="point2">Die UNSDG bieten einen Rahmen zur Bewältigung globaler Herausforderungen, einschließlich
+              Armut, Ungleichheit, Klimawandel, soziale Ungerechtigkeit usw.</li>
+            <li id="point3">Die Ziele umfassen eine Vielzahl von Fragen: Beendigung von Armut und Hunger, Bekämpfung des
+              Klimawandels, Förderung von Bildung und nachhaltigem wirtschaftlichem Wachstum</li>
+            <li id="point4">Die UNSDG sollen bis 2030 erreicht werden und bieten eine 15-jährige Roadmap für nachhaltige
+              Entwicklungsanstrengungen im globalen Maßstab</li>
+            <li id="point5">Sie rufen zu Zusammenarbeit und Partnerschaften zwischen Regierungen, Unternehmen,
+              Organisationen der Zivilgesellschaft und Einzelpersonen auf, um gemeinsam an der Erreichung der Ziele zu
+              arbeiten und eine nachhaltigere Welt zu schaffen</li>
           </ul>
         </div>
       </div>
     </div>
   </div>
   <div class="bottom-space side-margin fade-in-short-short-delay background-dark">
-    <h2>Our 5 UN Sustainability Goal Priorities</h2>
-    <p>With all this said, Cybethics cannot focus on all but prioritises five out of the 17 goals instead. The choice
-      for these five goals has been made on the basis of two main questions:</p>
+    <h2 id="priority_title">Unsere 5 Prioritäten im Bereich der UN-Nachhaltigkeitsziele</h2>
+    <p id="priority_intro">Bei alledem kann Cybethics nicht alle Ziele verfolgen, sondern priorisiert stattdessen fünf
+      der 17 Ziele. Die Auswahl dieser fünf Ziele basiert auf zwei Hauptfragen:</p>
     <ul>
-      <li>How can we contribute most?</li>
-      <li>Which goals do we consider most important?</li>
+      <li id="question_1">Wie können wir am meisten beitragen?</li>
+      <li id="question_2">Welche Ziele halten wir für am wichtigsten?</li>
     </ul>
-    <p>Having provided the baseline for our beliefs, the below five goals are our priorities.</p>
+    <p id="priority_conclusion">Nachdem wir die Grundlage für unsere Überzeugungen geschaffen haben, sind die folgenden
+      fünf Ziele unsere Prioritäten.</p>
     <div class="bottom-space" style="padding-top: 135px;">
       <div class="">
         <div class="blog-slider">
           <div class="blog-slider__wrp swiper-wrapper">
+            <!-- UNSDG 3 -->
             <div class="blog-slider__item swiper-slide">
               <div class="blog-slider__img">
-                <img src="assets/unsdg3.png" alt="">
+                <img src="assets/unsdg3.png" loading="lazy" alt="UNSDG 3: Gesundheit und Wohlergehen">
               </div>
               <div class="blog-slider__content">
-                <div class="blog-slider__title">UNSDG 3: Good Health and Well-Being</div>
-                <div class="blog-slider__text">
-                  <div class="blog-slider__text">
-                    <ul class="unsdg-card-content">
-                      <li>Employee Well-Being Programs: Prioritise the health and well-being of employees
-                        throughwellness programs, promoting work-life balance, and creating a supportive work
-                        environment</li>
-                      <li>Flexible Work Arrangements: Offer flexible work arrangements, such as remote work or flexible
-                        hours, that allow employees to manage their health needs, attend medical appointments, or
-                        accommodate caregiving responsibilities</li>
-                      <li>Promote Health Awareness: Raise awareness about important health issues, share health tips,
-                        and promote preventive healthcare practices among employees and the wider community</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="blog-slider__item swiper-slide">
-              <div class="blog-slider__img">
-                <img src="assets/unsdg8.png" alt="">
-              </div>
-              <div class="blog-slider__content">
-                <div class="blog-slider__title">UNSDG 8: Decent Work and Economic Growth</div>
+                <div class="blog-slider__title" id="unsdg3_title">UNSDG 3: Gesundheit und Wohlergehen</div>
                 <div class="blog-slider__text">
                   <ul class="unsdg-card-content">
-                    <li>Job Creation: Actively create job opportunities, contribute to economic growth by hiring and
-                      providing employment.</li>
-                    <li>Skill Development: Support initiatives for skill development and training programs to enhance
-                      employability.</li>
-                    <li>Fair & Inclusive Employment Practices: Foster a diverse and inclusive work environment, promote
-                      equal
-                      opportunities, respect human rights, and prohibit discrimination.</li>
-                    <li>Corporate Social Responsibility (CSR): Implement CSR initiatives supporting community
-                      development, education, and entrepreneurship.</li>
+                    <li id="unsdg3_point1">Mitarbeiterwohlbefinden Programme: Die Gesundheit und das Wohlbefinden der
+                      Mitarbeiter durch Wellnessprogramme priorisieren, die Work-Life-Balance fördern und eine
+                      unterstützende Arbeitsumgebung schaffen.</li>
+                    <li id="unsdg3_point2">Flexible Arbeitsvereinbarungen: Flexible Arbeitsvereinbarungen anbieten, wie
+                      z.B. Telearbeit oder flexible Arbeitszeiten, die es den Mitarbeitern ermöglichen, ihre
+                      Gesundheitsbedürfnisse zu verwalten, Arzttermine wahrzunehmen oder Betreuungspflichten zu
+                      berücksichtigen.</li>
+                    <li id="unsdg3_point3">Gesundheitsbewusstsein fördern: Das Bewusstsein für wichtige
+                      Gesundheitsthemen schärfen, Gesundheitstipps teilen und präventive Gesundheitspraktiken unter
+                      Mitarbeitern und der breiteren Gemeinschaft fördern.</li>
                   </ul>
                 </div>
               </div>
             </div>
+            <!-- UNSDG 8 -->
             <div class="blog-slider__item swiper-slide">
               <div class="blog-slider__img">
-                <img src="assets/unsdg9.png" alt="">
+                <img src="assets/unsdg8.png" loading="lazy" alt="UNSDG 8: Anständige Arbeit und Wirtschaftswachstum">
               </div>
               <div class="blog-slider__content">
-                <div class="blog-slider__title">UNSDG 9: Industry, Innovation and Infrastructure</div>
+                <div class="blog-slider__title" id="unsdg8_title">UNSDG 8: Anständige Arbeit und Wirtschaftswachstum
+                </div>
                 <div class="blog-slider__text">
                   <ul class="unsdg-card-content">
-                    <li>Technological Innovation: Drive cutting-edge software solutions, improving efficiency,
-                      productivity, and sustainability across industries.</li>
-                    <li>Digital Connectivity: Enhance access to affordable and reliable internet services, empowering
-                      communities, bridging the digital divide, and enabling economic opportunities.</li>
-                    <li>Partnerships for Innovation: Collaborate with industry, research, and government partners to
-                      foster innovation ecosystems, driving research and development to address societal challenges.
-                    </li>
+                    <li id="unsdg8_point1">Arbeitsplatzschaffung: Aktiv Arbeitsplätze schaffen, wirtschaftliches
+                      Wachstum durch Einstellung und Beschäftigung fördern.</li>
+                    <li id="unsdg8_point2">Förderung von Fähigkeiten: Initiativen zur Fähigkeitenentwicklung und
+                      Trainingsprogramme unterstützen, um die Beschäftigungsfähigkeit zu erhöhen.</li>
+                    <li id="unsdg8_point3">Gerechte und inklusive Arbeitspraktiken: Eine vielfältige und inklusive
+                      Arbeitsumgebung fördern, gleiche Möglichkeiten fördern, Menschenrechte respektieren und
+                      Diskriminierung verbieten.</li>
+                    <li id="unsdg8_point4">Unternehmerische Sozialverantwortung (CSR): CSR-Initiativen umsetzen, die die
+                      Gemeinschaftsentwicklung, Bildung und Unternehmertum unterstützen.</li>
                   </ul>
                 </div>
               </div>
             </div>
+            <!-- UNSDG 9 -->
             <div class="blog-slider__item swiper-slide">
               <div class="blog-slider__img">
-                <img src="assets/unsdg11.png" alt="">
+                <img src="assets/unsdg9.png" loading="lazy" alt="UNSDG 9: Industrie, Innovation und Infrastruktur">
               </div>
               <div class="blog-slider__content">
-                <div class="blog-slider__title">UNSDG 11: Sustainable Cities and Communities</div>
+                <div class="blog-slider__title" id="unsdg9_title">UNSDG 9: Industrie, Innovation und Infrastruktur</div>
                 <div class="blog-slider__text">
                   <ul class="unsdg-card-content">
-                    <li>Internal Sustainability Practices: Implement eco-friendly policies for waste management, energy
-                      efficiency, and resource conservation. Encourage sustainable commuting methods like public
-                      transportation, carpooling, or cycling.</li>
-                    <li>Advocacy and Policy Engagement: Promote sustainable urban development through advocacy, stay
-                      informed about local policies, engage in public consultations, and advocate for public
-                      transportation, sustainable infrastructure, and inclusive urban design.</li>
-                    <li>Technology Solutions: Develop software applications and platforms for sustainable cities,
-                      including public transportation promotion, smart city management, citizen engagement, and urban
-                      planning facilitation.</li>
+                    <li id="unsdg9_point1">Technologische Innovation: Spitzentechnologie-Lösungen vorantreiben,
+                      Effizienz, Produktivität und Nachhaltigkeit in verschiedenen Branchen verbessern.</li>
+                    <li id="unsdg9_point2">Digitale Konnektivität: Zugang zu erschwinglichen und zuverlässigen
+                      Internetdiensten verbessern, Gemeinschaften befähigen, die digitale Kluft überbrücken und
+                      wirtschaftliche Möglichkeiten ermöglichen.</li>
+                    <li id="unsdg9_point3">Partnerschaften für Innovation: Zusammenarbeit mit Industrie-, Forschungs-
+                      und Regierungspartnern zur Förderung von Innovationssystemen, Antriebsforschung und -entwicklung
+                      zur Bewältigung gesellschaftlicher Herausforderungen.</li>
                   </ul>
                 </div>
               </div>
             </div>
+
+            <!-- UNSDG 11 -->
             <div class="blog-slider__item swiper-slide">
               <div class="blog-slider__img">
-                <img src="assets/unsdg16.png" alt="">
+                <img src="assets/unsdg11.png" loading="lazy" alt="UNSDG 11: Nachhaltige Städte und Gemeinschaften">
               </div>
               <div class="blog-slider__content">
-                <div class="blog-slider__title">UNSDG 16: Peace, Justice and Strong Institutions</div>
+                <div class="blog-slider__title" id="unsdg11_title">UNSDG 11: Nachhaltige Städte und Gemeinschaften</div>
                 <div class="blog-slider__text">
                   <ul class="unsdg-card-content">
-                    <li>Ethical Business Practices: Foster integrity and ethical conduct, strong governance,
-                      anti-corruption
-                      measures, and transparency. Promote fair practices, responsible procurement, compliance, and human
-                      rights respect.</li>
-                    <li>Data Security and Privacy: Prioritize data security, robust cybersecurity, data protection
-                      compliance, and responsible data handling.</li>
-                    <li>Promote Digital Rights: Advocate for digital rights, including freedom of expression, privacy,
-                      and
-                      access. Support initiatives for digital literacy, inclusivity, and bridging the digital divide.
-                    </li>
-                    <li>Transparency and Accountability: Transparent tax practices, financial reporting, robust
-                      accounting
-                      standards, and relevant tax information disclosure.</li>
+                    <li id="unsdg11_point1">Interne Nachhaltigkeitspraktiken: Umsetzung umweltfreundlicher Richtlinien
+                      für Abfallwirtschaft, Energieeffizienz und Ressourcenschonung. Förderung nachhaltiger
+                      Pendelmethoden wie öffentliche Verkehrsmittel, Fahrgemeinschaften oder Radfahren.</li>
+                    <li id="unsdg11_point2">Fürsprecherrolle und politisches Engagement: Förderung nachhaltiger
+                      städtischer Entwicklung durch Fürsprache, Information über lokale Politik, Beteiligung an
+                      öffentlichen Konsultationen und Fürsprache für öffentliche Verkehrsmittel, nachhaltige
+                      Infrastruktur und inklusives Städtedesign.</li>
+                    <li id="unsdg11_point3">Technologielösungen: Entwicklung von Softwareanwendungen und -plattformen
+                      für nachhaltige Städte, einschließlich Förderung öffentlicher Verkehrsmittel, intelligentes
+                      Stadtmanagement, Bürgerbeteiligung und städtebauliche Erleichterung.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- UNSDG 16 -->
+            <div class="blog-slider__item swiper-slide">
+              <div class="blog-slider__img">
+                <img src="assets/unsdg16.png" loading="lazy"
+                  alt="UNSDG 16: Frieden, Gerechtigkeit und starke Institutionen">
+              </div>
+              <div class="blog-slider__content">
+                <div class="blog-slider__title" id="unsdg16_title">UNSDG 16: Frieden, Gerechtigkeit und starke
+                  Institutionen</div>
+                <div class="blog-slider__text">
+                  <ul class="unsdg-card-content">
+                    <li id="unsdg16_point1">Ethische Geschäftspraktiken: Integrität und ethisches Verhalten, starke
+                      Governance, Antikorruptionsmaßnahmen und Transparenz fördern. Faire Praktiken,
+                      verantwortungsbewusste Beschaffung, Compliance und Respekt vor Menschenrechten fördern.</li>
+                    <li id="unsdg16_point2">Datensicherheit und Datenschutz: Datensicherheit priorisieren, robuste
+                      Cybersicherheit, Datenschutz-Compliance und verantwortungsvolle Datenverarbeitung.</li>
+                    <li id="unsdg16_point3">Partnerschaften für den Frieden: Mit Organisationen, Regierungen und
+                      gemeinnützigen Organisationen zusammenarbeiten, um Friedensinitiativen, Mediation,
+                      Friedenssicherung und Konfliktlösung zu unterstützen.</li>
                   </ul>
                 </div>
               </div>
@@ -457,29 +495,31 @@
     </div>
   </div>
   <div id="cybethics-process" class="side-margin fade-in-short-short-delay bottom-space visible-large-screen-only">
-    <h1>What happens when you contact us</h1>
+    <h2 id="contact_heading">Was passiert, wenn Sie uns kontaktieren</h2>
     <div class="">
       <div class="">
         <div class="text-container">
-          <h3 class="process-text part1">You contact our company and we assign a
-            requirements engineer to you. Our requirements engineer is a specialist for technical possibilities,
-            potential solutions, options and costs
-            of the project.</h3>
-          <h3 class="process-text part2">The requirements engineer proposes solutions to your problem and if you decide
-            to go for it, a value stream (team) of people
-            will be established to complete the project.</h3>
-          <h3 class="process-text part3">The value stream discusses the architectural solution and divides the work
-            into small and clear tasks.</h3>
-          <h3 class="process-text part4">Depending on the project needs different specialists might be involved.</h3>
-          <h3 class="process-text part5">The value stream works on the technical implementation and testing, while the
-            responsible requirements engineer always has an overview
-            so that you could be informed about the status.</h3>
-          <h3 class="process-text part6">Once the work has been completed and successfully tested, the value stream
-            will finalize the work and documentation for the final handover.</h3>
-          <h3 class="process-text part7">The final work including the documentation will be sent to the requirements
-            engineer for the final signoff.</h3>
-          <h3 class="process-text part8">Once the project has been completed we will make sure the solution made
-            available based on our clients needs.</h3>
+          <h3 class="process-text part1" id="step1_text">Sie kontaktieren unser Unternehmen und wir weisen Ihnen einen
+            Anforderungsingenieur zu. Unser Anforderungsingenieur ist ein Spezialist für technische Möglichkeiten,
+            potenzielle Lösungen, Optionen und Kosten des Projekts.</h3>
+          <h3 class="process-text part2" id="step2_text">Der Anforderungsingenieur schlägt Lösungen für Ihr Problem vor
+            und wenn Sie sich dafür entscheiden, wird ein Value Stream (Team) von Personen eingerichtet, um das Projekt
+            abzuschließen.</h3>
+          <h3 class="process-text part3" id="step3_text">Der Value Stream bespricht die architektonische Lösung und
+            teilt
+            die Arbeit in kleine und klare Aufgaben auf.</h3>
+          <h3 class="process-text part4" id="step4_text">Je nach Projektbedarf könnten verschiedene Spezialisten
+            beteiligt sein.</h3>
+          <h3 class="process-text part5" id="step5_text">Der Value Stream arbeitet an der technischen Umsetzung und am
+            Testen, während der verantwortliche Anforderungsingenieur immer einen Überblick hat, damit Sie über den
+            Status informiert werden könnten.</h3>
+          <h3 class="process-text part6" id="step6_text">Sobald die Arbeit abgeschlossen und erfolgreich getestet wurde,
+            wird der Value Stream die Arbeit und die Dokumentation für die endgültige Übergabe abschließen.</h3>
+          <h3 class="process-text part7" id="step7_text">Die endgültige Arbeit einschließlich der Dokumentation wird dem
+            Anforderungsingenieur zur endgültigen Abnahme gesendet.</h3>
+          <h3 class="process-text part8" id="step8_text">Sobald das Projekt abgeschlossen wurde, werden wir
+            sicherstellen, dass die Lösung basierend auf den Bedürfnissen unserer Kunden zur Verfügung gestellt wird.
+          </h3>
         </div>
       </div>
     </div>
@@ -499,14 +539,14 @@
       </div>
       <div class="process-container-actor part3">
         <i class="role-icon fa-solid fa-user fa-2xl"></i>
-        <h5 class="role-title part3 role1">Software Engineer</h5>
-        <h5 class="role-title part4 role2">Frontend Developer</h5>
+        <h5 class="role-title part3 role1">Software-Ingenieur</h5>
+        <h5 class="role-title part4 role2">Frontend-Entwickler</h5>
         <i class="fa-solid fa-circle-notch fa-lg ongoing part5"></i>
-        <h5 class="role-title part4 role3">Backend Developer</h5>
+        <h5 class="role-title part4 role3">Backend-Entwickler</h5>
       </div>
       <div class="process-container-actor part1">
         <i class="role-icon fa-solid fa-user fa-2xl" id="cybethics-re"></i>
-        <h5 class="role-title">Requirements Engineer</h5>
+        <h5 class="role-title">Anforderungsingenieur</h5>
       </div>
       <div class="arrow-column">
         <div class="document-row">
@@ -527,16 +567,16 @@
             <i class="document-list fa-solid fa-file-lines fa-2xl part3"></i>
             <i class="document-checked fa-solid fa-file-circle-check fa-2xl part6"></i>
           </div>
-          <p class="arrow-line part3"></p>
+          <div class="arrow-line part3"></div>
           <p class="arrow right part3"></p>
         </div>
       </div>
       <div class="process-container-actor part3">
         <i class="role-icon fa-solid fa-user fa-2xl"></i>
-        <h5 class="role-title role1 part3">Software Engineer</h5>
-        <h5 class="role-title part4 role2">Database Analyst</h5>
+        <h5 class="role-title role1 part3">Software-Ingenieur</h5>
+        <h5 class="role-title part4 role2">Datenbankanalyst</h5>
         <i class="fa-solid fa-circle-notch fa-lg ongoing part5"></i>
-        <h5 class="role-title part4 role3">Frontend Developer</h5>
+        <h5 class="role-title part4 role3">Frontend-Entwickler</h5>
       </div>
       <div class="empty-cell"></div>
       <div class="empty-cell"></div>
@@ -547,45 +587,61 @@
             <i class="document-list fa-solid fa-file-lines fa-2xl part3"></i>
             <i class="document-checked fa-solid fa-file-circle-check fa-2xl part6"></i>
           </div>
-          <p class="arrow-line part3"></p>
+          <div class="arrow-line part3"></div>
           <p class="arrow right part3"></p>
         </div>
       </div>
       <div class="process-container-actor part3">
         <i class="role-icon fa-solid fa-user fa-2xl"></i>
         <h5 class="role-title part3 role1">Tester</h5>
-        <h5 class="role-title part4 role2">DevOps Engineer</h5>
+        <h5 class="role-title part4 role2">DevOps-Ingenieur</h5>
         <i class="fa-solid fa-circle-notch fa-lg ongoing part5"></i>
-        <h5 class="role-title part4 role3">Database Engineer</h5>
+        <h5 class="role-title part4 role3">Datenbank-Ingenieur</h5>
       </div>
     </div>
   </div>
   <div class="background-dark side-margin bottom-space fade-in-short-short-delay">
     <div class="rotating-text large-text">
-      <p>You want to</p>
+      <p id="youWantTo">Sie möchten</p>
       <p>
-        <span class="word sun-flower">reduce costs?</span>
-        <span class="word alizarin">optimize performance?</span>
-        <span class="word peter-river">maximize efficiency?</span>
-        <span class="word emerald">avoid repetitive work?</span>
-        <span class="word wisteria">streamline processes?</span>
-        <span class="word peter-river">automate tasks?</span>
+        <span class="word sun-flower" id="reduceCosts">Kosten reduzieren?</span>
+        <span class="word alizarin" id="optimizePerformance">Leistung optimieren?</span>
+        <span class="word peter-river" id="maximizeEfficiency">Effizienz maximieren?</span>
+        <span class="word emerald" id="avoidRepetitiveWork">repetitive Arbeit vermeiden?</span>
+        <span class="word wisteria" id="streamlineProcesses">Prozesse straffen?</span>
+        <span class="word peter-river" id="automateTasks">Arbeit automatisieren?</span>
       </p>
     </div>
-    <h3 class="large-text">We can help! Contact us</h3>
-    <form target="_blank" action="https://formsubmit.co/77ae534886cf0d623525bfeb94990284" method="POST"
-      class="bottom-space form-container">
-      <input type="text" name="first_name" placeholder="First Name">
-      <input type="text" name="last_name" placeholder="Last Name">
-      <input type="email" name="email" placeholder="Email Address (*)" required>
+    <h3 class="large-text" id="weCanHelp">Wir können helfen! Kontaktieren Sie uns</h3>
+    <form target="_blank"
+      action="https://europe-west6-moonlit-web-399708.cloudfunctions.net/contact-form/34e62b9aee5b8bf58e795ab02b90c150f1da1bc89d482f905f7fe9481b74a742"
+      method="POST" class="bottom-space form-container" id="contactForm">
+      <div>
+        <label for="first_name" hidden>Vorname</label>
+        <input id="firstName" type="text" name="first_name" placeholder="Vorname">
+      </div>
+      <label for="last_name" hidden>Nachname</label>
+      <input id="lastName" type="text" name="last_name" placeholder="Nachname">
+      <label for="email" hidden>Email-Adresse</label>
+      <input id="emailAddress" type="email" name="email" placeholder="Email-Adresse (*)" required>
       <input type="text" name="_honey" style="display:none">
-      <input type="text" name="phone" placeholder="Phone Number">
-      <input type="hidden" name="_blacklist" value="spammy pattern, banned term, phrase">
+      <label for="phone" hidden>Telefonnummer</label>
+      <input id="phoneNumber" type="text" name="phone" placeholder="Telefonnummer">
       <input type="hidden" name="_subject" value="Webseite Kontaktaufnahme">
       <input type="hidden" name="_autoresponse"
         value="Herzlichen Dank für Ihre Kontaktaufnahme. Wir haben Ihre Mail erhalten und werden Sie innerhalb der nächsten 24h bearbeitet haben. Wir freuen uns auf den Kontakt mit Ihnen!">
-      <textarea placeholder="Your Message (*)" class="form-control" name="message" rows="10" required></textarea>
-      <button type="submit">Send</button>
+      <input type="hidden" name="_httpresponse" value="Vielen Dank!">
+      <label for="message" hidden>Nachricht</label>
+      <textarea id="message" placeholder="Ihre Nachricht (*)" class="form-control" name="message" rows="10" required></textarea>
+      <div class="checkbox-container full-grid-width">
+        <input type="checkbox" name="checkbox" id="agreement" class="checkbox-input" required
+          onclick="updateSubmitButton()">
+        <label id="privacy_policy_prefix" for="checkbox" class="label-text">Ich akzeptiere die </label>
+          <a id="privacy_policy_link" href="ds.html"
+            aria-label="link to Cybethics' data security terms">Datenschutzbestimmungen</a>
+      </div>
+      <button type="submit" id="submitButton" class="h-captcha" data-sitekey="de19f5f2-792d-4e9b-8621-8ab7c2a5ff9a"
+        data-callback="onSubmit" disabled>Senden</button>
     </form>
   </div>
 </body>

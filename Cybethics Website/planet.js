@@ -10,11 +10,13 @@ scene.background = new THREE.Color(0x000000);
 let camera = new THREE.PerspectiveCamera(60, innerWidth / innerHeight, 1, 1000);
 camera.position.set(0, 10, dynamicCameraPoint(innerWidth));
 let renderer = new THREE.WebGLRenderer();
+renderer.powerPerformance = "high-performance";
 renderer.setSize(innerWidth, innerHeight);
+renderer.precision = "lowp";
 const canvasContainer = document.getElementById("canvas-planet-container");
-const textNode1 = createTextNode("Tailored Software Solutions Built With Purpose", "fade-in-short-short-delay visible-medium-screen-only");
+const textNode1 = createTextNode("Business Software nach Ihren Bedürfnissen", "fade-in-short-short-delay visible-medium-screen-only", "canvas_text_1");
 canvasContainer.appendChild(textNode1);
-const textNode2 = createTextNode("Empower Your Vision And Elevate Humanity", "fade-in-short-short-delay visible-medium-screen-only");
+const textNode2 = createTextNode("Maximieren Sie Ihr Potenzial mit Softwarelösungen", "fade-in-short-short-delay visible-medium-screen-only", "canvas_text_2");
 canvasContainer.appendChild(textNode2);
 canvasContainer.appendChild(renderer.domElement);
 
@@ -115,14 +117,14 @@ function dynamicCameraPoint(screenWidth) {
     const yMax = 20;
 
     const result = yMin + (screenWidth - xMin) * (yMax - yMin) / (xMax - xMin);
-    console.log(result);
     return result;
 }
 
-function createTextNode(text, partType) {
+function createTextNode(text, partType, id) {
     const textNode = document.createElement("p");
     textNode.innerHTML = text;
     textNode.className = "background-dark canvas-text " + partType;
+    textNode.id = id;
     return textNode;
 }
 
@@ -131,12 +133,9 @@ function addOptionClick() {
     for (const optionElem of optionElements) {
         optionElem.addEventListener('click', function replacePreviousActiveWithNewOne(pointerEvent) {
             const optionElements = document.getElementsByClassName("option");
-            console.log("found elements " + optionElements);
             for (const optionElem of optionElements) {
-                console.log("looping through elements " + optionElements);
                 optionElem.classList.remove("active");
             }
-            console.log("loop completed " + optionElements);
             pointerEvent.currentTarget.classList.add("active");
         });
     }
@@ -145,11 +144,11 @@ function addOptionClick() {
 var swiper = new Swiper('.blog-slider', {
     spaceBetween: 30,
     effect: 'fade',
-    loop: true,
+    loop: false,
     mousewheel: {
         invert: false,
     },
-    //autoHeight: true,
+    passiveListeners: true,
     pagination: {
         el: '.blog-slider__pagination',
         clickable: true,
