@@ -440,17 +440,8 @@ h6 {
   animation-delay: 0s;
 }
 
-.part1_2 {
-  animation-delay: 4s;
-}
-
 .part2 {
   animation-delay: 8s;
-  /* animation-delay: 0s; */
-}
-
-.part2_2 {
-  animation-delay: 12s;
   /* animation-delay: 0s; */
 }
 
@@ -586,7 +577,7 @@ h6 {
 }
 
 .fade-in-short-short-delay {
-  animation: fade-in 1s normal 0.7s both;
+  animation: fade-in 0.75s normal 0.25s both;
 }
 
 @keyframes fade-in {
@@ -686,6 +677,10 @@ h6 {
 .image-title {
   display: inline-flex;
   align-items: baseline;
+}
+
+#intro_text {
+  font-size: 1.5rem;
 }
 
 .web-development-experience {
@@ -790,7 +785,7 @@ h6 {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: repeat(2, 1fr);
-  max-height: 80%;
+  height: 70vh;
 }
 
 .canvas-text {
@@ -1817,6 +1812,68 @@ input {
     0 0.125em 0.5em hsla(var(--hue), 10%, 10%, 0.1);
 }
 
+#imprint p {
+  margin: 0;
+}
+
+#imprint > div {
+  margin-top: 0.75rem;
+  border-top: gray 1px solid;
+}
+
+#imprint h2 {
+  font-size: 2rem;
+}
+
+/* Footer Styles */
+footer {
+  font-size: 1.5rem;
+  background-color: #333; /* Background color for the footer */
+  color: #fff; /* Text color */
+  padding: 20px 0; /* Padding around the footer content */
+  text-align: center; /* Center-align the content */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  border-bottom: 1px white solid;
+}
+
+.footer-logo img {
+  max-width: 15vw;
+  min-width: 150px;
+  height: auto; /* Maintain the aspect ratio */
+}
+
+.footer-links a {
+  color: #fff; /* Link color */
+  text-decoration: none; /* Remove underlines from links */
+  margin: 0 15px; /* Spacing between links */
+}
+
+.footer-links a:hover {
+  color: var(--highlight-color-two);
+}
+
+.footer-social {
+  margin-top: 20px; /* Spacing between the links and social media */
+  display: flex;
+  justify-content: space-between;
+}
+
+.linkedin-label {
+  font-weight: bold; /* Make the label bold */
+  font-size: 3rem;
+  color: white !important;
+}
+
+.linkedin-label:hover {
+  color: var(--highlight-color-two) !important;
+}
+
 /* Central media query for large notebook monitors */
 @media screen and (max-width: 1800px) {
   html {
@@ -1953,5 +2010,14 @@ input {
   li, ul {
     text-wrap: balance;
     margin: 1rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    display: flex;
   }
 }

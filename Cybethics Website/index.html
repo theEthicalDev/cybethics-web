@@ -17,14 +17,14 @@
   <noscript>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cairo">
   </noscript>
+  <script defer src="functions.js"></script>
   <script async defer src="https://js.hcaptcha.com/1/api.js"></script>
   <script async defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script async defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
-  <script async defer src="https://kit.fontawesome.com/3cb905f540.js" crossorigin="anonymous"></script>
   <script async defer src="planet.js" type="module"></script>
+  <script async defer src="https://kit.fontawesome.com/3cb905f540.js" crossorigin="anonymous"></script>
   <!-- <script async defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script> -->
   <!-- <script async defer src="rain.js" type="module"></script> -->
-  <script defer src="functions.js"></script>
   <script type="application/ld+json">
     {
       "@context": "http://schema.org",
@@ -37,7 +37,7 @@
 </head>
 
 <body>
-  <div class="header side-margin background-dark">
+  <header class="header side-margin background-dark">
     <div class="header-item">
       <a href="index.html" class="" aria-label="link to the home page">
         <div class="logo-container"></div>
@@ -45,16 +45,16 @@
     </div>
     <div class="language-container">
       <label class="switch">
-        <input id="language-switch" class="switch__input" type="checkbox" role="switch" name="dark"/>
+        <input id="language-switch" class="switch__input" type="checkbox" role="switch" name="dark" />
         <span class="switch__inner"></span>
       </label>
     </div>
-  </div>
+  </header>
   <div id="canvas-planet-container" class="side-margin bottom-space background-dark"></div>
   <div class="side-margin fade-in-short-short-delay">
     <div class="">
       <h1 id="custom_software_development">Individuelle Softwareentwicklung</h1>
-      <p id="software_desc">Unser Team zeichnet sich durch die Entwicklung von maßgeschneiderten Softwarelösungen aus,
+      <p id="software_desc">Unser Team zeichnet sich durch die Entwicklung von massgeschneiderten Softwarelösungen aus,
         die perfekt auf Ihre Geschäftsanforderungen abgestimmt sind. Mit branchenführenden Technologien wie Spring Boot,
         Angular, HTML, CSS und JPA erstellen wir skalierbare und robuste Anwendungen, die Ihre Organisation im digitalen
         Umfeld stärken.</p>
@@ -94,7 +94,8 @@
     </div>
   </div>
   <div class="fade-in-short-short-delay bottom-space side-margin background-dark">
-    <h2 id="web-development-experience-title" class="top-space bottom-space">Im Durchschnitt hat ein Cybethics Mitarbeiter</h2>
+    <h2 id="web-development-experience-title" class="top-space bottom-space">Im Durchschnitt hat ein Cybethics
+      Mitarbeiter</h2>
     <div class="web-development-experience">
       <div>
         <div class="web-development-experience-number counter" data-target="10"></div>
@@ -106,14 +107,15 @@
       </div>
       <div>
         <div class="web-development-experience-number counter" data-target="5"></div>
-        <p class="web-development-experience-description" id="average_certificates">Zertifizierungen gemacht</p>
+        <p class="web-development-experience-description" id="average_certificates">Zertifizierungen erlangt</p>
       </div>
       <div>
         <div class="web-development-experience-number counter" data-target="8"></div>
-        <p class="web-development-experience-description" id="tech_stack_experience">Möglichkeiten Ihr Problem zu lösen</p>
+        <p class="web-development-experience-description" id="tech_stack_experience">technologische Möglichkeiten
+        </p>
       </div>
     </div>
-    </div>
+  </div>
   <div class="fade-in-short-short-delay side-margin bottom-space">
     <h2 id="mobile_app_development_title">Mobile App Entwicklung</h2>
     <p id="mobile_app_desc">Wir sind spezialisiert auf die Entwicklung von intuitiven und funktionsreichen
@@ -128,7 +130,7 @@
         </div>
         <p id="uiux_desc">Wir legen Wert auf die Schaffung von intuitiven und <span id="visually_appealing">visuell
             ansprechenden Benutzeroberflächen (UI)</span>. Dabei liefern wir
-          außergewöhnliche Benutzererlebnisse (UX), erstellen <span id="user_friendly">benutzerfreundliche</span>
+          aussergewöhnliche Benutzererlebnisse (UX), erstellen <span id="user_friendly">benutzerfreundliche</span>
           Navigation und sorgen für ansprechende Interaktionen und nahtlose Übergänge.</p>
       </div>
       <div class="mobile-development-detail-single item" id="performance_opt_section">
@@ -147,7 +149,7 @@
           <h3 id="app_security_title">App Sicherheit</h3>
         </div>
         <p id="app_security_desc">Betonen Sie Ihr Engagement für die Sicherheit mobiler Anwendungen. Erwähnen Sie Ihre
-          Expertise bei der Implementierung robuster Sicherheitsmaßnahmen, wie Daten-<span
+          Expertise bei der Implementierung robuster Sicherheitsmassnahmen, wie Daten-<span
             id="data_encryption">Verschlüsselung</span>, sichere Benutzer-<span
             id="user_authentication">Authentifizierung</span> und <span id="protection_measures">Schutz</span> vor
           gängigen Sicherheitslücken.</p>
@@ -187,8 +189,8 @@
           </div>
         </div>
       </div>
-      <img class="visible-medium-screen-only" src="assets/mobile-apps-new.png" alt="Example of mobile apps" loading="lazy"
-        style="align-self: center; justify-self: center;" height="auto">
+      <img class="visible-medium-screen-only" src="assets/mobile-apps-new.png" alt="Example of mobile apps"
+        loading="lazy" style="align-self: center; justify-self: center;" height="auto">
       <div class="mobile-development-detail-single item">
         <div class="image-title">
           <i class="fa-solid fa-mobile fa-xl"></i>
@@ -270,9 +272,9 @@
   </div>
   <div class="fade-in-short-short-delay side-margin bottom-space">
     <h2 id="heading">Warum Cybethics Werte so wichtig sind</h2>
-    <p id="intro_text" class="large-text">Bei Cybethics stehen Ethik und Vernunft im Mittelpunkt all unseres Handelns.
-      Es ist nicht nur ein Name; es ist das Spiegelbild unserer unerschütterlichen Verpflichtung zu Integrität und
-      verantwortungsvollen Geschäftspraktiken.</p>
+    <p id="intro_text">Bei Cybethics stehen Ethik und Vernunft im Mittelpunkt all unseres Handelns.
+      Es ist mehr als ein Name; es ist das Spiegelbild unserer unerschütterlichen Verpflichtung zu Integrität und
+      verantwortungsvollen Geschäftspraktiken</p>
     <div class="cyber-ethical-solutions">
       <div class="cyber-ethical-solutions-item-container">
         <div class="cyber-ethical-solutions-item-short center-text cyber-ethical-solutions-item">
@@ -290,7 +292,7 @@
           <ul>
             <li id="cyber_1">Ihr strategischer Partner: Stärken Sie Ihr Geschäft mit Softwarelösungen.</li>
             <li id="cyber_2">Effizienz steigern: Prozesse optimieren und Produktivität erhöhen.</li>
-            <li id="cyber_3">Individuelle Lösungen: Maßgeschneidert für Ihre speziellen Bedürfnisse.</li>
+            <li id="cyber_3">Individuelle Lösungen: Massgeschneidert für Ihre speziellen Bedürfnisse.</li>
             <li id="cyber_4">Technologie für Wachstum: Innovation für Wettbewerbsvorteile nutzen.</li>
             <li id="cyber_5" class="visible-large-screen-only">Messbare Ergebnisse: Greifbare Ergebnisse, die zum Erfolg
               führen.</li>
@@ -345,12 +347,12 @@
           <ul>
             <li id="point1">Die Nachhaltigkeitsziele der Vereinten Nationen (UNSDG) sind ein Satz von 17 globalen
               Zielen, die 2015 von den Vereinten Nationen angenommen wurden</li>
-            <li id="point2">Die UNSDG bieten einen Rahmen zur Bewältigung globaler Herausforderungen, einschließlich
+            <li id="point2">Die UNSDG bieten einen Rahmen zur Bewältigung globaler Herausforderungen, einschliesslich
               Armut, Ungleichheit, Klimawandel, soziale Ungerechtigkeit usw.</li>
             <li id="point3">Die Ziele umfassen eine Vielzahl von Fragen: Beendigung von Armut und Hunger, Bekämpfung des
               Klimawandels, Förderung von Bildung und nachhaltigem wirtschaftlichem Wachstum</li>
             <li id="point4">Die UNSDG sollen bis 2030 erreicht werden und bieten eine 15-jährige Roadmap für nachhaltige
-              Entwicklungsanstrengungen im globalen Maßstab</li>
+              Entwicklungsanstrengungen im globalen Massstab</li>
             <li id="point5">Sie rufen zu Zusammenarbeit und Partnerschaften zwischen Regierungen, Unternehmen,
               Organisationen der Zivilgesellschaft und Einzelpersonen auf, um gemeinsam an der Erreichung der Ziele zu
               arbeiten und eine nachhaltigere Welt zu schaffen</li>
@@ -458,7 +460,7 @@
                       öffentlichen Konsultationen und Fürsprache für öffentliche Verkehrsmittel, nachhaltige
                       Infrastruktur und inklusives Städtedesign.</li>
                     <li id="unsdg11_point3">Technologielösungen: Entwicklung von Softwareanwendungen und -plattformen
-                      für nachhaltige Städte, einschließlich Förderung öffentlicher Verkehrsmittel, intelligentes
+                      für nachhaltige Städte, einschliesslich Förderung öffentlicher Verkehrsmittel, intelligentes
                       Stadtmanagement, Bürgerbeteiligung und städtebauliche Erleichterung.</li>
                   </ul>
                 </div>
@@ -477,7 +479,7 @@
                 <div class="blog-slider__text">
                   <ul class="unsdg-card-content">
                     <li id="unsdg16_point1">Ethische Geschäftspraktiken: Integrität und ethisches Verhalten, starke
-                      Governance, Antikorruptionsmaßnahmen und Transparenz fördern. Faire Praktiken,
+                      Governance, Antikorruptionsmassnahmen und Transparenz fördern. Faire Praktiken,
                       verantwortungsbewusste Beschaffung, Compliance und Respekt vor Menschenrechten fördern.</li>
                     <li id="unsdg16_point2">Datensicherheit und Datenschutz: Datensicherheit priorisieren, robuste
                       Cybersicherheit, Datenschutz-Compliance und verantwortungsvolle Datenverarbeitung.</li>
@@ -504,7 +506,7 @@
             potenzielle Lösungen, Optionen und Kosten des Projekts.</h3>
           <h3 class="process-text part2" id="step2_text">Der Anforderungsingenieur schlägt Lösungen für Ihr Problem vor
             und wenn Sie sich dafür entscheiden, wird ein Value Stream (Team) von Personen eingerichtet, um das Projekt
-            abzuschließen.</h3>
+            abzuschliessen.</h3>
           <h3 class="process-text part3" id="step3_text">Der Value Stream bespricht die architektonische Lösung und
             teilt
             die Arbeit in kleine und klare Aufgaben auf.</h3>
@@ -514,8 +516,8 @@
             Testen, während der verantwortliche Anforderungsingenieur immer einen Überblick hat, damit Sie über den
             Status informiert werden könnten.</h3>
           <h3 class="process-text part6" id="step6_text">Sobald die Arbeit abgeschlossen und erfolgreich getestet wurde,
-            wird der Value Stream die Arbeit und die Dokumentation für die endgültige Übergabe abschließen.</h3>
-          <h3 class="process-text part7" id="step7_text">Die endgültige Arbeit einschließlich der Dokumentation wird dem
+            wird der Value Stream die Arbeit und die Dokumentation für die endgültige Übergabe abschliessen.</h3>
+          <h3 class="process-text part7" id="step7_text">Die endgültige Arbeit einschliesslich der Dokumentation wird dem
             Anforderungsingenieur zur endgültigen Abnahme gesendet.</h3>
           <h3 class="process-text part8" id="step8_text">Sobald das Projekt abgeschlossen wurde, werden wir
             sicherstellen, dass die Lösung basierend auf den Bedürfnissen unserer Kunden zur Verfügung gestellt wird.
@@ -632,18 +634,39 @@
         value="Herzlichen Dank für Ihre Kontaktaufnahme. Wir haben Ihre Mail erhalten und werden Sie innerhalb der nächsten 24h bearbeitet haben. Wir freuen uns auf den Kontakt mit Ihnen!">
       <input type="hidden" name="_httpresponse" value="Vielen Dank!">
       <label for="message" hidden>Nachricht</label>
-      <textarea id="message" placeholder="Ihre Nachricht (*)" class="form-control" name="message" rows="10" required></textarea>
+      <textarea id="message" placeholder="Ihre Nachricht (*)" class="form-control" name="message" rows="10"
+        required></textarea>
       <div class="checkbox-container full-grid-width">
         <input type="checkbox" name="checkbox" id="agreement" class="checkbox-input" required
           onclick="updateSubmitButton()">
         <label id="privacy_policy_prefix" for="checkbox" class="label-text">Ich akzeptiere die </label>
-          <a id="privacy_policy_link" href="ds.html"
-            aria-label="link to Cybethics' data security terms">Datenschutzbestimmungen</a>
+        <a id="privacy_policy_link" href="privacy.html"
+          aria-label="link to Cybethics' data security terms">Datenschutzbestimmungen</a>
       </div>
       <button type="submit" id="submitButton" class="h-captcha" data-sitekey="de19f5f2-792d-4e9b-8621-8ab7c2a5ff9a"
         data-callback="onSubmit" disabled>Senden</button>
     </form>
   </div>
+  <footer class="side-margin bottom-space">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="assets/logo.png" alt="Cybethics Logo">
+      </div>
+      <div class="footer-links">
+        <a id="footer_terms_conditions" href="terms.html">AGB</a>
+        <a id="footer_privacy_policy_link" href="privacy.html">Datenschutzbestimmungen</a>
+        <a id="footer_imprint" href="imprint.html">Impressum</a>
+      </div>
+    </div>
+    <div class="footer-social">
+      <div>
+        &copy; 2023 Cybethics GmbH
+      </div>
+      <div>
+        <a href="https://www.linkedin.com/company/98657687" class="linkedin-label"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>

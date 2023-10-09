@@ -58,86 +58,86 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function prepareDevOpsAnimation() {
-    // Selecting elements
-
-    // Demo purposes: animation
-    var pointElements = document.querySelectorAll('.point');
-    function animateProgress(index) {
-        var totalPoints = pointElements.length;
-        setPoints(totalPoints, index);
-    };
-
     const targetDiv = document.getElementById("devops-grid-item");
 
-    const devOpsAnimation = () => {
-        var boxOne = document.querySelector('.box:nth-child(1)');
-        var boxTwo = document.querySelector('.box:nth-child(2)');
-        var boxThree = document.querySelector('.box:nth-child(3)');
-
-        // Creating TimelineMax instances
-        var timelineBoxOne = new TimelineMax();
-        var timelineBoxTwo = new TimelineMax();
-        var timelineBoxThree = new TimelineMax();
-
-        // Animating boxOne
-        timelineBoxOne.to(boxOne, 0.6, {
-            opacity: 0.25,
-            scale: 1,
-            ease: Back.easeOut
-        }).to(boxOne, 0.6, {
-            rotation: 4,
-            ease: Back.easeOut
-        }, 2);
-
-        // Animating boxTwo
-        timelineBoxTwo.to(boxTwo, 0.6, {
-            opacity: 0.5,
-            scale: 1,
-            ease: Back.easeOut
-        }, 0.6).to(boxTwo, 0.6, {
-            rotation: -4,
-            ease: Back.easeOut
-        }, 1.8);
-
-        // Animating boxThree
-        timelineBoxThree.to(boxThree, 0.6, {
-            opacity: 1,
-            scale: 1,
-            ease: Back.easeOut
-        }, 1.2);
-
-        // Adding click event to point elements
+    if (targetDiv) {
+        // Demo purposes: animation
         var pointElements = document.querySelectorAll('.point');
-        pointElements.forEach(function (point) {
-            point.addEventListener('click', function (e) {
-                var totalPoints = pointElements.length;
-                var index = Array.from(pointElements).indexOf(point);
-                setPoints(totalPoints, index);
+        function animateProgress(index) {
+            var totalPoints = pointElements.length;
+            setPoints(totalPoints, index);
+        };
+
+        const devOpsAnimation = () => {
+            var boxOne = document.querySelector('.box:nth-child(1)');
+            var boxTwo = document.querySelector('.box:nth-child(2)');
+            var boxThree = document.querySelector('.box:nth-child(3)');
+
+            // Creating TimelineMax instances
+            var timelineBoxOne = new TimelineMax();
+            var timelineBoxTwo = new TimelineMax();
+            var timelineBoxThree = new TimelineMax();
+
+            // Animating boxOne
+            timelineBoxOne.to(boxOne, 0.6, {
+                opacity: 0.25,
+                scale: 1,
+                ease: Back.easeOut
+            }).to(boxOne, 0.6, {
+                rotation: 4,
+                ease: Back.easeOut
+            }, 2);
+
+            // Animating boxTwo
+            timelineBoxTwo.to(boxTwo, 0.6, {
+                opacity: 0.5,
+                scale: 1,
+                ease: Back.easeOut
+            }, 0.6).to(boxTwo, 0.6, {
+                rotation: -4,
+                ease: Back.easeOut
+            }, 1.8);
+
+            // Animating boxThree
+            timelineBoxThree.to(boxThree, 0.6, {
+                opacity: 1,
+                scale: 1,
+                ease: Back.easeOut
+            }, 1.2);
+
+            // Adding click event to point elements
+            var pointElements = document.querySelectorAll('.point');
+            pointElements.forEach(function (point) {
+                point.addEventListener('click', function (e) {
+                    var totalPoints = pointElements.length;
+                    var index = Array.from(pointElements).indexOf(point);
+                    setPoints(totalPoints, index);
+                });
             });
-        });
-        for (let i = 0; i < 4; i++) {
-            // const randomIndex = Math.floor(Math.random() * 3) + 1;
-            setTimeout(() => {
-                animateProgress(i);
-            }, 1000 + 500 * (i + 1)); // Use (i + 1) to stagger the execution by 2000 milliseconds for each iteration
-        }
-    };
-
-    addScrollAnimation(devOpsAnimation, targetDiv);
-
-    function setPoints(totalPoints, index) {
-        var barFill = document.querySelector('.bar__fill');
-        barFill.style.width = ((index) / (totalPoints - 1)) * 100 + '%';
-        const allPoints = document.getElementsByClassName('point');
-        Array.from(allPoints).forEach(function (el, i) {
-            el.classList.remove('point--complete');
-            el.classList.remove('point--active');
-            if (i < index) {
-                el.classList.add('point--complete');
-            } else if (i === index) {
-                el.classList.add('point--active');
+            for (let i = 0; i < 4; i++) {
+                // const randomIndex = Math.floor(Math.random() * 3) + 1;
+                setTimeout(() => {
+                    animateProgress(i);
+                }, 1000 + 500 * (i + 1)); // Use (i + 1) to stagger the execution by 2000 milliseconds for each iteration
             }
-        });
+        };
+
+        addScrollAnimation(devOpsAnimation, targetDiv);
+
+        function setPoints(totalPoints, index) {
+            var barFill = document.querySelector('.bar__fill');
+            barFill.style.width = ((index) / (totalPoints - 1)) * 100 + '%';
+            const allPoints = document.getElementsByClassName('point');
+            Array.from(allPoints).forEach(function (el, i) {
+                el.classList.remove('point--complete');
+                el.classList.remove('point--active');
+                if (i < index) {
+                    el.classList.add('point--complete');
+                } else if (i === index) {
+                    el.classList.add('point--active');
+                }
+            });
+        }
     }
 }
 
@@ -147,81 +147,85 @@ function prepareRotatingText() {
         clearInterval(intervalId);
     }
     let words = document.querySelectorAll(".word");
-    let wordArray = Array.from(words);
-    wordArray.forEach(word => {
-        let letters = word.textContent.split("");
-        word.textContent = "";
-        letters.forEach(letter => {
-            let span = document.createElement("span");
-            span.textContent = letter;
-            span.style.minWidth = "0.3em";
-            span.className = "letter out";
-            word.appendChild(span);
+    if (words.length > 0) {
+        let wordArray = Array.from(words);
+        wordArray.forEach(word => {
+            let letters = word.textContent.split("");
+            word.textContent = "";
+            letters.forEach(letter => {
+                let span = document.createElement("span");
+                span.textContent = letter;
+                span.style.minWidth = "0.3em";
+                span.className = "letter out";
+                word.appendChild(span);
+            });
         });
-    });
 
-    let currentWordIndex = 0;
-    let maxWordIndex = wordArray.length - 1;
-    wordArray[currentWordIndex].style.opacity = "1";
+        let currentWordIndex = 0;
+        let maxWordIndex = wordArray.length - 1;
+        wordArray[currentWordIndex].style.opacity = "1";
 
-    let rotateText = () => {
-        let currentWord = wordArray[currentWordIndex];
-        let nextWord = currentWordIndex === maxWordIndex ? wordArray[0] : wordArray[currentWordIndex + 1];
-        Array.from(currentWord.children).forEach((letter, i) => {
-            setTimeout(() => {
-                letter.className = "letter out";
-            }, i * 80);
-        });
-        nextWord.style.opacity = "1";
-        Array.from(nextWord.children).forEach((letter, i) => {
-            letter.className = "letter behind";
-            setTimeout(() => {
-                letter.className = "letter in";
-            }, 340 + i * 80);
-        });
-        currentWordIndex =
-            currentWordIndex === maxWordIndex ? 0 : currentWordIndex + 1;
-    };
-    rotateText();
-    intervalId = setInterval(rotateText, 4000);
+        let rotateText = () => {
+            let currentWord = wordArray[currentWordIndex];
+            let nextWord = currentWordIndex === maxWordIndex ? wordArray[0] : wordArray[currentWordIndex + 1];
+            Array.from(currentWord.children).forEach((letter, i) => {
+                setTimeout(() => {
+                    letter.className = "letter out";
+                }, i * 80);
+            });
+            nextWord.style.opacity = "1";
+            Array.from(nextWord.children).forEach((letter, i) => {
+                letter.className = "letter behind";
+                setTimeout(() => {
+                    letter.className = "letter in";
+                }, 340 + i * 80);
+            });
+            currentWordIndex =
+                currentWordIndex === maxWordIndex ? 0 : currentWordIndex + 1;
+        };
+        rotateText();
+        intervalId = setInterval(rotateText, 4000);
+    }
 }
 
 function addScrollAnimations() {
     const counters = document.getElementsByClassName('counter');
-    Array.from(counters).forEach(counter => {
-        const target = parseInt(counter.getAttribute('data-target'));
-        const duration = 2000; // in milliseconds
-        const frameDuration = 1000 / 60; // 60 frames per second
+    if (counters.length > 0) {
+        Array.from(counters).forEach(counter => {
+            const target = parseInt(counter.getAttribute('data-target'));
+            const duration = 2000; // in milliseconds
+            const frameDuration = 1000 / 60; // 60 frames per second
 
-        const totalFrames = duration / frameDuration;
-        const increment = target / totalFrames;
+            const totalFrames = duration / frameDuration;
+            const increment = target / totalFrames;
 
-        let count = 0;
-        let currentFrame = 0;
+            let count = 0;
+            let currentFrame = 0;
 
-        const updateCounter = () => {
-            if (count < target) {
-                count += increment;
-                counter.textContent = Math.floor(count);
+            const updateCounter = () => {
+                if (count < target) {
+                    count += increment;
+                    counter.textContent = Math.floor(count);
 
-                currentFrame++;
-                if (currentFrame < totalFrames - 15) {
-                    requestAnimationFrame(updateCounter);
-                } else if (currentFrame < totalFrames) {
-                    setTimeout(updateCounter, frameDuration * 2);
-                } else {
-                    counter.textContent = target;
-                    if (target === 8) {
-                        counter.classList.add('rotate-right');
-                        counter.style = "left: 6px; position: relative;";
+                    currentFrame++;
+                    if (currentFrame < totalFrames - 15) {
+                        requestAnimationFrame(updateCounter);
+                    } else if (currentFrame < totalFrames) {
+                        setTimeout(updateCounter, frameDuration * 2);
+                    } else {
+                        counter.textContent = target;
+                        if (target === 8) {
+                            counter.classList.add('rotate-right');
+                            counter.style = "left: 6px; position: relative;";
+                        }
                     }
                 }
-            }
-        };
+            };
 
-        const targetDiv = counter;
-        addScrollAnimation(updateCounter, targetDiv);
-    });
+            const targetDiv = counter;
+            addScrollAnimation(updateCounter, targetDiv);
+        });
+    }
 }
 
 function addScrollAnimation(animation, targetDiv) {
@@ -257,7 +261,7 @@ function prepareLanguageSwitch() {
     const targetLanguage = localStorage.getItem('language');
     translateTo(targetLanguage);
     document.getElementById("language-switch").checked = targetLanguage === 'en' ? true : false;
-    document.getElementById("language-switch").addEventListener("change", function() {
+    document.getElementById("language-switch").addEventListener("change", function () {
         if (this.checked) {
             translateTo('en');
         } else {
@@ -293,7 +297,11 @@ function translateText(data, targetLanguage) {
                 element.setAttribute("placeholder", data[key]);
             } else {
                 if (targetLanguage === 'en') {
-                    germanText[key] = element.textContent;
+                    if (element.classList.contains('word')) {
+                        germanText[key] = element.textContent;
+                    } else {
+                        germanText[key] = element.innerText.replace(/\n/g, '');
+                    }
                 }
                 element.innerText = data[key];
             }
