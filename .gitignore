@@ -1,3 +1,6 @@
 Notion/notion_2.0.py
 Notion/notion.py
 Notion/*
+
+*.iml
+.idea

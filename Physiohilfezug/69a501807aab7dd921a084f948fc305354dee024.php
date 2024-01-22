@@ -1,1 +1,0 @@
-<h2>Milos je pokusao</h2><?php /**PATH /home/physiohilfezug/public_html/resources/views/pages/randomstranica.blade.php ENDPATH**/ ?>
