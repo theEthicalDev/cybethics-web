@@ -24,7 +24,7 @@ canvasContainer.appendChild(renderer.domElement);
 
 let controls = new OrbitControls(camera, renderer.domElement);
 controls.enableZoom = false;
-controls.enableRotate = true;
+controls.enableRotate = false;
 controls.enablePan = false;
 
 let gu = {
