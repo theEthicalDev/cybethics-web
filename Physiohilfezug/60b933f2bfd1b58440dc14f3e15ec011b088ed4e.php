@@ -1,1 +1,0 @@
-<?php /**PATH /home/physiohilfezug/public_html/resources/views/pages/home/test.blade.php ENDPATH**/ ?>

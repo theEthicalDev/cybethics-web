@@ -1,4 +1,5 @@
 import * as THREE from "https://cdn.skypack.dev/three@0.136.0";
+import {tns} from "https://cdn.skypack.dev/tiny-slider";
 import { OrbitControls } from "https://cdn.skypack.dev/three@0.136.0/examples/jsm/controls/OrbitControls";
 
 addOptionClick();
@@ -16,7 +17,8 @@ renderer.precision = "lowp";
 const canvasContainer = document.getElementById("canvas-planet-container");
 const textNode1 = createTextNode("Business Software nach Ihren Bedürfnissen", "fade-in-short-short-delay visible-medium-screen-only", "canvas_text_1");
 canvasContainer.appendChild(textNode1);
-const textNode2 = createTextNode("Maximieren Sie Ihr Potenzial mit Softwarelösungen", "fade-in-short-short-delay visible-medium-screen-only", "canvas_text_2");
+const textNode2 = createTextNode("<span>Kosten reduzieren</span> mit massgeschneiderten Softwarelösungen", "fade-in-short-short-delay" +
+  " visible-medium-screen-only underline-bold", "canvas_text_2");
 canvasContainer.appendChild(textNode2);
 canvasContainer.appendChild(renderer.domElement);
 
@@ -141,7 +143,7 @@ function addOptionClick() {
     }
 }
 
-var swiper = new Swiper('.blog-slider', {
+new Swiper('.blog-slider', {
     spaceBetween: 30,
     effect: 'fade',
     loop: false,
@@ -153,4 +155,19 @@ var swiper = new Swiper('.blog-slider', {
         el: '.blog-slider__pagination',
         clickable: true,
     }
+});
+
+tns({
+    container: '.app-slider',
+    items: 1,
+    slideBy: 'page',
+    controls: true,
+    nav: false,
+    prevButton: '#app-slider-prev',
+    nextButton: '#app-slider-next',
+    speed: 1000,
+    autoplay: true,
+    autoplayTimeout: 5000,
+    autoplayStopOnHover: true,
+    autoplayButtonOutput: false,
 });
