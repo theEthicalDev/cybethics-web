@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <title>Cybethics</title>
+    <meta charset="utf-8">
+    <meta name="description"
+          content="Entdecke Cybethics - Deinen Partner für massgeschneiderte Softwarelösungen. Wir verwandeln Ideen in digitale Realität.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="Transparent">
+    <meta name="google-site-verification" content="s9fwO0DaqeL5sa0c5xapmQ6A26vs84yHStqM6wF2ac4"/>
+    <meta http-equiv="Cache-Control" content="max-age=604800">
+    <meta http-equiv="Content-Security-Policy"
+          content="connect-src 'self' https://newassets.hcaptcha.com https://hcaptcha.com https://*.hcaptcha.com https://ka-f.fontawesome.com;">
+    <link rel="icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+    <link rel="stylesheet" href="cybethics.css">
+    <link href="https://fonts.googleapis.com/css?family=Cairo&display=swap" rel="stylesheet"/>
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cairo">
+    </noscript>
+    <script defer src="functions.js"></script>
+    <script async defer src="https://js.hcaptcha.com/1/api.js"></script>
+    <script async defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script async defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script async defer src="planet.js" type="module"></script>
+    <script async defer src="https://kit.fontawesome.com/3cb905f540.js" crossorigin="anonymous"></script>
+    <!-- <script async defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script> -->
+    <!-- <script async defer src="rain.js" type="module"></script> -->
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "Organization",
+            "name": "Cybethics",
+            "url": "https://www.cybethics.com/",
+            "logo": "https://www.cybethics.com/assets/favicon.ico"
+        }
+    </script>
+</head>
+
+<body>
+<header class="header side-margin background-dark">
+    <div class="header-item">
+        <a href="index.html" class="" aria-label="link to the home page">
+            <div class="logo-container"></div>
+        </a>
+    </div>
+    <div class="language-container">
+        <label class="switch">
+            <input id="language-switch" class="switch__input" type="checkbox" role="switch" name="dark"/>
+            <span class="switch__inner"></span>
+        </label>
+    </div>
+</header>
+<div id="canvas-planet-container" class="side-margin bottom-space-mini background-dark"></div>
+<div class="fade-in-short-short-delay side-margin bottom-space top-space parent">
+    <div class="d-grid">
+        <i class="fa-solid fa-display text-center fx-1"></i>
+        <h2 id="mobile_app_development_title" class="subheading">
+            🚀 Ihre eigene <span class="hvr-underline-from-left">Web-Applikation entwickeln</span> lassen 🚀
+        </h2>
+    </div>
+    <p id="mobile_app_desc" class="text-balance text-center fs-4">Unsere Hausspezialität? Die Entwicklung erstklassiger Webanwendungen!
+        Webapplikationen sind wie
+        massgeschneiderte Werkzeuge für das digitale Zeitalter – dynamisch, zugänglich und voller Möglichkeiten. Bei uns dreht sich alles
+        darum, Ihre Ideen zum Leben zu erwecken und Ihre Visionen in pixelgenaue Realität zu verwandeln. Von der Konzeption bis zur
+        Umsetzung stehen wir Ihnen zur Seite, um Ihre Visionen erfolgreich umzusetzen und Ihr Unternehmen voranzubringen!
+    </p>
+
+    <div class="info-group top-space">
+
+        <div class="mobile-development-detail-single">
+            <div class="text-center mb-10 mb-md-0">
+                <i class="fa-solid fa-lightbulb fx-1 mb-5"></i>
+                <div class="d-flex justify-center mb-5">
+                    <span class="badge badge-circle badge-light-success fw-bold p-5 me-3 fs-3">1</span>
+                    <span class="fs-4 fw-bold text-gray-900">
+                        Analyse & Konzeption
+                    </span>
+                </div>
+                <div class="fw-semibold fs-5 fs-lg-4 text-muted text-balance">
+                    Ihre Anforderungen und Ziele sind der Ausgangspunkt für die Entwicklung Ihrer Webanwendung. Wir führen eine
+                    gründliche Analyse durch, um Ihre Bedürfnisse zu verstehen.
+                </div>
+            </div>
+        </div>
+
+        <div class="mobile-development-detail-single">
+            <div class="text-center mb-10 mb-md-0">
+                <i class="fa-solid fa-laptop-code fx-1 mb-5"></i>
+                <div class="d-flex justify-center mb-5">
+                    <span class="badge badge-circle badge-light-success fw-bold p-5 me-3 fs-3">2</span>
+                    <span class="fs-4 fw-bold text-gray-900">
+                        Design & Entwicklung
+                    </span>
+                </div>
+                <div class="fw-semibold fs-5 fs-lg-4 text-muted text-balance">
+                    Die Entwicklung einer benutzerfreundlichen Applikation beginnt mit einem ansprechenden Design und einer soliden
+                    Architektur, basierend auf Ihren Anforderungen.
+                </div>
+            </div>
+        </div>
+
+        <div class="mobile-development-detail-single">
+            <div class="text-center mb-10 mb-md-0">
+                <i class="fa-solid fa-list-check fx-1 mb-5"></i>
+                <div class="d-flex justify-center mb-5">
+                    <span class="badge fw-bold p-5 fs-3">3</span>
+                    <span class="fs-4 fw-bold text-gray-900">
+                        Testing & Bereitstellung
+                    </span>
+                </div>
+                <div class="fw-semibold fs-5 fs-lg-4 text-muted text-balance">
+                    Ihre Software wird gründlich getestet, um sicherzustellen, dass sie fehlerfrei funktioniert, bevor sie
+                    live geschaltet wird. Wir unterstützen Sie auch bei der Bereitstellung & Wartung.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-inline-flex align-items-center top-space bottom-space">
+        <button class="btn btn-icon btn-active-color-primary app-slider-button" id="app-slider-prev" data-controls="prev">
+            <i class="fa-solid fa-angle-left fs-2"></i>
+        </button>
+        <div class="app-slider">
+            <div class="text-center px-5 pt-5 pt-lg-10 px-lg-10 tns-item" aria-hidden="true">
+                <img src="assets/app-example4.png" class="card-rounded shadow mh-lg-650px" alt="">
+            </div>
+            <div class="text-center px-5 pt-5 pt-lg-10 px-lg-10 tns-item" aria-hidden="true">
+                <img src="assets/app-example7.png" class="card-rounded shadow mh-lg-650px" alt="">
+            </div>
+            <div class="text-center px-5 pt-5 pt-lg-10 px-lg-10 tns-item" aria-hidden="true">
+                <img src="assets/app-example5.png" class="card-rounded shadow mh-lg-650px" alt="">
+            </div>
+            <div class="text-center px-5 pt-5 tns-item" aria-hidden="true">
+                <img src="assets/app-example2.png" class="card-rounded shadow mh-lg-650px" alt="">
+            </div>
+            <div class="text-center px-5 pt-5 tns-item" aria-hidden="true">
+                <img src="assets/app-example6.png" class="card-rounded shadow mh-lg-650px" alt="">
+            </div>
+            <div class="text-center px-5 pt-5 pt-lg-10 px-lg-10 tns-item" aria-hidden="true">
+                <img src="assets/app-example3.png" class="card-rounded shadow mh-lg-650px" alt="">
+            </div>
+        </div>
+        <button class="btn btn-icon btn-active-color-primary app-slider-button" id="app-slider-next" data-controls="next">
+            <i class="fa-solid fa-angle-right fs-2"></i>
+        </button>
+    </div>
+
+    <div class="info-group">
+        <div class="mobile-development-detail-single item" id="ui_ux_section">
+            <div class="image-title">
+                <h3 id="uiux_title">UI/UX Design</h3>
+                <i class="fa-solid fa-layer-group fa-xl"></i>
+            </div>
+            <p id="uiux_desc">Wir legen Wert auf die Schaffung von intuitiven und <span id="visually_appealing">visuell
+            ansprechenden Benutzeroberflächen (UI)</span>. Dabei liefern wir
+                aussergewöhnliche Benutzererlebnisse (UX), erstellen <span id="user_friendly">benutzerfreundliche</span>
+                Navigation und sorgen für ansprechende Interaktionen und nahtlose Übergänge.</p>
+        </div>
+        <div class="mobile-development-detail-single item" id="performance_opt_section">
+            <div class="image-title">
+                <h3 id="performance_title">Datenschutz und -verarbeitung</h3>
+                <i class="fa-solid fa-user-lock fa-xl"></i>
+            </div>
+            <p id="performance_desc">Datenschutz liegt ist bei uns Grossgeschrieben und wir legen grossen Wert auf Ihre und die Daten
+                Ihrer Benutzer! Die Daten werden ausschliesslich auf <span id="safe_servers">sicheren Servern </span> in der <span
+                        id="switzerland">
+                Schweiz🇨🇭</span></span> gespeichert.</p>
+        </div>
+        <div class="mobile-development-detail-single item" id="mobile-development-app-security">
+            <div class="image-title">
+                <h3 id="app_security_title">App Sicherheit</h3>
+                <i class="fa-solid fa-shield-halved fa-xl"></i>
+            </div>
+            <p id="app_security_desc">Betonen Sie Ihr Engagement für die Sicherheit mobiler Anwendungen. Erwähnen Sie Ihre
+                Expertise bei der Implementierung robuster Sicherheitsmassnahmen, wie Daten-<span
+                        id="data_encryption">Verschlüsselung</span>, sichere Benutzer-<span
+                        id="user_authentication">Authentifizierung</span> und <span id="protection_measures">Schutz</span> vor
+                gängigen Sicherheitslücken.</p>
+        </div>
+
+        <!--        <div class="mobile-development-detail-single item">-->
+        <!--            <div class="image-title">-->
+        <!--                <i class="fa-solid fa-mobile fa-xl"></i>-->
+        <!--                <h3 id="native_title">Native</h3>-->
+        <!--            </div>-->
+        <!--            <p id="native_desc">Unterstreichen Sie Ihre Kompetenz bei der Entwicklung mobiler Anwendungen für die <span-->
+        <!--                    id="ios_and_android">iOS und Android</span> Plattformen. Erzählen Sie von Ihren Erfahrungen mit bestimmten-->
+        <!--                Versionen von <span id="ios_android_versions">iOS und Android</span> sowie eventuellen weiteren unterstützten-->
+        <!--                Plattformen.</p>-->
+        <!--            <div class="mobile-development-platform-group">-->
+        <!--                <div class="image-title center visible-large-screen-only">-->
+        <!--                    <i class="fa-brands fa-swift fa-2xl"></i>-->
+        <!--                    <h3 id="swift_title">Swift</h3>-->
+        <!--                    <p class="subtitle" id="swift_subtitle">(iOS)</p>-->
+        <!--                </div>-->
+        <!--                <div class="image-title center visible-large-screen-only">-->
+        <!--                    <i class="fa-brands fa-android fa-2xl"></i>-->
+        <!--                    <h3 id="android_sdk_title">Android SDK</h3>-->
+        <!--                    <p class="subtitle" id="android_subtitle">(Android)</p>-->
+        <!--                </div>-->
+        <!--                <p class="mobile-development-platform-group-item-stretched center center-text" id="native_adv_disadvantages">-->
+        <!--                    Vor- und Nachteile der nativen App-Programmierung:</p>-->
+        <!--                <div class="pros">-->
+        <!--                    <p class="awesome pro" id="better_perf">Bessere App-Leistung</p>-->
+        <!--                    <p class="awesome pro" id="native_exp">Native Benutzererfahrung</p>-->
+        <!--                    <p class="awesome pro" id="device_features_access">Mehr Zugriff auf Gerätefunktionen</p>-->
+        <!--                    <p class="awesome pro" id="os_flexibility">Flexibilität bei OS-Änderungen</p>-->
+        <!--                </div>-->
+        <!--                <div class="cons">-->
+        <!--                    <p class="awesome con" id="dev_time_cost">Entwicklungszeit und -kosten</p>-->
+        <!--                    <p class="awesome con" id="maint_cost">Wartungskosten</p>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </div>-->
+        <!--        <div class="mobile-development-detail-single item">-->
+        <!--            <div class="image-title">-->
+        <!--                <i class="fa-solid fa-mobile fa-xl"></i>-->
+        <!--                <h3 id="cross_platform_title">Cross-Plattform</h3>-->
+        <!--            </div>-->
+        <!--            <div class="mobile-development-platform-group">-->
+        <!--                <div class="image-title center mobile-development-platform-group-item-stretched">-->
+        <!--                    <i class="fa-solid fa-angles-left fa-2xl"></i>-->
+        <!--                    <h3 id="flutter_title">Flutter</h3>-->
+        <!--                </div>-->
+        <!--                <p id="flutter_desc" class="mobile-development-platform-group-item-stretched center center-text">Mit-->
+        <!--                    Cross-Plattform-Entwicklungstechnologien wie Flutter können Apps für mehrere Plattformen gleichzeitig-->
+        <!--                    entwickelt werden.</p>-->
+        <!--                <div class="pros">-->
+        <!--                    <p id="pro_faster_dev" class="awesome pro">Schnellere Entwicklung</p>-->
+        <!--                    <p id="pro_maintenance_all_platforms" class="awesome pro">Wartung auf allen Plattformen</p>-->
+        <!--                    <p id="pro_single_codebase" class="awesome pro">Einzelner Codebase</p>-->
+        <!--                </div>-->
+        <!--                <div class="cons">-->
+        <!--                    <p id="con_performance_limitations" class="awesome con">Leistungseinschränkungen</p>-->
+        <!--                    <p id="con_platform_specific" class="awesome con">Eingeschränkte plattformspezifische Funktionen</p>-->
+        <!--                    <p id="con_os_updates" class="awesome con">Schwierigkeiten bei Betriebssystem-Updates</p>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </div>-->
+    </div>
+</div>
+<div class="fade-in-short-short-delay bottom-space side-margin background-dark">
+    <h2 id="web-development-experience-title" class="top-space text-balance text-center">Im Schnitt hat ein Cybethics
+        Mitarbeiter ... </h2>
+    <div class="web-development-experience">
+        <div>
+            <div class="web-development-experience-number counter" data-target="11"></div>
+            <p class="web-development-experience-description" id="years_of_experience">Jahre Entwicklungserfahrung</p>
+        </div>
+        <div>
+            <div class="web-development-experience-number counter" data-target="18"></div>
+            <p class="web-development-experience-description" id="technologies_known">Technologien kennengelernt</p>
+        </div>
+        <div>
+            <div class="web-development-experience-number counter" data-target="5"></div>
+            <p class="web-development-experience-description" id="average_certificates">Zertifizierungen erlangt</p>
+        </div>
+        <div>
+            <div class="web-development-experience-number counter" data-target="8"></div>
+            <p class="web-development-experience-description" id="tech_stack_experience">technologische Möglichkeiten
+            </p>
+        </div>
+    </div>
+</div>
+<div class="side-margin fade-in-short-short-delay top-space bottom-space">
+    <div class="">
+        <div class="d-flex flex-center">
+            <i class="fa-solid fa-clipboard-question fx-1"></i>
+        </div>
+        <h2 class="subheading" id="custom_software_development">🤔 Wie kann Software helfen? 💭</h2>
+        <p class="text-balance text-center fs-4 bottom-space-mini">Softwarelösungen können Unternehmen dabei unterstützen, ihre
+            Geschäftsprozesse zu optimieren, die Effizienz zu steigern und die Rentabilität zu verbessern. Durch die Entwicklung
+            massgeschneiderter Software können Unternehmen massgeschneiderte Lösungen erhalten, die ihre spezifischen Anforderungen
+            erfüllen und ihnen einen Wettbewerbsvorteil verschaffen.
+        </p>
+        <div class="blog-slider item">
+            <div class="blog-slider__wrp swiper-wrapper">
+                <div class="blog-slider__item swiper-slide">
+                    <div class="blog-slider__img blog-slider__excel">
+                        <i class="fa-solid fa-file-excel"></i>
+                    </div>
+                    <div class="blog-slider__content">
+                        <h2 class="blog-slider__text">Excel-Tabellen sind ganz okay, aber ...</h2>
+                        <div class="blog-slider__text">
+                            <p id="software_desc">Für viele Unternehmen sind Excel-Tabellen ein gängiges Werkzeug für die Verwaltung von
+                                Daten und Prozessen. Doch Excel-Tabellen haben ihre Grenzen:
+                            </p>
+                            <ul>
+                                <li>Aufwändige manuelle Dateneingabe und -verarbeitung</li>
+                                <li>Unübersichtliche und schwer zu pflegende Tabellen</li>
+                                <li>Anfällig für Fehler und Dateninkonsistenzen</li>
+                                <li>Fehlerpotential wenn Personen an gleichem Dokument arbeiten</li>
+                                <li>Begrenzte Möglichkeiten zur Automatisierung</li>
+                                <li>Fehlende Backups und Risiko versehentlicher Datenverluste</li>
+                                <li>Eingeschränkte Kontrolle und Sicherheit ohne Rechte- und Rollenverwaltung</li>
+                            </ul>
+                            <p>Dies kann zu ineffizienten Arbeitsabläufen, erhöhtem Arbeitsaufwand und unzuverlässigen Daten führen.
+                                Durch die Entwicklung einer individuellen Web-Applikation können Unternehmen diese Herausforderungen
+                                überwinden, indem sie eine massgeschneiderte Lösung erhalten, die ihre spezifischen Anforderungen erfüllt.
+                                Eine Web-Applikation kann komplexe Geschäftsprozesse automatisieren, Daten konsolidieren und die Effizienz
+                                verbessern, was zu erheblichen Kosteneinsparungen führt.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="blog-slider__item swiper-slide">
+                    <div class="blog-slider__img blog-slider__process">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <div class="blog-slider__content">
+                        <h2 class="blog-slider__text">Automatisierung von Geschäftsprozessen</h2>
+                        <div class="blog-slider__text">
+                            <p id="software_desc2">Die Automatisierung von Geschäftsprozessen ist entscheidend für die Effizienz und
+                                Produktivität eines Unternehmens. Manuelle Aufgaben können zeitaufwändig sein und Fehleranfälligkeit mit
+                                sich bringen. Durch den Einsatz von Softwarelösungen können repetitive Aufgaben automatisiert werden, was zu
+                                einer Steigerung der Arbeitsgeschwindigkeit, Reduzierung von Fehlern und erhöhter Zuverlässigkeit führt.</p>
+                            <ul>
+                                <li>Effizientere Nutzung von Ressourcen durch automatisierte Abläufe.</li>
+                                <li>Verbesserung der Datenqualität durch Minimierung menschlicher Fehler.</li>
+                                <li>Zeitersparnis bei wiederkehrenden Prozessen ermöglicht Fokus auf strategische Aufgaben.</li>
+                                <li>Erhöhte Flexibilität und Anpassungsfähigkeit an sich ändernde Anforderungen des Marktes.</li>
+                            </ul>
+                            <p>Automatisierung kann in verschiedenen Bereichen eingesetzt werden, wie z.B. beim Datenaustausch zwischen
+                                Systemen, beim Versand von Benachrichtigungen und E-Mails, bei der Generierung von Berichten, die Beispiele
+                                sind endlos. Durch die Optimierung von Geschäftsprozessen können Unternehmen Zeit und Ressourcen sparen und
+                                gleichzeitig die Qualität ihrer Dienstleistungen verbessern.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="blog-slider__item swiper-slide">
+                    <div class="blog-slider__img blog-slider__costs">
+                        <i class="fa-solid fa-circle-dollar-to-slot"></i>
+                    </div>
+                    <div class="blog-slider__content">
+                        <h2 class="blog-slider__text">Kosteneinsparungen durch Softwarelösungen</h2>
+                        <div class="blog-slider__text">
+                            <p id="software_desc3">Die richtigen Softwarelösungen können erhebliche Kosteneinsparungen für Unternehmen
+                                bedeuten. Durch die Automatisierung von Prozessen, die Reduzierung von manuellen Arbeitsstunden und die
+                                Verbesserung der Effizienz können Unternehmen ihre Betriebskosten deutlich senken.</p>
+                            <p>Software kann auch dazu beitragen, unnötige Ausgaben zu vermeiden, indem sie beispielsweise bessere Kontrolle
+                                über Ausgaben ermöglicht, Verträge und Lizenzen optimiert oder Betrug und Verschwendung reduziert. Darüber
+                                hinaus können massgeschneiderte Softwarelösungen spezifische Probleme eines Unternehmens lösen und so die
+                                Rentabilität und Wettbewerbsfähigkeit steigern.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-slider__pagination"></div>
+        </div>
+    </div>
+</div>
+
+<div class="background-dark bottom-space top-space fade-in-short-short-delay">
+    <div class="side-margin">
+        <div class="d-flex flex-center">
+            <i class="fa-solid fa-gears fx-1"></i>
+        </div>
+        <h2 class="subheading text-center">Was wir neben Web-Apps anbieten?</h2>
+        <p class="text-balance text-center fs-4">Vielleicht brauchen Sie gar keine Applikation, sondern wären mit viel weniger
+            zufrieden. Unsere Dienstleistungen umfassen auch folgende Bereiche:</p>
+        <div class="grid-container">
+            <div class="">
+                <h2 id="serverless_title">Serverlose Funktionen</h2>
+                <p id="serverless_desc">Es braucht nicht immer komplexe Applikationen um Ihnen das Leben einfacher zu machen.
+                    Sogenannte serverlose Funktionen sind eine effiziente Möglichkeit, um schnell und kostengünstig
+                    einfache Automatisierungen zu erstellen.</p>
+            </div>
+            <div class="">
+                <h2 id="api_integration_title">Externe API-Integrationen</h2>
+                <p id="api_integration_desc">Wir erleichtern die nahtlose Integration von Drittanbieter-APIs in Ihr
+                    Software-Ökosystem, ermöglichen einen effizienten Datenaustausch und erweitern die Fähigkeiten Ihrer
+                    Anwendungen. Unsere Expertise in der API-Integration gewährleistet reibungslose und sichere Interaktionen
+                    mit externen Systemen und verbessert Ihre Geschäftsprozesse.</p>
+            </div>
+            <div class="">
+                <h2 id="devops_title">DevOps</h2>
+                <p id="devops_desc">Unsere DevOps-Experten optimieren Ihre Softwareentwicklung und den Bereitstellungsprozess,
+                    sodass Sie schneller und zuverlässiger veröffentlichen können. Wir implementieren
+                    Containerisierungstechniken mit Plattformen wie Docker und Orchestrierungswerkzeugen wie Kubernetes, um
+                    Skalierbarkeit, Portabilität und einfache Verwaltung zu gewährleisten.</p>
+            </div>
+            <div id="devops-grid-item">
+                <div class="boxes">
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box">
+                        <div class="progress">
+                            <div class="bar">
+                                <div class="bar__fill" style="width: 33%;"></div>
+                            </div>
+                            <div class="point">
+                                <div class="bullet"></div>
+                                <label class="label">Build</label>
+                            </div>
+                            <div class="point">
+                                <div class="bullet"></div>
+                                <label class="label">Test</label>
+                            </div>
+                            <div class="point">
+                                <div class="bullet"></div>
+                                <label class="label">Release</label>
+                            </div>
+                            <div class="point">
+                                <div class="bullet"></div>
+                                <label class="label">Deploy</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="fade-in-short-short-delay side-margin top-space bottom-space">
+    <div class="d-flex flex-center">
+        <i class="fa-solid fa-handshake-simple fx-1"></i>
+    </div>
+    <h2 id="heading" class="center-text">Unsere Werte</h2>
+    <p id="intro_text" class="text-balance text-center fs-4 bottom-space-mini">Bei Cybethics stehen Ethik und Vernunft im Mittelpunkt all unseres
+        Handelns.
+        Es ist mehr als ein Name; es ist das Spiegelbild unserer unerschütterlichen Verpflichtung zu Integrität und
+        verantwortungsvollen Geschäftspraktiken
+    </p>
+
+    <div class="top-space info-group bottom-space d-flex">
+
+        <div class="">
+            <div class="text-center mb-10 mb-md-0">
+                <i class="fa-solid fa-street-view fx-1 mb-5"></i>
+                <div class="d-flex justify-center mb-5">
+                    <span class="badge badge-circle badge-light-success fw-bold p-5 me-3 fs-3">1</span>
+                    <span class="fs-4 fw-bold text-gray-900">
+                        Pragmatisch
+                    </span>
+                </div>
+                <div class="fw-semibold fs-5 fs-lg-4 text-muted text-balance">
+                    Unsere Kunden schätzen unsere Fähigkeit, mitzudenken und innovative Lösungen zu entwickeln, die ihre
+                    Geschäftsziele unterstützen, selbst wenn wir günstigere Lösungen anbieten.
+                </div>
+            </div>
+        </div>
+
+        <div class="">
+            <div class="text-center mb-10 mb-md-0">
+                <i class="fa-solid fa-ranking-star fx-1 mb-5"></i>
+                <div class="d-flex justify-center mb-5">
+                    <span class="badge badge-circle badge-light-success fw-bold p-5 me-3 fs-3">2</span>
+                    <span class="fs-4 fw-bold text-gray-900">
+                        Qualitätsbewusst
+                    </span>
+                </div>
+                <div class="fw-semibold fs-5 fs-lg-4 text-muted text-balance">
+                    Das Ziel von Cybethics ist es, qualitativ hochwertige Softwarelösungen zu entwickeln, bei welchen unsere
+                    Kunden sagen: "Bei Cybethics würden wir wieder anfragen".
+                </div>
+            </div>
+        </div>
+
+        <div class="">
+            <div class="text-center mb-10 mb-md-0">
+                <i class="fa-solid fa-hands-holding-circle fx-1 mb-5"></i>
+                <div class="d-flex justify-center mb-5">
+                    <span class="badge fw-bold p-5 fs-3">3</span>
+                    <span class="fs-4 fw-bold text-gray-900">
+                        Ethisch
+                    </span>
+                </div>
+                <div class="fw-semibold fs-5 fs-lg-4 text-muted text-balance">
+                    Wir sind bestrebt, ethisch zu handeln und unsere Geschäfte auf verantwortungsvolle Weise zu führen. Wir
+                    halten uns an hohe ethische Standards und respektieren die Rechte & Privatsphäre unserer Kunden.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cyber-ethical-solutions">
+        <div class="cyber-ethical-solutions-item-container">
+            <div class="cyber-ethical-solutions-item-short center-text cyber-ethical-solutions-item">
+                <div style="display: inline-flex;">
+                    <p class="center-text cyber-ethical-solutions-item-title">c</p>
+                    <p class="center-text cyber-ethical-solutions-item-title">y</p>
+                    <p class="center-text cyber-ethical-solutions-item-title">b</p>
+                    <p class="center-text cyber-ethical-solutions-item-title">e</p>
+                    <p class="center-text cyber-ethical-solutions-item-title">r</p>
+                </div>
+                <i class="fa-solid fa-microchip"></i>
+            </div>
+        </div>
+        <div class="cyber-ethical-solutions-item-container">
+            <div class="cyber-ethical-solutions-item-short center-text cyber-ethical-solutions-item">
+                <div style="display: inline-flex;">
+                    <p class="center-text cyber-ethical-solutions-item-title">e</p>
+                    <p class="center-text cyber-ethical-solutions-item-title">t</p>
+                    <p class="center-text cyber-ethical-solutions-item-title">h</p>
+                    <p class="center-text cyber-ethical-solutions-item-title">i</p>
+                    <p class="center-text cyber-ethical-solutions-item-title">c</p>
+                    <p class="center-text cyber-ethical-solutions-item-title">s</p>
+                </div>
+                <i class="fa-solid fa-heart-circle-check"></i>
+            </div>
+        </div>
+        <div class="wrap">
+            <button class="lg-button" id="cyber-ethical-solutions-button" onclick="cybethicsNameContinue()">Auflösen</button>
+        </div>
+    </div>
+</div>
+<div class="background-dark bottom-space fade-in-short-short-delay">
+    <div class="side-margin">
+        <h2>United Nations Sustainability Development Goals</h2>
+        <div class="grid-container unsdg-container">
+            <img src="assets/unsdg.png" alt="Nachhaltigkeitsziele der Vereinten Nationen" loading="lazy"
+                 class="limit-width fade-in-short-short-delay">
+            <div class="fade-in-short-short-delay">
+                <h3 id="subtitle" class="large-text">Was zum Teufel sind UNSDG?</h3>
+                <ul>
+                    <li id="point1">Die Nachhaltigkeitsziele der Vereinten Nationen (UNSDG) sind ein Satz von 17 globalen
+                        Zielen, die 2015 von den Vereinten Nationen angenommen wurden
+                    </li>
+                    <li id="point2">Die UNSDG bieten einen Rahmen zur Bewältigung globaler Herausforderungen, einschliesslich
+                        Armut, Ungleichheit, Klimawandel, soziale Ungerechtigkeit usw.
+                    </li>
+                    <li id="point3">Die Ziele umfassen eine Vielzahl von Fragen: Beendigung von Armut und Hunger, Bekämpfung des
+                        Klimawandels, Förderung von Bildung und nachhaltigem wirtschaftlichem Wachstum
+                    </li>
+                    <li id="point4">Die UNSDG sollen bis 2030 erreicht werden und bieten eine 15-jährige Roadmap für nachhaltige
+                        Entwicklungsanstrengungen im globalen Massstab
+                    </li>
+                    <li id="point5">Sie rufen zu Zusammenarbeit und Partnerschaften zwischen Regierungen, Unternehmen,
+                        Organisationen der Zivilgesellschaft und Einzelpersonen auf, um gemeinsam an der Erreichung der Ziele zu
+                        arbeiten und eine nachhaltigere Welt zu schaffen
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="side-margin fade-in-short-short-delay background-dark">
+    <h2 id="priority_title">Unsere 5 Prioritäten im Bereich der UN-Nachhaltigkeitsziele</h2>
+    <p id="priority_intro">Bei alledem kann Cybethics nicht alle Ziele verfolgen, sondern priorisiert stattdessen fünf
+        der 17 Ziele. Die Auswahl dieser fünf Ziele basiert auf zwei Hauptfragen:</p>
+    <ul>
+        <li id="question_1">Wie können wir am meisten beitragen?</li>
+        <li id="question_2">Welche Ziele halten wir für am wichtigsten?</li>
+    </ul>
+    <p id="priority_conclusion">Nachdem wir die Grundlage für unsere Überzeugungen geschaffen haben, sind die folgenden
+        fünf Ziele unsere Prioritäten.</p>
+    <div class="bottom-space" style="padding-top: 135px;">
+        <div class="blog-slider">
+            <div class="blog-slider__wrp swiper-wrapper">
+                <!-- UNSDG 3 -->
+                <div class="blog-slider__item swiper-slide">
+                    <div class="blog-slider__img">
+                        <img src="assets/unsdg3.png" loading="lazy" alt="UNSDG 3: Gesundheit und Wohlergehen">
+                    </div>
+                    <div class="blog-slider__content">
+                        <div class="blog-slider__title" id="unsdg3_title">UNSDG 3: Gesundheit und Wohlergehen</div>
+                        <div class="blog-slider__text">
+                            <ul class="unsdg-card-content">
+                                <li id="unsdg3_point1">Mitarbeiterwohlbefinden Programme: Die Gesundheit und das Wohlbefinden der
+                                    Mitarbeiter durch Wellnessprogramme priorisieren, die Work-Life-Balance fördern und eine
+                                    unterstützende Arbeitsumgebung schaffen.
+                                </li>
+                                <li id="unsdg3_point2">Flexible Arbeitsvereinbarungen: Flexible Arbeitsvereinbarungen anbieten, wie
+                                    z.B. Telearbeit oder flexible Arbeitszeiten, die es den Mitarbeitern ermöglichen, ihre
+                                    Gesundheitsbedürfnisse zu verwalten, Arzttermine wahrzunehmen oder Betreuungspflichten zu
+                                    berücksichtigen.
+                                </li>
+                                <li id="unsdg3_point3">Gesundheitsbewusstsein fördern: Das Bewusstsein für wichtige
+                                    Gesundheitsthemen schärfen, Gesundheitstipps teilen und präventive Gesundheitspraktiken unter
+                                    Mitarbeitern und der breiteren Gemeinschaft fördern.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- UNSDG 8 -->
+                <div class="blog-slider__item swiper-slide">
+                    <div class="blog-slider__img">
+                        <img src="assets/unsdg8.png" loading="lazy" alt="UNSDG 8: Anständige Arbeit und Wirtschaftswachstum">
+                    </div>
+                    <div class="blog-slider__content">
+                        <div class="blog-slider__title" id="unsdg8_title">UNSDG 8: Anständige Arbeit und Wirtschaftswachstum
+                        </div>
+                        <div class="blog-slider__text">
+                            <ul class="unsdg-card-content">
+                                <li id="unsdg8_point1">Arbeitsplatzschaffung: Aktiv Arbeitsplätze schaffen, wirtschaftliches
+                                    Wachstum durch Einstellung und Beschäftigung fördern.
+                                </li>
+                                <li id="unsdg8_point2">Förderung von Fähigkeiten: Initiativen zur Fähigkeitenentwicklung und
+                                    Trainingsprogramme unterstützen, um die Beschäftigungsfähigkeit zu erhöhen.
+                                </li>
+                                <li id="unsdg8_point3">Gerechte und inklusive Arbeitspraktiken: Eine vielfältige und inklusive
+                                    Arbeitsumgebung fördern, gleiche Möglichkeiten fördern, Menschenrechte respektieren und
+                                    Diskriminierung verbieten.
+                                </li>
+                                <li id="unsdg8_point4">Unternehmerische Sozialverantwortung (CSR): CSR-Initiativen umsetzen, die die
+                                    Gemeinschaftsentwicklung, Bildung und Unternehmertum unterstützen.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- UNSDG 9 -->
+                <div class="blog-slider__item swiper-slide">
+                    <div class="blog-slider__img">
+                        <img src="assets/unsdg9.png" loading="lazy" alt="UNSDG 9: Industrie, Innovation und Infrastruktur">
+                    </div>
+                    <div class="blog-slider__content">
+                        <div class="blog-slider__title" id="unsdg9_title">UNSDG 9: Industrie, Innovation und Infrastruktur</div>
+                        <div class="blog-slider__text">
+                            <ul class="unsdg-card-content">
+                                <li id="unsdg9_point1">Technologische Innovation: Spitzentechnologie-Lösungen vorantreiben,
+                                    Effizienz, Produktivität und Nachhaltigkeit in verschiedenen Branchen verbessern.
+                                </li>
+                                <li id="unsdg9_point2">Digitale Konnektivität: Zugang zu erschwinglichen und zuverlässigen
+                                    Internetdiensten verbessern, Gemeinschaften befähigen, die digitale Kluft überbrücken und
+                                    wirtschaftliche Möglichkeiten ermöglichen.
+                                </li>
+                                <li id="unsdg9_point3">Partnerschaften für Innovation: Zusammenarbeit mit Industrie-, Forschungs-
+                                    und Regierungspartnern zur Förderung von Innovationssystemen, Antriebsforschung und -entwicklung
+                                    zur Bewältigung gesellschaftlicher Herausforderungen.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- UNSDG 11 -->
+                <div class="blog-slider__item swiper-slide">
+                    <div class="blog-slider__img">
+                        <img src="assets/unsdg11.png" loading="lazy" alt="UNSDG 11: Nachhaltige Städte und Gemeinschaften">
+                    </div>
+                    <div class="blog-slider__content">
+                        <div class="blog-slider__title" id="unsdg11_title">UNSDG 11: Nachhaltige Städte und Gemeinschaften</div>
+                        <div class="blog-slider__text">
+                            <ul class="unsdg-card-content">
+                                <li id="unsdg11_point1">Interne Nachhaltigkeitspraktiken: Umsetzung umweltfreundlicher Richtlinien
+                                    für Abfallwirtschaft, Energieeffizienz und Ressourcenschonung. Förderung nachhaltiger
+                                    Pendelmethoden wie öffentliche Verkehrsmittel, Fahrgemeinschaften oder Radfahren.
+                                </li>
+                                <li id="unsdg11_point2">Fürsprecherrolle und politisches Engagement: Förderung nachhaltiger
+                                    städtischer Entwicklung durch Fürsprache, Information über lokale Politik, Beteiligung an
+                                    öffentlichen Konsultationen und Fürsprache für öffentliche Verkehrsmittel, nachhaltige
+                                    Infrastruktur und inklusives Städtedesign.
+                                </li>
+                                <li id="unsdg11_point3">Technologielösungen: Entwicklung von Softwareanwendungen und -plattformen
+                                    für nachhaltige Städte, einschliesslich Förderung öffentlicher Verkehrsmittel, intelligentes
+                                    Stadtmanagement, Bürgerbeteiligung und städtebauliche Erleichterung.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- UNSDG 16 -->
+                <div class="blog-slider__item swiper-slide">
+                    <div class="blog-slider__img">
+                        <img src="assets/unsdg16.png" loading="lazy"
+                             alt="UNSDG 16: Frieden, Gerechtigkeit und starke Institutionen">
+                    </div>
+                    <div class="blog-slider__content">
+                        <div class="blog-slider__title" id="unsdg16_title">UNSDG 16: Frieden, Gerechtigkeit und starke
+                            Institutionen
+                        </div>
+                        <div class="blog-slider__text">
+                            <ul class="unsdg-card-content">
+                                <li id="unsdg16_point1">Ethische Geschäftspraktiken: Integrität und ethisches Verhalten, starke
+                                    Governance, Antikorruptionsmassnahmen und Transparenz fördern. Faire Praktiken,
+                                    verantwortungsbewusste Beschaffung, Compliance und Respekt vor Menschenrechten fördern.
+                                </li>
+                                <li id="unsdg16_point2">Datensicherheit und Datenschutz: Datensicherheit priorisieren, robuste
+                                    Cybersicherheit, Datenschutz-Compliance und verantwortungsvolle Datenverarbeitung.
+                                </li>
+                                <li id="unsdg16_point3">Partnerschaften für den Frieden: Mit Organisationen, Regierungen und
+                                    gemeinnützigen Organisationen zusammenarbeiten, um Friedensinitiativen, Mediation,
+                                    Friedenssicherung und Konfliktlösung zu unterstützen.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-slider__pagination"></div>
+        </div>
+    </div>
+</div>
+<div id="cybethics-process" class="side-margin fade-in-short-short-delay bottom-space visible-large-screen-only">
+    <h2 id="contact_heading">Was passiert, wenn Sie uns kontaktieren</h2>
+    <div class="">
+        <div class="">
+            <div class="text-container">
+                <h3 class="process-text part1" id="step1_text">Sie kontaktieren unser Unternehmen und wir weisen Ihnen einen
+                    Anforderungsingenieur zu. Unser Anforderungsingenieur ist ein Spezialist für technische Möglichkeiten,
+                    potenzielle Lösungen, Optionen und Kosten des Projekts.</h3>
+                <h3 class="process-text part2" id="step2_text">Der Anforderungsingenieur schlägt Lösungen für Ihr Problem vor
+                    und wenn Sie sich dafür entscheiden, wird ein Value Stream (Team) von Personen eingerichtet, um das Projekt
+                    abzuschliessen.</h3>
+                <h3 class="process-text part3" id="step3_text">Der Value Stream bespricht die architektonische Lösung und
+                    teilt
+                    die Arbeit in kleine und klare Aufgaben auf.</h3>
+                <h3 class="process-text part4" id="step4_text">Je nach Projektbedarf könnten verschiedene Spezialisten
+                    beteiligt sein.</h3>
+                <h3 class="process-text part5" id="step5_text">Der Value Stream arbeitet an der technischen Umsetzung und am
+                    Testen, während der verantwortliche Anforderungsingenieur immer einen Überblick hat, damit Sie über den
+                    Status informiert werden könnten.</h3>
+                <h3 class="process-text part6" id="step6_text">Sobald die Arbeit abgeschlossen und erfolgreich getestet wurde,
+                    wird der Value Stream die Arbeit und die Dokumentation für die endgültige Übergabe abschliessen.</h3>
+                <h3 class="process-text part7" id="step7_text">Die endgültige Arbeit einschliesslich der Dokumentation wird dem
+                    Anforderungsingenieur zur endgültigen Abnahme gesendet.</h3>
+                <h3 class="process-text part8" id="step8_text">Sobald das Projekt abgeschlossen wurde, werden wir
+                    sicherstellen, dass die Lösung basierend auf den Bedürfnissen unserer Kunden zur Verfügung gestellt wird.
+                </h3>
+            </div>
+        </div>
+    </div>
+    <div class="process-container-new">
+        <div class="empty-cell"></div>
+        <div class="empty-cell"></div>
+        <div class="empty-cell"></div>
+        <div class="">
+            <div class="arrow-column">
+                <div class="document-row part3">
+                    <i class="document-list fa-solid fa-file-lines fa-2xl part3"></i>
+                    <i class="document-checked fa-solid fa-file-circle-check fa-2xl part6"></i>
+                </div>
+                <div class="arrow-line part3"></div>
+                <p class="arrow right part3"></p>
+            </div>
+        </div>
+        <div class="process-container-actor part3">
+            <i class="role-icon fa-solid fa-user fa-2xl"></i>
+            <h5 class="role-title part3 role1">Software-Ingenieur</h5>
+            <h5 class="role-title part4 role2">Frontend-Entwickler</h5>
+            <i class="fa-solid fa-circle-notch fa-lg ongoing part5"></i>
+            <h5 class="role-title part4 role3">Backend-Entwickler</h5>
+        </div>
+        <div class="process-container-actor part1">
+            <i class="role-icon fa-solid fa-user fa-2xl" id="cybethics-re"></i>
+            <h5 class="role-title">Anforderungsingenieur</h5>
+        </div>
+        <div class="arrow-column">
+            <div class="document-row">
+                <i class="document-list fa-solid fa-file-lines fa-2xl part2"></i>
+                <i class="document-checked fa-solid fa-file-circle-check fa-2xl part7"></i>
+            </div>
+            <p class="arrow-line part2"></p>
+            <p class="arrow right part2"></p>
+        </div>
+        <div class="process-container-actor part2">
+            <i class="role-icon fa-solid fa-people-group fa-2xl"></i>
+            <i class="fa-solid fa-circle-notch fa-lg ongoing part6"></i>
+            <h5 class="role-title">Value Stream</h5>
+        </div>
+        <div class="">
+            <div class="arrow-column">
+                <div class="document-row part3">
+                    <i class="document-list fa-solid fa-file-lines fa-2xl part3"></i>
+                    <i class="document-checked fa-solid fa-file-circle-check fa-2xl part6"></i>
+                </div>
+                <div class="arrow-line part3"></div>
+                <p class="arrow right part3"></p>
+            </div>
+        </div>
+        <div class="process-container-actor part3">
+            <i class="role-icon fa-solid fa-user fa-2xl"></i>
+            <h5 class="role-title role1 part3">Software-Ingenieur</h5>
+            <h5 class="role-title part4 role2">Datenbankanalyst</h5>
+            <i class="fa-solid fa-circle-notch fa-lg ongoing part5"></i>
+            <h5 class="role-title part4 role3">Frontend-Entwickler</h5>
+        </div>
+        <div class="empty-cell"></div>
+        <div class="empty-cell"></div>
+        <div class="empty-cell"></div>
+        <div class="">
+            <div class="arrow-column">
+                <div class="document-row part3">
+                    <i class="document-list fa-solid fa-file-lines fa-2xl part3"></i>
+                    <i class="document-checked fa-solid fa-file-circle-check fa-2xl part6"></i>
+                </div>
+                <div class="arrow-line part3"></div>
+                <p class="arrow right part3"></p>
+            </div>
+        </div>
+        <div class="process-container-actor part3">
+            <i class="role-icon fa-solid fa-user fa-2xl"></i>
+            <h5 class="role-title part3 role1">Tester</h5>
+            <h5 class="role-title part4 role2">DevOps-Ingenieur</h5>
+            <i class="fa-solid fa-circle-notch fa-lg ongoing part5"></i>
+            <h5 class="role-title part4 role3">Datenbank-Ingenieur</h5>
+        </div>
+    </div>
+</div>
+<div class="background-dark side-margin bottom-space fade-in-short-short-delay parent">
+    <div class="rotating-text large-text">
+        <p id="youWantTo">Sie möchten</p>
+        <p>
+            <span class="word sun-flower" id="reduceCosts">Kosten reduzieren?</span>
+            <span class="word alizarin" id="optimizePerformance">Leistung optimieren?</span>
+            <span class="word peter-river" id="maximizeEfficiency">Effizienz maximieren?</span>
+            <span class="word emerald" id="avoidRepetitiveWork">repetitive Arbeit vermeiden?</span>
+            <span class="word wisteria" id="streamlineProcesses">Prozesse straffen?</span>
+            <span class="word peter-river" id="automateTasks">Arbeit automatisieren?</span>
+        </p>
+    </div>
+    <h3 class="large-text" id="weCanHelp">Wir können helfen! <span class="hvr-underline-from-left">Kontaktieren Sie uns</span></h3>
+    <form target="_blank"
+          action="https://europe-west6-moonlit-web-399708.cloudfunctions.net/contact-form/34e62b9aee5b8bf58e795ab02b90c150f1da1bc89d482f905f7fe9481b74a742"
+          method="POST" class="form-container" id="contactForm">
+        <div>
+            <label for="first_name" hidden>Vorname</label>
+            <input id="firstName" type="text" name="first_name" placeholder="Vorname">
+        </div>
+        <label for="last_name" hidden>Nachname</label>
+        <input id="lastName" type="text" name="last_name" placeholder="Nachname">
+        <label for="email" hidden>Email-Adresse</label>
+        <input id="emailAddress" type="email" name="email" placeholder="Email-Adresse (*)" required>
+        <input type="text" name="_honey" style="display:none">
+        <label for="phone" hidden>Telefonnummer</label>
+        <input id="phoneNumber" type="text" name="phone" placeholder="Telefonnummer">
+        <input type="hidden" name="_subject" value="Webseite Kontaktaufnahme">
+        <input type="hidden" name="_autoresponse"
+               value="Herzlichen Dank für Ihre Kontaktaufnahme. Wir haben Ihre Mail erhalten und werden Sie innerhalb der nächsten 24h bearbeitet haben. Wir freuen uns auf den Kontakt mit Ihnen!">
+        <input type="hidden" name="_httpresponse" value="Vielen Dank!">
+        <label for="message" hidden>Nachricht</label>
+        <textarea id="message" placeholder="Ihre Nachricht (*)" class="form-control" name="message" rows="10"
+                  required></textarea>
+        <div class="checkbox-container full-grid-width">
+            <input type="checkbox" name="checkbox" id="agreement" class="checkbox-input" required
+                   onclick="updateSubmitButton()">
+            <label id="privacy_policy_prefix" for="checkbox" class="label-text">Ich akzeptiere die </label>
+            <a id="privacy_policy_link" href="privacy.html"
+               aria-label="link to Cybethics' data security terms">Datenschutzbestimmungen</a>
+        </div>
+        <button type="submit" id="submitButton" class="h-captcha lg-button" data-sitekey="de19f5f2-792d-4e9b-8621-8ab7c2a5ff9a"
+                data-callback="onSubmit" disabled>Senden
+        </button>
+    </form>
+</div>
+<footer class="side-margin">
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img src="assets/logo.png" alt="Cybethics Logo">
+        </div>
+        <div class="footer-links">
+            <a id="footer_terms_conditions" href="terms.html">AGB</a>
+            <a id="footer_privacy_policy_link" href="privacy.html">Datenschutzbestimmungen</a>
+            <a id="footer_imprint" href="imprint.html">Impressum</a>
+        </div>
+    </div>
+    <div class="footer-social" style="padding-bottom: 2rem">
+        <div>
+            &copy; 2022 - 2024 Cybethics GmbH
+        </div>
+        <div>
+            <a href="https://www.linkedin.com/company/98657687" class="linkedin-label"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+    </div>
+</footer>
+</body>
+
+</html>
