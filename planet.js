@@ -1,10 +1,8 @@
 import * as THREE from "https://cdn.skypack.dev/three@0.136.0";
 import {tns} from "https://cdn.skypack.dev/tiny-slider";
-import { OrbitControls } from "https://cdn.skypack.dev/three@0.136.0/examples/jsm/controls/OrbitControls";
+import {OrbitControls} from "https://cdn.skypack.dev/three@0.136.0/examples/jsm/controls/OrbitControls";
 
 addOptionClick();
-
-console.clear();
 
 let scene = new THREE.Scene();
 scene.background = new THREE.Color(0x000000);
@@ -15,10 +13,10 @@ renderer.powerPerformance = "high-performance";
 renderer.setSize(innerWidth, innerHeight);
 renderer.precision = "lowp";
 const canvasContainer = document.getElementById("canvas-planet-container");
-const textNode1 = createTextNode("Business Software nach Ihren Bedürfnissen", "fade-in-short-short-delay visible-medium-screen-only", "canvas_text_1");
+const textNode1 = createTextNode("Business Software nach Ihren Bedürfnissen", "fade-in-short-short-delay ", "canvas_text_1");
 canvasContainer.appendChild(textNode1);
 const textNode2 = createTextNode("<span>Kosten reduzieren</span> mit massgeschneiderten Softwarelösungen", "fade-in-short-short-delay" +
-  " visible-medium-screen-only underline-bold", "canvas_text_2");
+  "  underline-bold", "canvas_text_2");
 canvasContainer.appendChild(textNode2);
 canvasContainer.appendChild(renderer.domElement);
 
@@ -113,13 +111,16 @@ renderer.setAnimationLoop(() => {
 });
 
 function dynamicCameraPoint(screenWidth) {
-    const xMin = 700;  // or whatever you consider as smallest screen width
-    const xMax = 3000; // or whatever you consider as desktop screen width
+    const xMin = 1500;  // or whatever you consider as smallest screen width
+    const xMax = 2900; // or whatever you consider as desktop screen width
     const yMin = 35;
     const yMax = 20;
-
-    const result = yMin + (screenWidth - xMin) * (yMax - yMin) / (xMax - xMin);
-    return result;
+    return yMin + (screenWidth - xMin) * (yMax - yMin) / (xMax - xMin);
+    // const xMin = 700;  // or whatever you consider as smallest screen width
+    // const xMax = 3000; // or whatever you consider as desktop screen width
+    // const yMin = 40;
+    // const yMax = 20;
+    // return yMin + (screenWidth - xMin) * (yMax - yMin) / (xMax - xMin);
 }
 
 function createTextNode(text, partType, id) {

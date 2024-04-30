@@ -10,7 +10,6 @@ function cybethicsNameContinue() {
             for (const continuedElem of continuedElems) {
                 continuedElem.classList.remove('continued');
             }
-            const titles = document.getElementsByClassName('cyber-ethical-solutions-item-title');
             button.removeAttribute('disabled');
             button.textContent = isGerman() ? 'Auflösen' : 'Resolve';
         }, 1000);
@@ -55,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
     prepareRotatingText();
     prepareDevOpsAnimation();
     addScrollAnimations();
+    // updateIframeHeight();
 });
 
 function prepareDevOpsAnimation() {
@@ -62,21 +62,21 @@ function prepareDevOpsAnimation() {
 
     if (targetDiv) {
         // Demo purposes: animation
-        var pointElements = document.querySelectorAll('.point');
+        const pointElements = document.querySelectorAll('.point');
         function animateProgress(index) {
-            var totalPoints = pointElements.length;
+            const totalPoints = pointElements.length;
             setPoints(totalPoints, index);
-        };
+        }
 
         const devOpsAnimation = () => {
-            var boxOne = document.querySelector('.box:nth-child(1)');
-            var boxTwo = document.querySelector('.box:nth-child(2)');
-            var boxThree = document.querySelector('.box:nth-child(3)');
+            const boxOne = document.querySelector('.box:nth-child(1)');
+            const boxTwo = document.querySelector('.box:nth-child(2)');
+            const boxThree = document.querySelector('.box:nth-child(3)');
 
             // Creating TimelineMax instances
-            var timelineBoxOne = new TimelineMax();
-            var timelineBoxTwo = new TimelineMax();
-            var timelineBoxThree = new TimelineMax();
+            const timelineBoxOne = new TimelineMax();
+            const timelineBoxTwo = new TimelineMax();
+            const timelineBoxThree = new TimelineMax();
 
             // Animating boxOne
             timelineBoxOne.to(boxOne, 0.6, {
@@ -160,11 +160,9 @@ function prepareRotatingText() {
                 word.appendChild(span);
             });
         });
-
         let currentWordIndex = 0;
         let maxWordIndex = wordArray.length - 1;
         wordArray[currentWordIndex].style.opacity = "1";
-
         let rotateText = () => {
             let currentWord = wordArray[currentWordIndex];
             let nextWord = currentWordIndex === maxWordIndex ? wordArray[0] : wordArray[currentWordIndex + 1];
@@ -195,13 +193,10 @@ function addScrollAnimations() {
             const target = parseInt(counter.getAttribute('data-target'));
             const duration = 2000; // in milliseconds
             const frameDuration = 1000 / 60; // 60 frames per second
-
             const totalFrames = duration / frameDuration;
             const increment = target / totalFrames;
-
             let count = 0;
             let currentFrame = 0;
-
             const updateCounter = () => {
                 if (count < target) {
                     count += increment;
@@ -221,16 +216,15 @@ function addScrollAnimations() {
                     }
                 }
             };
-
-            const targetDiv = counter;
-            addScrollAnimation(updateCounter, targetDiv);
+            addScrollAnimation(updateCounter, counter);
         });
     }
 }
 
 function addScrollAnimation(animation, targetDiv) {
-    const targetPositionStart = targetDiv.getBoundingClientRect().top + window.scrollY - (window.innerHeight);
-    const targetPositionEnd = targetDiv.getBoundingClientRect().bottom + window.scrollY;
+    const rem = parseFloat(getComputedStyle(document.documentElement).fontSize);
+    const targetPositionStart = targetDiv.getBoundingClientRect().top - rem * 30;
+    const targetPositionEnd = targetDiv.getBoundingClientRect().bottom + rem * 30;
     window.addEventListener("scroll", () => {
         const animated = targetDiv.getAttribute('animated');
         if (!animated && window.scrollY >= targetPositionStart && window.scrollY <= targetPositionEnd) {
@@ -240,27 +234,13 @@ function addScrollAnimation(animation, targetDiv) {
     }, { passive: true });
 }
 
-function updateSubmitButton() {
-    var agreementCheckbox = document.getElementById("agreement");
-    var submitButton = document.getElementById("submitButton");
-    if (agreementCheckbox.checked) {
-        submitButton.disabled = false;
-    } else {
-        submitButton.disabled = true;
-    }
-}
-
-function onSubmit(token) {
-    document.getElementById('contactForm').submit();
-}
-
 function prepareLanguageSwitch() {
     if (!localStorage.getItem('language')) {
         localStorage.setItem('language', 'de');
     }
     const targetLanguage = localStorage.getItem('language');
     translateTo(targetLanguage);
-    document.getElementById("language-switch").checked = targetLanguage === 'en' ? true : false;
+    document.getElementById("language-switch").checked = targetLanguage === 'en';
     document.getElementById("language-switch").addEventListener("change", function () {
         if (this.checked) {
             translateTo('en');
@@ -268,7 +248,7 @@ function prepareLanguageSwitch() {
             translateTo('de');
         }
     })
-};
+}
 
 function translateTo(targetLanguage) {
     localStorage.setItem('language', targetLanguage);

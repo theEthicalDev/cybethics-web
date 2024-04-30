@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="description"
           content="Entdecke Cybethics - Deinen Partner für massgeschneiderte Softwarelösungen. Wir verwandeln Ideen in digitale Realität.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <meta name="theme-color" content="Transparent">
     <meta name="google-site-verification" content="s9fwO0DaqeL5sa0c5xapmQ6A26vs84yHStqM6wF2ac4"/>
     <meta http-equiv="Cache-Control" content="max-age=604800">
@@ -26,8 +26,6 @@
     <script async defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <script async defer src="planet.js" type="module"></script>
     <script async defer src="https://kit.fontawesome.com/3cb905f540.js" crossorigin="anonymous"></script>
-    <!-- <script async defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script> -->
-    <!-- <script async defer src="rain.js" type="module"></script> -->
     <script type="application/ld+json">
         {
             "@context": "http://schema.org",
@@ -53,14 +51,17 @@
         </label>
     </div>
 </header>
-<div id="canvas-planet-container" class="side-margin bottom-space-mini background-dark"></div>
+<div id="canvas-planet-container" class="side-margin-md bottom-space-mini background-dark"></div>
 <div class="fade-in-short-short-delay side-margin bottom-space top-space parent">
     <div class="d-grid">
         <i class="fa-solid fa-display text-center fx-1"></i>
-        <h2 id="mobile_app_development_title" class="subheading">
+    </div>
+        <h2 class="subheading visible-medium-screen-only" id="web_app_title">
             🚀 Ihre eigene <span class="hvr-underline-from-left">Web-Applikation entwickeln</span> lassen 🚀
         </h2>
-    </div>
+        <h2 class="subheading visible-small-screen-only d-grid" id="web_app_title_small">
+            <span class="hvr-underline-from-left">Ihre eigene Web-App</span> <span>entwickeln lassen 🚀</span>
+        </h2>
     <p id="mobile_app_desc" class="text-balance text-center fs-4">Unsere Hausspezialität? Die Entwicklung erstklassiger Webanwendungen!
         Webapplikationen sind wie
         massgeschneiderte Werkzeuge für das digitale Zeitalter – dynamisch, zugänglich und voller Möglichkeiten. Bei uns dreht sich alles
@@ -75,11 +76,11 @@
                 <i class="fa-solid fa-lightbulb fx-1 mb-5"></i>
                 <div class="d-flex justify-center mb-5">
                     <span class="badge badge-circle badge-light-success fw-bold p-5 me-3 fs-3">1</span>
-                    <span class="fs-4 fw-bold text-gray-900">
+                    <span class="fs-4 fw-bold text-gray-900" id="webapp-analysis">
                         Analyse & Konzeption
                     </span>
                 </div>
-                <div class="fw-semibold fs-5 fs-lg-4 text-muted text-balance">
+                <div class="fw-semibold fs-5 fs-lg-4 text-muted text-balance" id="webapp-analysis-desc">
                     Ihre Anforderungen und Ziele sind der Ausgangspunkt für die Entwicklung Ihrer Webanwendung. Wir führen eine
                     gründliche Analyse durch, um Ihre Bedürfnisse zu verstehen.
                 </div>
@@ -91,11 +92,11 @@
                 <i class="fa-solid fa-laptop-code fx-1 mb-5"></i>
                 <div class="d-flex justify-center mb-5">
                     <span class="badge badge-circle badge-light-success fw-bold p-5 me-3 fs-3">2</span>
-                    <span class="fs-4 fw-bold text-gray-900">
+                    <span class="fs-4 fw-bold text-gray-900" id="webapp-design">
                         Design & Entwicklung
                     </span>
                 </div>
-                <div class="fw-semibold fs-5 fs-lg-4 text-muted text-balance">
+                <div class="fw-semibold fs-5 fs-lg-4 text-muted text-balance" id="webapp-design-desc">
                     Die Entwicklung einer benutzerfreundlichen Applikation beginnt mit einem ansprechenden Design und einer soliden
                     Architektur, basierend auf Ihren Anforderungen.
                 </div>
@@ -107,11 +108,11 @@
                 <i class="fa-solid fa-list-check fx-1 mb-5"></i>
                 <div class="d-flex justify-center mb-5">
                     <span class="badge fw-bold p-5 fs-3">3</span>
-                    <span class="fs-4 fw-bold text-gray-900">
+                    <span class="fs-4 fw-bold text-gray-900" id="webapp-testing">
                         Testing & Bereitstellung
                     </span>
                 </div>
-                <div class="fw-semibold fs-5 fs-lg-4 text-muted text-balance">
+                <div class="fw-semibold fs-5 fs-lg-4 text-muted text-balance" id="webapp-testing-desc">
                     Ihre Software wird gründlich getestet, um sicherzustellen, dass sie fehlerfrei funktioniert, bevor sie
                     live geschaltet wird. Wir unterstützen Sie auch bei der Bereitstellung & Wartung.
                 </div>
@@ -123,24 +124,30 @@
         <button class="btn btn-icon btn-active-color-primary app-slider-button" id="app-slider-prev" data-controls="prev">
             <i class="fa-solid fa-angle-left fs-2"></i>
         </button>
-        <div class="app-slider">
+        <div class="app-slider" style="display: -webkit-box">
             <div class="text-center px-5 pt-5 pt-lg-10 px-lg-10 tns-item" aria-hidden="true">
-                <img src="assets/app-example4.png" class="card-rounded shadow mh-lg-650px" alt="">
+                <img loading="lazy" src="assets/app-example4.png" class="card-rounded shadow mh-lg-650px"
+                     alt="Example of a web application 1">
             </div>
             <div class="text-center px-5 pt-5 pt-lg-10 px-lg-10 tns-item" aria-hidden="true">
-                <img src="assets/app-example7.png" class="card-rounded shadow mh-lg-650px" alt="">
+                <img loading="lazy" src="assets/app-example7.png" class="card-rounded shadow mh-lg-650px"
+                     alt="Example of a web application 2">
             </div>
             <div class="text-center px-5 pt-5 pt-lg-10 px-lg-10 tns-item" aria-hidden="true">
-                <img src="assets/app-example5.png" class="card-rounded shadow mh-lg-650px" alt="">
+                <img loading="lazy" src="assets/app-example5.png" class="card-rounded shadow mh-lg-650px"
+                     alt="Example of a web application 3">
             </div>
             <div class="text-center px-5 pt-5 tns-item" aria-hidden="true">
-                <img src="assets/app-example2.png" class="card-rounded shadow mh-lg-650px" alt="">
+                <img loading="lazy" src="assets/app-example2.png" class="card-rounded shadow mh-lg-650px"
+                     alt="Example of a web application 4">
             </div>
             <div class="text-center px-5 pt-5 tns-item" aria-hidden="true">
-                <img src="assets/app-example6.png" class="card-rounded shadow mh-lg-650px" alt="">
+                <img loading="lazy" src="assets/app-example6.png" class="card-rounded shadow mh-lg-650px"
+                     alt="Example of a web application 5">
             </div>
             <div class="text-center px-5 pt-5 pt-lg-10 px-lg-10 tns-item" aria-hidden="true">
-                <img src="assets/app-example3.png" class="card-rounded shadow mh-lg-650px" alt="">
+                <img loading="lazy" src="assets/app-example3.png" class="card-rounded shadow mh-lg-650px"
+                     alt="Example of a web application 6">
             </div>
         </div>
         <button class="btn btn-icon btn-active-color-primary app-slider-button" id="app-slider-next" data-controls="next">
@@ -149,7 +156,7 @@
     </div>
 
     <div class="info-group">
-        <div class="mobile-development-detail-single item" id="ui_ux_section">
+        <div class="mobile-development-detail-single item">
             <div class="image-title">
                 <h3 id="uiux_title">UI/UX Design</h3>
                 <i class="fa-solid fa-layer-group fa-xl"></i>
@@ -159,7 +166,7 @@
                 aussergewöhnliche Benutzererlebnisse (UX), erstellen <span id="user_friendly">benutzerfreundliche</span>
                 Navigation und sorgen für ansprechende Interaktionen und nahtlose Übergänge.</p>
         </div>
-        <div class="mobile-development-detail-single item" id="performance_opt_section">
+        <div class="mobile-development-detail-single item">
             <div class="image-title">
                 <h3 id="performance_title">Datenschutz und -verarbeitung</h3>
                 <i class="fa-solid fa-user-lock fa-xl"></i>
@@ -167,20 +174,19 @@
             <p id="performance_desc">Datenschutz liegt ist bei uns Grossgeschrieben und wir legen grossen Wert auf Ihre und die Daten
                 Ihrer Benutzer! Die Daten werden ausschliesslich auf <span id="safe_servers">sicheren Servern </span> in der <span
                         id="switzerland">
-                Schweiz🇨🇭</span></span> gespeichert.</p>
+                Schweiz🇨🇭</span> gespeichert.</p>
         </div>
-        <div class="mobile-development-detail-single item" id="mobile-development-app-security">
+        <div class="mobile-development-detail-single item">
             <div class="image-title">
                 <h3 id="app_security_title">App Sicherheit</h3>
                 <i class="fa-solid fa-shield-halved fa-xl"></i>
             </div>
-            <p id="app_security_desc">Betonen Sie Ihr Engagement für die Sicherheit mobiler Anwendungen. Erwähnen Sie Ihre
-                Expertise bei der Implementierung robuster Sicherheitsmassnahmen, wie Daten-<span
+            <p id="app_security_desc">Sicherheit hat höchste Priorität bei Cybethics. Wir machen diverse Empfehlungen in
+                sicherheitsrelevanten Bereichen der Softwareentwicklung, wie Daten-<span
                         id="data_encryption">Verschlüsselung</span>, sichere Benutzer-<span
                         id="user_authentication">Authentifizierung</span> und <span id="protection_measures">Schutz</span> vor
                 gängigen Sicherheitslücken.</p>
         </div>
-
         <!--        <div class="mobile-development-detail-single item">-->
         <!--            <div class="image-title">-->
         <!--                <i class="fa-solid fa-mobile fa-xl"></i>-->
@@ -215,31 +221,6 @@
         <!--                </div>-->
         <!--            </div>-->
         <!--        </div>-->
-        <!--        <div class="mobile-development-detail-single item">-->
-        <!--            <div class="image-title">-->
-        <!--                <i class="fa-solid fa-mobile fa-xl"></i>-->
-        <!--                <h3 id="cross_platform_title">Cross-Plattform</h3>-->
-        <!--            </div>-->
-        <!--            <div class="mobile-development-platform-group">-->
-        <!--                <div class="image-title center mobile-development-platform-group-item-stretched">-->
-        <!--                    <i class="fa-solid fa-angles-left fa-2xl"></i>-->
-        <!--                    <h3 id="flutter_title">Flutter</h3>-->
-        <!--                </div>-->
-        <!--                <p id="flutter_desc" class="mobile-development-platform-group-item-stretched center center-text">Mit-->
-        <!--                    Cross-Plattform-Entwicklungstechnologien wie Flutter können Apps für mehrere Plattformen gleichzeitig-->
-        <!--                    entwickelt werden.</p>-->
-        <!--                <div class="pros">-->
-        <!--                    <p id="pro_faster_dev" class="awesome pro">Schnellere Entwicklung</p>-->
-        <!--                    <p id="pro_maintenance_all_platforms" class="awesome pro">Wartung auf allen Plattformen</p>-->
-        <!--                    <p id="pro_single_codebase" class="awesome pro">Einzelner Codebase</p>-->
-        <!--                </div>-->
-        <!--                <div class="cons">-->
-        <!--                    <p id="con_performance_limitations" class="awesome con">Leistungseinschränkungen</p>-->
-        <!--                    <p id="con_platform_specific" class="awesome con">Eingeschränkte plattformspezifische Funktionen</p>-->
-        <!--                    <p id="con_os_updates" class="awesome con">Schwierigkeiten bei Betriebssystem-Updates</p>-->
-        <!--                </div>-->
-        <!--            </div>-->
-        <!--        </div>-->
     </div>
 </div>
 <div class="fade-in-short-short-delay bottom-space side-margin background-dark">
@@ -247,19 +228,19 @@
         Mitarbeiter ... </h2>
     <div class="web-development-experience">
         <div>
-            <div class="web-development-experience-number counter" data-target="11"></div>
+            <div class="web-development-experience-number counter" data-target="11">11</div>
             <p class="web-development-experience-description" id="years_of_experience">Jahre Entwicklungserfahrung</p>
         </div>
         <div>
-            <div class="web-development-experience-number counter" data-target="18"></div>
+            <div class="web-development-experience-number counter" data-target="18">18</div>
             <p class="web-development-experience-description" id="technologies_known">Technologien kennengelernt</p>
         </div>
         <div>
-            <div class="web-development-experience-number counter" data-target="5"></div>
+            <div class="web-development-experience-number counter" data-target="5">5</div>
             <p class="web-development-experience-description" id="average_certificates">Zertifizierungen erlangt</p>
         </div>
         <div>
-            <div class="web-development-experience-number counter" data-target="8"></div>
+            <div class="web-development-experience-number counter" data-target="8">8</div>
             <p class="web-development-experience-description" id="tech_stack_experience">technologische Möglichkeiten
             </p>
         </div>
@@ -270,87 +251,113 @@
         <div class="d-flex flex-center">
             <i class="fa-solid fa-clipboard-question fx-1"></i>
         </div>
-        <h2 class="subheading" id="custom_software_development">🤔 Wie kann Software helfen? 💭</h2>
-        <p class="text-balance text-center fs-4 bottom-space-mini">Softwarelösungen können Unternehmen dabei unterstützen, ihre
+        <h2 class="subheading" id="custom_software_development">🤔 Wie kann Software Ihrem Unternehmen helfen? 💭</h2>
+        <p class="text-balance text-center fs-4 bottom-space-mini" id="custom_software_development_desc">
+            Softwarelösungen können Unternehmen dabei unterstützen, ihre
             Geschäftsprozesse zu optimieren, die Effizienz zu steigern und die Rentabilität zu verbessern. Durch die Entwicklung
             massgeschneiderter Software können Unternehmen massgeschneiderte Lösungen erhalten, die ihre spezifischen Anforderungen
             erfüllen und ihnen einen Wettbewerbsvorteil verschaffen.
         </p>
-        <div class="blog-slider item">
-            <div class="blog-slider__wrp swiper-wrapper">
-                <div class="blog-slider__item swiper-slide">
-                    <div class="blog-slider__img blog-slider__excel">
-                        <i class="fa-solid fa-file-excel"></i>
-                    </div>
-                    <div class="blog-slider__content">
-                        <h2 class="blog-slider__text">Excel-Tabellen sind ganz okay, aber ...</h2>
-                        <div class="blog-slider__text">
-                            <p id="software_desc">Für viele Unternehmen sind Excel-Tabellen ein gängiges Werkzeug für die Verwaltung von
-                                Daten und Prozessen. Doch Excel-Tabellen haben ihre Grenzen:
-                            </p>
-                            <ul>
-                                <li>Aufwändige manuelle Dateneingabe und -verarbeitung</li>
-                                <li>Unübersichtliche und schwer zu pflegende Tabellen</li>
-                                <li>Anfällig für Fehler und Dateninkonsistenzen</li>
-                                <li>Fehlerpotential wenn Personen an gleichem Dokument arbeiten</li>
-                                <li>Begrenzte Möglichkeiten zur Automatisierung</li>
-                                <li>Fehlende Backups und Risiko versehentlicher Datenverluste</li>
-                                <li>Eingeschränkte Kontrolle und Sicherheit ohne Rechte- und Rollenverwaltung</li>
-                            </ul>
-                            <p>Dies kann zu ineffizienten Arbeitsabläufen, erhöhtem Arbeitsaufwand und unzuverlässigen Daten führen.
-                                Durch die Entwicklung einer individuellen Web-Applikation können Unternehmen diese Herausforderungen
-                                überwinden, indem sie eine massgeschneiderte Lösung erhalten, die ihre spezifischen Anforderungen erfüllt.
-                                Eine Web-Applikation kann komplexe Geschäftsprozesse automatisieren, Daten konsolidieren und die Effizienz
-                                verbessern, was zu erheblichen Kosteneinsparungen führt.
-                            </p>
+        <div class="bottom-space" style="padding-top: 100px;">
+            <div class="blog-slider item">
+                <div class="blog-slider__wrp swiper-wrapper">
+                    <div class="blog-slider__item swiper-slide">
+                        <div class="blog-slider__img blog-slider__excel">
+                            <i class="fa-solid fa-file-excel"></i>
+                        </div>
+                        <div class="blog-slider__content">
+                            <h2 class="blog-slider__text" id="excel_title">Excel-Tabellen sind ganz okay, aber ...</h2>
+                            <div class="blog-slider__text">
+                                <p id="excel_desc">Für viele Unternehmen sind Excel-Tabellen ein gängiges Werkzeug für die Verwaltung von
+                                    Daten und Prozessen. Doch Excel-Tabellen haben ihre Grenzen:
+                                </p>
+                                <ul>
+                                    <li id="excel_bullet_8">Manuelle Arbeitsschritte und mangelnde Automatisierung</li>
+                                    <li id="excel_bullet_1">Aufwändige manuelle Dateneingabe und -verarbeitung</li>
+                                    <li id="excel_bullet_2">Unübersichtliche und schwer zu pflegende Tabellen</li>
+                                    <li id="excel_bullet_3">Anfällig für Fehler und Dateninkonsistenzen</li>
+                                    <li id="excel_bullet_4">Fehlerpotential wenn Personen an gleichem Dokument arbeiten</li>
+                                    <li id="excel_bullet_5">Begrenzte Möglichkeiten zur Automatisierung</li>
+                                    <li id="excel_bullet_6">Fehlende Backups und Risiko versehentlicher Datenverluste</li>
+                                    <li id="excel_bullet_7">Eingeschränkte Kontrolle und Sicherheit ohne Rechte- und Rollenverwaltung</li>
+                                </ul>
+                                <p id="excel_conclusion">Dies kann zu ineffizienten Arbeitsabläufen, erhöhtem Arbeitsaufwand und
+                                    unzuverlässigen Daten führen.
+                                    Durch die Entwicklung einer individuellen Web-Applikation können Unternehmen diese Herausforderungen
+                                    überwinden, indem sie eine massgeschneiderte Lösung erhalten, die ihre spezifischen Anforderungen
+                                    erfüllt.
+                                    Eine Web-Applikation kann komplexe Geschäftsprozesse automatisieren, Daten konsolidieren und die
+                                    Effizienz
+                                    verbessern, was zu erheblichen Kosteneinsparungen führt.
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="blog-slider__item swiper-slide">
-                    <div class="blog-slider__img blog-slider__process">
-                        <i class="fa-solid fa-robot"></i>
-                    </div>
-                    <div class="blog-slider__content">
-                        <h2 class="blog-slider__text">Automatisierung von Geschäftsprozessen</h2>
-                        <div class="blog-slider__text">
-                            <p id="software_desc2">Die Automatisierung von Geschäftsprozessen ist entscheidend für die Effizienz und
-                                Produktivität eines Unternehmens. Manuelle Aufgaben können zeitaufwändig sein und Fehleranfälligkeit mit
-                                sich bringen. Durch den Einsatz von Softwarelösungen können repetitive Aufgaben automatisiert werden, was zu
-                                einer Steigerung der Arbeitsgeschwindigkeit, Reduzierung von Fehlern und erhöhter Zuverlässigkeit führt.</p>
-                            <ul>
-                                <li>Effizientere Nutzung von Ressourcen durch automatisierte Abläufe.</li>
-                                <li>Verbesserung der Datenqualität durch Minimierung menschlicher Fehler.</li>
-                                <li>Zeitersparnis bei wiederkehrenden Prozessen ermöglicht Fokus auf strategische Aufgaben.</li>
-                                <li>Erhöhte Flexibilität und Anpassungsfähigkeit an sich ändernde Anforderungen des Marktes.</li>
-                            </ul>
-                            <p>Automatisierung kann in verschiedenen Bereichen eingesetzt werden, wie z.B. beim Datenaustausch zwischen
-                                Systemen, beim Versand von Benachrichtigungen und E-Mails, bei der Generierung von Berichten, die Beispiele
-                                sind endlos. Durch die Optimierung von Geschäftsprozessen können Unternehmen Zeit und Ressourcen sparen und
-                                gleichzeitig die Qualität ihrer Dienstleistungen verbessern.</p>
+                    <div class="blog-slider__item swiper-slide">
+                        <div class="blog-slider__img blog-slider__process">
+                            <i class="fa-solid fa-robot"></i>
+                        </div>
+                        <div class="blog-slider__content">
+                            <h2 class="blog-slider__text" id="automating_processes">Automatisierung von Geschäftsprozessen</h2>
+                            <div class="blog-slider__text">
+                                <p id="automating_processes_introduction">Die Automatisierung von Geschäftsprozessen ist entscheidend für
+                                    die
+                                    Effizienz und
+                                    Produktivität eines Unternehmens. Manuelle Aufgaben können zeitaufwändig sein und Fehleranfälligkeit mit
+                                    sich bringen. Durch den Einsatz von Softwarelösungen können repetitive Aufgaben automatisiert werden,
+                                    was zu
+                                    einer Steigerung der Arbeitsgeschwindigkeit, Reduzierung von Fehlern und erhöhter Zuverlässigkeit
+                                    führt.</p>
+                                <ul>
+                                    <li id="automating_processes_1">Effizientere Nutzung von Ressourcen durch automatisierte Abläufe.</li>
+                                    <li id="automating_processes_2">Verbesserung der Datenqualität durch Minimierung menschlicher Fehler.</li>
+                                    <li id="automating_processes_3">Zeitersparnis bei wiederkehrenden Prozessen ermöglicht Fokus auf
+                                        strategische Aufgaben.</li>
+                                    <li id="automating_processes_4">Erhöhte Flexibilität und Anpassungsfähigkeit an sich ändernde
+                                        Anforderungen des Marktes.</li>
+                                </ul>
+                                <p id="automating_processes_conclusion">Automatisierung kann in verschiedenen Bereichen eingesetzt werden,
+                                    wie z.B. beim Datenaustausch
+                                    zwischen
+                                    Systemen, beim Versand von Benachrichtigungen und E-Mails, bei der Generierung von Berichten, die
+                                    Beispiele
+                                    sind endlos. Durch die Optimierung von Geschäftsprozessen können Unternehmen Zeit und Ressourcen sparen
+                                    und
+                                    gleichzeitig die Qualität ihrer Dienstleistungen verbessern.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="blog-slider__item swiper-slide">
-                    <div class="blog-slider__img blog-slider__costs">
-                        <i class="fa-solid fa-circle-dollar-to-slot"></i>
-                    </div>
-                    <div class="blog-slider__content">
-                        <h2 class="blog-slider__text">Kosteneinsparungen durch Softwarelösungen</h2>
-                        <div class="blog-slider__text">
-                            <p id="software_desc3">Die richtigen Softwarelösungen können erhebliche Kosteneinsparungen für Unternehmen
-                                bedeuten. Durch die Automatisierung von Prozessen, die Reduzierung von manuellen Arbeitsstunden und die
-                                Verbesserung der Effizienz können Unternehmen ihre Betriebskosten deutlich senken.</p>
-                            <p>Software kann auch dazu beitragen, unnötige Ausgaben zu vermeiden, indem sie beispielsweise bessere Kontrolle
-                                über Ausgaben ermöglicht, Verträge und Lizenzen optimiert oder Betrug und Verschwendung reduziert. Darüber
-                                hinaus können massgeschneiderte Softwarelösungen spezifische Probleme eines Unternehmens lösen und so die
-                                Rentabilität und Wettbewerbsfähigkeit steigern.</p>
+                    <div class="blog-slider__item swiper-slide">
+                        <div class="blog-slider__img blog-slider__costs">
+                            <i class="fa-solid fa-circle-dollar-to-slot"></i>
+                        </div>
+                        <div class="blog-slider__content">
+                            <h2 class="blog-slider__text" id="cost_savings">Kosteneinsparungen durch Softwarelösungen</h2>
+                            <div class="blog-slider__text">
+                                <p id="cost_savings_introduction">
+                                    Die richtigen Softwarelösungen können erhebliche Kosteneinsparungen für Unternehmen
+                                    bedeuten. Durch die Automatisierung von Prozessen, die Reduzierung von manuellen Arbeitsstunden und die
+                                    Verbesserung der Effizienz können Unternehmen ihre Betriebskosten deutlich senken.</p>
+                                <ul>
+                                    <li id="cost_savings_examples_1">Automatisierung wiederkehrender Aufgaben, um Kosten zu senken</li>
+                                    <li id="cost_savings_examples_2">Verbesserung der Effizienz zur Minimierung von Ressourcenverschwendung</li>
+                                    <li id="cost_savings_examples_3">Erhöhung der Kontrolle über Ausgaben, um unnötige Ausgaben zu vermeiden</li>
+                                    <li id="cost_savings_examples_4">Optimierung von Verträgen und Lizenzen zur Reduzierung von Overhead-Kosten</li>
+                                    <li id="cost_savings_examples_5">Implementierung von Betrugserkennungsmechanismen zur Verhinderung finanzieller Verluste</li>
+                                    <li id="cost_savings_examples_6">Reduzierung manueller Fehler zur Beseitigung kostspieliger Fehler</li>
+                                    <li id="cost_savings_examples_7">Anpassung der Software an spezifische Geschäftsanforderungen zur Maximierung des ROI</li>
+                                </ul>
+                                <p id="cost_savings_examples">
+                                    Darüber hinaus können massgeschneiderte Softwarelösungen spezifische Probleme eines Unternehmens lösen
+                                    und so die Rentabilität und Wettbewerbsfähigkeit steigern.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="blog-slider__pagination"></div>
             </div>
-            <div class="blog-slider__pagination"></div>
         </div>
     </div>
 </div>
@@ -360,24 +367,25 @@
         <div class="d-flex flex-center">
             <i class="fa-solid fa-gears fx-1"></i>
         </div>
-        <h2 class="subheading text-center">Was wir neben Web-Apps anbieten?</h2>
-        <p class="text-balance text-center fs-4">Vielleicht brauchen Sie gar keine Applikation, sondern wären mit viel weniger
+        <h2 class="subheading text-center" id="other_services_title">Was wir neben Web-Apps anbieten?</h2>
+        <p class="text-balance text-center fs-4" id="other_services_introduction">Vielleicht brauchen Sie gar keine Applikation, sondern
+            wären mit viel weniger
             zufrieden. Unsere Dienstleistungen umfassen auch folgende Bereiche:</p>
         <div class="grid-container">
-            <div class="">
+            <div class="other-services">
                 <h2 id="serverless_title">Serverlose Funktionen</h2>
                 <p id="serverless_desc">Es braucht nicht immer komplexe Applikationen um Ihnen das Leben einfacher zu machen.
                     Sogenannte serverlose Funktionen sind eine effiziente Möglichkeit, um schnell und kostengünstig
                     einfache Automatisierungen zu erstellen.</p>
             </div>
-            <div class="">
+            <div class="other-services">
                 <h2 id="api_integration_title">Externe API-Integrationen</h2>
                 <p id="api_integration_desc">Wir erleichtern die nahtlose Integration von Drittanbieter-APIs in Ihr
                     Software-Ökosystem, ermöglichen einen effizienten Datenaustausch und erweitern die Fähigkeiten Ihrer
                     Anwendungen. Unsere Expertise in der API-Integration gewährleistet reibungslose und sichere Interaktionen
                     mit externen Systemen und verbessert Ihre Geschäftsprozesse.</p>
             </div>
-            <div class="">
+            <div class="other-services">
                 <h2 id="devops_title">DevOps</h2>
                 <p id="devops_desc">Unsere DevOps-Experten optimieren Ihre Softwareentwicklung und den Bereitstellungsprozess,
                     sodass Sie schneller und zuverlässiger veröffentlichen können. Wir implementieren
@@ -435,13 +443,13 @@
                 <i class="fa-solid fa-street-view fx-1 mb-5"></i>
                 <div class="d-flex justify-center mb-5">
                     <span class="badge badge-circle badge-light-success fw-bold p-5 me-3 fs-3">1</span>
-                    <span class="fs-4 fw-bold text-gray-900">
+                    <span class="fs-4 fw-bold text-gray-900" id="values_pragmatic_title">
                         Pragmatisch
                     </span>
                 </div>
-                <div class="fw-semibold fs-5 fs-lg-4 text-muted text-balance">
-                    Unsere Kunden schätzen unsere Fähigkeit, mitzudenken und innovative Lösungen zu entwickeln, die ihre
-                    Geschäftsziele unterstützen, selbst wenn wir günstigere Lösungen anbieten.
+                <div class="fw-semibold fs-5 fs-lg-4 text-muted text-balance" id="values_pragmatic_desc">
+                    Unsere Kunden schätzen unsere Fähigkeit, mitzudenken und Lösungen zu entwickeln, die sowohl den finanziellen Aspekt
+                    berücksichtigen als auch den Geschäftsnutzen maximieren
                 </div>
             </div>
         </div>
@@ -451,11 +459,11 @@
                 <i class="fa-solid fa-ranking-star fx-1 mb-5"></i>
                 <div class="d-flex justify-center mb-5">
                     <span class="badge badge-circle badge-light-success fw-bold p-5 me-3 fs-3">2</span>
-                    <span class="fs-4 fw-bold text-gray-900">
+                    <span class="fs-4 fw-bold text-gray-900" id="values_quality_title">
                         Qualitätsbewusst
                     </span>
                 </div>
-                <div class="fw-semibold fs-5 fs-lg-4 text-muted text-balance">
+                <div class="fw-semibold fs-5 fs-lg-4 text-muted text-balance" id="values_quality_desc">
                     Das Ziel von Cybethics ist es, qualitativ hochwertige Softwarelösungen zu entwickeln, bei welchen unsere
                     Kunden sagen: "Bei Cybethics würden wir wieder anfragen".
                 </div>
@@ -467,11 +475,11 @@
                 <i class="fa-solid fa-hands-holding-circle fx-1 mb-5"></i>
                 <div class="d-flex justify-center mb-5">
                     <span class="badge fw-bold p-5 fs-3">3</span>
-                    <span class="fs-4 fw-bold text-gray-900">
+                    <span class="fs-4 fw-bold text-gray-900" id="values_ethical_title">
                         Ethisch
                     </span>
                 </div>
-                <div class="fw-semibold fs-5 fs-lg-4 text-muted text-balance">
+                <div class="fw-semibold fs-5 fs-lg-4 text-muted text-balance" id="values_ethical_desc">
                     Wir sind bestrebt, ethisch zu handeln und unsere Geschäfte auf verantwortungsvolle Weise zu führen. Wir
                     halten uns an hohe ethische Standards und respektieren die Rechte & Privatsphäre unserer Kunden.
                 </div>
@@ -549,7 +557,7 @@
     </ul>
     <p id="priority_conclusion">Nachdem wir die Grundlage für unsere Überzeugungen geschaffen haben, sind die folgenden
         fünf Ziele unsere Prioritäten.</p>
-    <div class="bottom-space" style="padding-top: 135px;">
+    <div class="bottom-space" style="padding-top: 100px;">
         <div class="blog-slider">
             <div class="blog-slider__wrp swiper-wrapper">
                 <!-- UNSDG 3 -->
@@ -795,33 +803,21 @@
         </div>
     </div>
 </div>
-<div class="side-margin bottom-space fade-in-short-short-delay parent center center-text" style="background-color: #f4f4f4; color: black">
-    <!--    <div class="rotating-text large-text">-->
-    <!--        <p id="youWantTo" style="color: black">Sie möchten</p>-->
-    <!--        <p>-->
-    <!--            <span class="word sun-flower" id="reduceCosts">Kosten reduzieren?</span>-->
-    <!--            <span class="word alizarin" id="optimizePerformance">Leistung optimieren?</span>-->
-    <!--            <span class="word peter-river" id="maximizeEfficiency">Effizienz maximieren?</span>-->
-    <!--            <span class="word emerald" id="avoidRepetitiveWork">repetitive Arbeit vermeiden?</span>-->
-    <!--            <span class="word wisteria" id="streamlineProcesses">Prozesse straffen?</span>-->
-    <!--            <span class="word peter-river" id="automateTasks">Arbeit automatisieren?</span>-->
-    <!--        </p>-->
-    <!--    </div>-->
+<div class="side-margin fade-in-short-short-delay parent center center-text" style="background-color: #f4f4f4; color: black">
     <div class="d-flex top-space flex-center">
         <i class="fa-solid fa-headset fx-1"></i>
     </div>
-    <h2 class="large-text bottom-space-mini">
-        💁🏼‍♀️<span class="hvr-underline-from-left"> Haben Sie Fragen? Wir wollen Sie kennenlernen!</span> 🙋🏽‍
+    <h2 class="large-text bottom-space-mini" id="contact_heading_new">
+        💁🏼‍♀️ <span class="hvr-underline-from-left"> Wir wollen Sie kennenlernen! Haben Sie Fragen?</span> 🙋🏽‍
     </h2>
-    <iframe src='https://outlook.office365.com/owa/calendar/Cybethics@cybethics.com/bookings/' width='100%' height='2000px' scrolling='yes'
-            style='border:0; background-color: black'>
+    <iframe src='https://outlook.office365.com/owa/calendar/Cybethics@cybethics.com/bookings/' width='100%'
+            style='border:0'>
     </iframe>
-
 </div>
 <footer class="side-margin">
     <div class="footer-content">
         <div class="footer-logo">
-            <img src="assets/logo.png" alt="Cybethics Logo">
+            <img src="assets/logo.png" alt="Cybethics Logo" loading="lazy">
         </div>
         <div class="footer-links">
             <a id="footer_terms_conditions" href="terms.html">AGB</a>
