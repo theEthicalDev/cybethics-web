@@ -54,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
     prepareRotatingText();
     prepareDevOpsAnimation();
     addScrollAnimations();
+    addFullScreenEventListener();
     // updateIframeHeight();
 });
 
@@ -288,6 +289,20 @@ function translateText(data, targetLanguage) {
         }
     }
     prepareRotatingText();
+}
+
+function addFullScreenEventListener() {
+    const attribute = "data-fullscreen";
+    const fullScreenImages = document.querySelectorAll(`[${attribute}]`);
+    fullScreenImages.forEach(image => {
+        image.addEventListener("click", function () {
+            if (document.fullscreenElement) {
+                document.exitFullscreen();
+            } else {
+                this.requestFullscreen();
+            }
+        });
+    });
 }
 
 function isGerman() {
